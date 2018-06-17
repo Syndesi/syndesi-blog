@@ -1,0 +1,21 @@
+@import "./variables.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/slick-carousel/slick/slick.css";
+@import "../node_modules/slick-carousel/slick/slick-theme.css";
+
+
+@import "./components/**/*.scss";
+@import "./widgets/**/*.scss";
+@import "./pages/**/*.scss";
+
+body {
+    background-color: #fff;
+    position: relative;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+p {
+    text-align:justify;
+}

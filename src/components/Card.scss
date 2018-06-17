@@ -1,0 +1,38 @@
+.floatingAction {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: $primary;
+    color: #fff;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform: translate(- #{map-get($spacers, 3)}, -50%);
+    > .icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.card {
+    > .img {
+        float: left;
+        width: 100%;
+        padding-top: 56.25%;
+        position: relative;
+        > div {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background-size: cover;
+            @include border-top-radius($card-inner-border-radius);
+        }
+    }
+    > .card-body {
+        position: relative;
+    }
+}
