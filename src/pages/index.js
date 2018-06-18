@@ -32,17 +32,19 @@ export default class Index extends React.Component {
 
     render(){
         var cards_futurism = [];
-        this.state.futurism.forEach((el) => {
+        this.state.futurism.forEach((el, i) => {
             cards_futurism.push(<Card src={el.image}
                             title={el.title}
-                            content={el.content.split("\n")[0]}
+                            text={el.content.split("\n")[0]}
+                            href={'/futurism/'+i}
                       />);
         });
         var cards_scmedia = [];
-        this.state.scmedia.forEach((el) => {
+        this.state.scmedia.forEach((el, i) => {
             cards_scmedia.push(<Card src={el.image}
                             title={el.title}
-                            content={el.content.split("\n")[0]}
+                            text={el.content.split("\n")[0]}
+                            href={'/scmedia/'+i}
                       />);
         });
 

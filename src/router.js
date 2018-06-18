@@ -8,12 +8,17 @@ import Footer from './widgets/Footer.js';
 const Loading = () => <div>Loading...</div>;
 
 const Index = Loadable({
-  loader: () => import('./pages/Index'),
+  loader: () => import('./pages/Index.js'),
+  loading: Loading,
+});
+
+const Post = Loadable({
+  loader: () => import('./pages/Post.js'),
   loading: Loading,
 });
 
 const About = Loadable({
-  loader: () => import('./pages/About'),
+  loader: () => import('./pages/About.js'),
   loading: Loading,
 });
 
@@ -25,6 +30,7 @@ export default class Router extends React.Component {
                 <Route component={Header}/>
                 <Switch>
                     <Route exact path='/' component={Index}/>
+                    <Route path='/:story/:id' component={Post}/>
                     <Route path='/about' component={About}/>
                 </Switch>
                 <Route component={Footer}/>

@@ -11,6 +11,11 @@
         cursor: pointer;
         transition: all 0.1s ease-in-out;
         color: $secondary;
+        user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
         &:hover {
             color: $primary;
             transform: translateY(-50%);

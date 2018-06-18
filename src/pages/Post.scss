@@ -1,0 +1,33 @@
+.post {
+    > .postBackground {
+        height: 100vh;
+        margin-bottom: -200px;
+        position: relative;
+        > .backgroundImage {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background-size: cover;
+        }
+        > .title {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            width: 60%;
+            > span {
+                background-color: #fff;
+                padding: 0em 0.2em;
+                box-decoration-break: clone;
+                line-height: 130%;
+            }
+        }
+        > .tags {
+            list-style-type: none;
+            position: absolute;
+            bottom: 20%;
+            left: 10%;
+        }
+    }
+}
