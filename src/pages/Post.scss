@@ -1,7 +1,6 @@
 .post {
-    > .postBackground {
-        height: 100vh;
-        margin-bottom: -200px;
+    > .heroImage {
+        height: calc(100vh - 56px);
         position: relative;
         > .backgroundImage {
             position: absolute;
@@ -10,24 +9,40 @@
             right: 0px;
             bottom: 0px;
             background-size: cover;
+            background-position: 50% 50%;
         }
-        > .title {
+        > .bottom {
             position: absolute;
-            top: 20%;
-            left: 10%;
-            width: 60%;
-            > span {
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            .preTitle > span,
+            .title > span,
+            .subtitle > span,
+            .tags > span {
                 background-color: #fff;
                 padding: 0em 0.2em;
                 box-decoration-break: clone;
                 line-height: 130%;
+                > * {
+                    display: inline;
+                }
             }
-        }
-        > .tags {
-            list-style-type: none;
-            position: absolute;
-            bottom: 20%;
-            left: 10%;
+            .preTitle > span,
+            .tags > span {
+                margin-right: 7px;
+            }
+            @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+                h1 {
+                    font-size: $h1-font-size * 0.5;
+                }
+                h2 {
+                    font-size: $h2-font-size * 0.5;
+                }
+                h3 {
+                    font-size: $h3-font-size * 0.5;
+                }
+            }
         }
     }
 }

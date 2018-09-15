@@ -24,17 +24,17 @@ const About = Loadable({
 
 
 export default class Router extends React.Component {
-    render() {
-        return (
-            <div className="app">
-                <Route component={Header}/>
-                <Switch>
-                    <Route exact path='/' component={Index}/>
-                    <Route path='/:story/:id' component={Post}/>
-                    <Route path='/about' component={About}/>
-                </Switch>
-                <Route component={Footer}/>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className="app">
+        <Route component={Header}/>
+        <Switch>
+          <Route exact path='/' component={Index}/>
+          <Route path='/:story/:id' component={Post}/>
+          <Route path='/about' component={About}/>
+        </Switch>
+        <Route component={Footer}/>
+      </div>
+    );
+  }
 }
