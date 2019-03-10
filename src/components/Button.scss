@@ -1,0 +1,14 @@
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: $color-primary;
+  color: $color-white;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  border: 0px solid transparent;
+  border-radius: $border-radius;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-gray;
+  }
+}

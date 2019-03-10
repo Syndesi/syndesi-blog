@@ -1,0 +1,13 @@
+.tile-file-download {
+  .detail {
+    padding: 0.5rem;
+  }
+  .download {
+    align-self: stretch;
+    > .btn {
+      height: 100%;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+  }
+}

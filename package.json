@@ -1,9 +1,9 @@
 {
-  "name": "react-boilerplate",
-  "version": "0.0.1",
-  "description": "A custom boilerplate to setup react faster",
+  "name": "syndesi-blog",
+  "version": "0.1.0",
+  "description": "",
   "main": "index.js",
-  "repository": "https://github.com/Syndesi/react-boilerplate",
+  "repository": "https://github.com/Syndesi/syndesi-blog",
   "author": "Syndesi <soerenklein98@gmail.com>",
   "license": "Apache-2.0",
   "scripts": {
@@ -11,15 +11,20 @@
     "start": "webpack-dev-server --content-base src/ --inline --history-api-fallback"
   },
   "dependencies": {
+    "@directus/sdk-js": "^5.2.1",
     "axios": "^0.18.0",
-    "bootstrap": "^4.1.1",
-    "mini-css-extract-plugin": "^0.4.0",
+    "file-saver": "^2.0.1",
+    "html-to-react": "^1.3.4",
+    "image-luminosity": "^0.1.1",
+    "katex": "^0.10.1",
+    "moment": "^2.24.0",
+    "node-waves": "^0.7.6",
+    "normalize.css": "^8.0.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-markdown": "^3.3.3",
     "react-router-dom": "^4.3.1",
-    "react-slick": "^0.23.1",
-    "slick-carousel": "^1.8.1"
+    "react-twitter-embed": "^2.0.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -36,6 +41,7 @@
     "html-webpack-plugin": "^3.2.0",
     "import-glob-loader": "^1.1.0",
     "import-inspector": "^2.0.0",
+    "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.9.0",
     "node-sass-glob-importer": "^5.1.3",
     "path": "^0.12.7",

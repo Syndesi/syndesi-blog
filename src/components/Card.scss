@@ -1,39 +1,137 @@
-.floatingAction {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background-color: $primary;
-    color: #fff;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    transform: translate(- #{map-get($spacers, 3)}, -50%);
-    > .icon {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+.card {
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    overflow: hidden;
+    position: relative;
+    > * {
+        padding: 0.5rem;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+    > .adaptive-height {
+        flex-grow: 1;
+        padding: 0px;
+        position: relative;
+    }
+    > .splash {
+        padding: 0px;
+        position: relative;
     }
 }
 
-.card {
-    > .img {
-        float: left;
-        width: 100%;
-        padding-top: 56.25%;
-        position: relative;
-        > div {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            right: 0px;
-            bottom: 0px;
-            background-size: cover;
-            background-position: 50% 50%;
-            @include border-top-radius($card-inner-border-radius);
-        }
+
+.post-number {
+    position: absolute;
+    right: 0.5rem;
+    bottom: -10px;
+    font-size: 4rem;
+    font-family: 'Roboto Mono';
+    color: $color-white;
+}
+
+.image-splash {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aspect-ratio-3-2 {
+  height: 0;
+  overflow: hidden;
+  padding-top: (2 / 3) * 100%;
+  background: $color-gray;
+  position: relative;
+}
+
+.aspect-ratio-16-9 {
+  height: 0;
+  overflow: hidden;
+  padding-top: (9 / 16) * 100%;
+  background: $color-gray;
+  position: relative;
+}
+
+.aspect-ratio-inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.pb-0 {
+    padding-bottom: 0px;
+}
+
+.pt-0 {
+    padding-top: 0px;
+}
+
+.space-evenly {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col {
+    float: left;
+    width: 33.3%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.gray {
+    color: $color-gray;
+}
+
+img {
+    display: block;
+}
+
+
+a,
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+}
+a {
+    color: $color-primary;
+    transition: 0.2s ease-in-out;
+    &:hover,
+    &:focus {
+        color: #68a2f3;
     }
-    > .card-body {
-        position: relative;
+}
+
+a.gray {
+    &:hover,
+    &:focus {
+        color: $color-primary;
     }
+}
+
+.unselectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.light {
+    color: $color-white;
+}
+
+.dark {
+    color: $color-white;
 }

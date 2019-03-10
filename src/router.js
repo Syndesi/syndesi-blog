@@ -1,9 +1,8 @@
 import React from 'react';
-import {Switch, Route} from 'react-router-dom';
+import {Switch, Route, Redirect} from 'react-router-dom';
 import Loadable from 'react-loadable';
 
-import Header from './widgets/Header.js';
-import Footer from './widgets/Footer.js';
+import Header from './components/Header.js';
 
 const Loading = () => <div>Loading...</div>;
 
@@ -17,23 +16,18 @@ const Post = Loadable({
   loading: Loading,
 });
 
-const About = Loadable({
-  loader: () => import('./pages/About.js'),
-  loading: Loading,
-});
-
-
 export default class Router extends React.Component {
   render() {
     return (
       <div className="app">
         <Route component={Header}/>
         <Switch>
-          <Route exact path='/' component={Index}/>
-          <Route path='/:story/:id' component={Post}/>
-          <Route path='/about' component={About}/>
+          <Route exact path="/" render={() => (
+            <Redirect to="/en/"/>
+          )}/>
+          <Route exact path='/:lang' component={Index}/>
+          <Route path='/:lang/post/:postId' component={Post}/>
         </Switch>
-        <Route component={Footer}/>
       </div>
     );
   }

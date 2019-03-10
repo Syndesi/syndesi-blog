@@ -1,0 +1,17 @@
+.tile-twitter {
+  overflow: visible;
+  box-shadow: none;
+  background-color: transparent;
+  > .splash {
+    > div {
+      display: flex;
+      justify-content: center;
+      > twitter-widget {
+        margin: 0px !important;
+        box-shadow: $shadow;
+        border-radius: $border-radius;
+        overflow: hidden;
+      }
+    }
+  }
+}

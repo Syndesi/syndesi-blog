@@ -1,0 +1,12 @@
+.tile-math {
+  .katex-display {
+    margin: 0px;
+  }
+  .katex {
+    display: flex;
+    justify-content: center;
+    .katex-mathml {
+      display: none;
+    }
+  }
+}
