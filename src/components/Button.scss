@@ -11,4 +11,7 @@
   &:active {
     background-color: color(blue, 50);
   }
+  &.icon {
+    padding: 0.5rem;
+  }
 }

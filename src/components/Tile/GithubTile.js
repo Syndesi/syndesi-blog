@@ -20,6 +20,7 @@ export default class GithubTile extends React.Component {
       latestRelease: {
         date: '',
         version: '',
+        versionUrl: '',
         author: '',
         authorUrl: ''
       }
@@ -28,7 +29,7 @@ export default class GithubTile extends React.Component {
   }
 
   loadData(){
-    if(!(/^\w+\/\w+$/.test(this.props.src))){
+    if(!(/^[\w-_]+\/[\w-_]+$/.test(this.props.src))){
       console.log(this.props.src + ' is not a github repository');
       return;
     }
@@ -53,7 +54,8 @@ export default class GithubTile extends React.Component {
           this.setState({
             latestRelease: {
               date: d[0].published_at,
-              version: d[0].name,
+              version: d[0].tag_name,
+              versionUrl: d[0].html_url,
               author: d[0].author.login,
               authorUrl: d[0].author.html_url
             }
@@ -66,22 +68,23 @@ export default class GithubTile extends React.Component {
     var created = (moment(s.created_at)).format('DD.MM.YYYY');
     var latestReleaseDate = (moment(s.latestRelease.date)).format('DD.MM.YYYY');
     return (
-      <div class={'tile mb-1 tile-' + this.type}>
-        <div class="row p-1 pb-0">
+      <div class={'tile tile-' + this.type}>
+        <div class="row px-1 layout-equal-spaced">
           <h4>{s.project}</h4>
+          <p className="icon">github</p>
         </div>
         <div class="row px-1 layout-equal-spaced">
-          <p class="detail">by <a class="detail" href={s.ownerUrl} target="_blank">{s.owner}</a>, forked from <a class="detail" href="#" target="_blank">directus/api</a></p>
+          <p class="detail">by <a class="detail" href={s.ownerUrl} target="_blank">{s.owner}</a></p>
           <p class="detail">{'created on ' + created}</p>
         </div>
         <div class="row px-1 pt-1">
           <p>{s.description}</p>
         </div>
         <div class="row px-1 pb-1">
-          <p class="small">{s.license + ', ' + s.issues + ' ⚠️, ' + s.stars + ' ⭐, '}</p>
+          <p class="small">{s.license + ', ' + s.issues}<i class="icon">error_outline</i>, {s.stars} <i class="icon">star_border</i></p>
         </div>
         <div class="row px-1 pt-1 bg-level-1">
-          <p>Latest release: v7.0.18</p>
+          <p>Latest release: <a class="text-primary" href={s.latestRelease.versionUrl} target="_blank">{s.latestRelease.version}</a></p>
         </div>
         <div class="row px-1 pb-1 layout-equal-spaced bg-level-1">
           <p class="small text-secondary">by <a class="text-secondary" href={s.latestRelease.authorUrl} target="_blank">{s.latestRelease.author}</a></p>
@@ -93,5 +96,5 @@ export default class GithubTile extends React.Component {
 }
 
 GithubTile.defaultProps = {
-  src: "directus/api"
+  src: ""
 };

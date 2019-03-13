@@ -1,7 +1,9 @@
-@import "./variables.scss";
-
+@import '../node_modules/normalize.css/normalize.css';
 @import "../node_modules/node-waves/src/scss/waves.scss";
+@import "../node_modules/prismjs/themes/prism-okaidia.css";
+@import '../node_modules/katex/dist/katex.css';
 
+@import "./variables.scss";
 
 @import "./components/**/*.scss";
 @import "./pages/**/*.scss";

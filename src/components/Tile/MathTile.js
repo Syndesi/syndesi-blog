@@ -24,7 +24,7 @@ export default class MathTile extends React.Component {
       );
     }
     return (
-      <div class={'tile mb-1 tile-' + this.type}>
+      <div class={'tile tile-' + this.type}>
         <div class="row p-1">
           {content}
         </div>

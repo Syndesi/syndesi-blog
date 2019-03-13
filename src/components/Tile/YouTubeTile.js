@@ -22,7 +22,7 @@ export default class YouTubeTile extends React.Component {
       options = "?" + options.join("&");
     }
     return (
-        <div class={'tile mb-1 tile-' + this.type}>
+        <div class={'tile tile-' + this.type}>
           <div class="row">
             <div className="aspect-ratio-16-9">
               <div className="aspect-ratio-inside">
