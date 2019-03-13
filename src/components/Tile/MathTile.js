@@ -24,8 +24,10 @@ export default class MathTile extends React.Component {
       );
     }
     return (
-      <div class={'card mb-1 tile-' + this.type}>
-        {content}
+      <div class={'tile mb-1 tile-' + this.type}>
+        <div class="row p-1">
+          {content}
+        </div>
       </div>
     );
   }

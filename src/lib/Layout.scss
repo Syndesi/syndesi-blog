@@ -1,0 +1,69 @@
+.layout-equal-spaced {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  &.no-wrap {
+    flex-wrap: nowrap;
+  }
+}
+
+$gap: (
+        0: 0px,
+        1: 0.5rem,
+        2: 1.0rem,
+        3: 2.0rem
+);
+
+@each $size, $margin in $gap {
+  .mt-#{$size} {
+    margin-top: $margin;
+  }
+  .mr-#{$size} {
+    margin-right: $margin;
+  }
+  .mb-#{$size} {
+    margin-bottom: $margin;
+  }
+  .ml-#{$size} {
+    margin-left: $margin;
+  }
+  .mx-#{$size} {
+    margin-left: $margin;
+    margin-right: $margin;
+  }
+  .my-#{$size} {
+    margin-top: $margin;
+    margin-bottom: $margin;
+  }
+  .m-#{$size} {
+    margin: $margin;
+  }
+}
+
+@each $size, $margin in $gap {
+  .pt-#{$size} {
+    padding-top: $margin;
+  }
+  .pr-#{$size} {
+    padding-right: $margin;
+  }
+  .pb-#{$size} {
+    padding-bottom: $margin;
+  }
+  .pl-#{$size} {
+    padding-left: $margin;
+  }
+  .px-#{$size} {
+    padding-left: $margin;
+    padding-right: $margin;
+  }
+  .py-#{$size} {
+    padding-top: $margin;
+    padding-bottom: $margin;
+  }
+  .p-#{$size} {
+    padding: $margin;
+  }
+}

@@ -1,0 +1,21 @@
+.tile {
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  overflow: hidden;
+  position: relative;
+  > .row {
+    flex-grow: 0;
+    flex-shrink: 0;
+    position: relative;
+  }
+  > .adaptive-height {
+    flex-grow: 1;
+    padding: 0px;
+    position: relative;
+  }
+}

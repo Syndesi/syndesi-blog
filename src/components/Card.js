@@ -40,7 +40,7 @@ export default class Card extends React.Component {
       alt = p.thumbnailAlt;
     }
     if(p.thumbnailUrl){
-      thumbnail = <img className="image-splash" src={p.thumbnailUrl} alt={alt} />;
+      thumbnail = <img class="image-splash" src={p.thumbnailUrl} alt={alt} />;
     }
     var numberClass = 'light';
     if(this.state.thumbnailBrightness >= 0.6){
@@ -61,19 +61,19 @@ export default class Card extends React.Component {
             </div>
           </div>
         </div>
-        <div className="pb-0">
+        <div class="pb-0">
           <h4>{p.title}</h4>
         </div>
-        <div className="pb-0 pt-0 space-evenly">
-          <p className="gray">by <a class="gray" href={p.authorUrl}>{p.author}</a></p>
-          <p className="gray">{date}</p>
+        <div class="pb-0 pt-0 space-evenly">
+          <p class="detail">by <a class="detail" href={p.authorUrl}>{p.author}</a></p>
+          <p class="detail">{date}</p>
         </div>
         <div class="pb-0">
           <p>{p.summary}</p>
         </div>
         <div class="adaptive-height"></div>
         <div>
-          <a class="gray" href={p.continueUrl}>continue reading →</a>
+          <a class="text-secondary" href={p.continueUrl}>continue reading →</a>
         </div>
       </div>
     );

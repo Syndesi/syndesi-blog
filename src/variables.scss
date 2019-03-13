@@ -1,11 +1,9 @@
-$color-primary: #1a6fe6;
-$color-secondary: #e61a2b;
-$color-black: #000000;
-$color-white: #ffffff;
-$color-gray: #808080;
-
-//$color-primary: $color-secondary;
+@import "./lib/Color.scss";
 
 $border-radius: 3.5px;
 
 $shadow: 0 2px 4px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.12);
+
+
+@import "./lib/Tile.scss";
+@import "./lib/Layout.scss";

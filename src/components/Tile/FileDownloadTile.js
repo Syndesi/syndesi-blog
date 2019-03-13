@@ -64,11 +64,11 @@ export default class FileDownloadTile extends React.Component {
 
   render(){
     return (
-      <div class={'card mb-1 tile-' + this.type}>
-        <div class="space-evenly splash">
-          <div class="detail">
+      <div class={'tile mb-1 tile-' + this.type}>
+        <div class="row layout-equal-spaced">
+          <div class="detailText">
             <p>{this.state.filename}</p>
-            <p><small class="gray">{this.state.details}</small></p>
+            <p class="detail">{this.state.details}</p>
           </div>
           <a href={this.state.href} download={this.state.filename} target="_blank" class="download">
             <Button>Download</Button>

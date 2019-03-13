@@ -31,8 +31,8 @@ export default class TwitterTile extends React.Component {
         break;
     }
     return (
-        <div class={'card mb-1 tile-' + this.type}>
-          <div class="splash">
+        <div class={'tile mb-1 tile-' + this.type}>
+          <div class="row">
             {twitter}
           </div>
         </div>

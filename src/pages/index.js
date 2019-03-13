@@ -74,17 +74,17 @@ export default class Index extends React.Component {
     });
     return (
       <div className="page">
-        <div class="card mb-1">
+        <div class="tile p-1 mb-1">
           <h1>Hello world :)</h1>
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </div>
-        <div class="card mb-1">
+        <div class="tile p-1 mb-1">
           <p>Hello world :)</p>
         </div>
         <MathTile content="c = \pm\sqrt{a^2 + b^2}" />
         <FileDownloadTile src="6" filename="Mensa HS Mittweida.jpg" />
         <FileDownloadTile src="https://spacenews.com/wp-content/uploads/2018/02/20180206004RP-879x485.jpeg" filename="rocket.jpg" />
-        <GithubTile />
+        <GithubTile src="facebook/react" />
         <YouTubeTile />
         <TwitterTile />
         <div>

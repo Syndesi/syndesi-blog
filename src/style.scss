@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background-color: #f1f0ef;
+    background-color: color(gray, 10);
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     margin: 0px;
@@ -74,6 +74,11 @@ small, .small {
     font-size: 0.8rem;
 }
 
+.detail {
+    font-size: 0.8rem;
+    color: $color-text-hint;
+}
+
 .page {
     display: grid;
     grid-template-columns:
@@ -95,6 +100,6 @@ small, .small {
 }
 
 .error {
-    color: $color-secondary;
+    color: $color-alert;
     font-family: 'Roboto Mono';
 }

@@ -8,6 +8,7 @@
     align-items: stretch;
     overflow: hidden;
     position: relative;
+    border: 2px solid $color-warning;
     > * {
         padding: 0.5rem;
         flex-grow: 0;
@@ -44,7 +45,7 @@
   height: 0;
   overflow: hidden;
   padding-top: (2 / 3) * 100%;
-  background: $color-gray;
+  background: $color-text-hint;
   position: relative;
 }
 
@@ -52,7 +53,7 @@
   height: 0;
   overflow: hidden;
   padding-top: (9 / 16) * 100%;
-  background: $color-gray;
+  background: $color-text-hint;
   position: relative;
 }
 
@@ -81,6 +82,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    border-color: 2px solid $color-warning;
 }
 
 .col {
@@ -91,7 +93,7 @@
 }
 
 .gray {
-    color: $color-gray;
+    color: $color-text-hint;
 }
 
 img {
