@@ -1,0 +1,64 @@
+.#{$rt-namespace}__toast {
+  border-radius: $border-radius;
+  padding: 0.5rem;
+  box-shadow: $shadow;
+  &--default {
+    background: $color-white;
+    border-left: 2px solid transparent;
+  }
+  &--info {
+    background: $color-white;
+    border-left: 2px solid $color-primary;
+  }
+  &--success {
+    background: $color-white;
+    border-left: 2px solid $color-success;
+  }
+  &--warning {
+    background: $color-white;
+    border-left: 2px solid $color-warning;
+  }
+  &--error {
+    background: $color-white;
+    border-left: 2px solid $color-alert;
+  }
+}
+
+.#{$rt-namespace}__toast-container {
+  padding: 0px;
+  &--top-left {
+    top: 1rem;
+    left: 1rem;
+  }
+  &--top-center {
+    top: 1rem;
+  }
+  &--top-right {
+    top: 1rem;
+    right: 1rem;
+  }
+  &--bottom-left {
+    bottom: 1rem;
+    left: 1rem;
+  }
+  &--bottom-center {
+    bottom: 1rem;
+  }
+  &--bottom-right {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+@media #{$rt-mobile} {
+  .#{$rt-namespace}__toast {
+    border-radius: 0px;
+  }
+  .#{$rt-namespace}__toast-container {
+    width: auto;
+    padding: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+  }
+}

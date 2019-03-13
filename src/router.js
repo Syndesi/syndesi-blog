@@ -1,6 +1,7 @@
 import React from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import Loadable from 'react-loadable';
+import { ToastContainer } from 'react-toastify';
 
 import Header from './components/Header.js';
 
@@ -28,6 +29,7 @@ export default class Router extends React.Component {
           <Route exact path='/:lang' component={Index}/>
           <Route path='/:lang/post/:postId' component={Post}/>
         </Switch>
+        <ToastContainer hideProgressBar="true" />
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Prism from 'prismjs';
 import copy from 'copy-to-clipboard';
+import { toast } from 'react-toastify';
 var HtmlToReactParser = require('html-to-react').Parser;
 
 export default class PrismTile extends React.Component {
@@ -15,6 +16,7 @@ export default class PrismTile extends React.Component {
 
   copyToClipboard(e){
     copy(this.props.code);
+    toast("Copied to clipboard");
   }
 
   render(){
