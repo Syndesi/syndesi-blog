@@ -21,24 +21,29 @@ export default class GalleryTile extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1
     };
+    var tiles = [];
+    this.props.images.forEach((el, i) => {
+      tiles.push(
+        <div className="slide">
+          <img className="image" src={el.src} />
+          <div class="text">
+            <div className="row">
+              <h4>{el.title}</h4>
+            </div>
+            <div className="row">
+              <p>{el.description}</p>
+            </div>
+          </div>
+        </div>
+      );
+    });
     return (
       <div class={'tile tile-' + this.type}>
         <div class="row">
           <div className="aspect-ratio-3-2">
             <div className="aspect-ratio-inside">
               <Slider {...settings}>
-                <div class="slide">
-                  <img class="content" src="http://localhost/directus_test/public/uploads/_/originals/IMG_8640-min.jpg" />
-                </div>
-                <div class="slide">
-                  <img className="content" src="http://localhost/directus_test/public/uploads/_/originals/IMG_8547-min.jpg"/>
-                </div>
-                <div class="slide">
-                  <img className="content" src="http://localhost/directus_test/public/uploads/_/originals/IMG_8555-min.jpg"/>
-                </div>
-                <div class="slide">
-                  <img className="content" src="http://localhost/directus_test/public/uploads/_/originals/IMG_8615-min.jpg"/>
-                </div>
+                {tiles}
               </Slider>
             </div>
           </div>
@@ -51,27 +56,27 @@ export default class GalleryTile extends React.Component {
 GalleryTile.defaultProps = {
   images: [
     {
-      src: "6",
-      title: "demo title",
-      description: "lorem ipsum",
+      src: "http://localhost/directus_test/public/uploads/_/originals/IMG_8640-min.jpg",
+      title: "Mensa Mittweida",
+      description: "Das Gebäude beherbergt die Bibliothek, Mensa und ein Raketentriebwerk.",
       url: ""
     },
     {
-      src: "7",
-      title: "demo title",
-      description: "lorem ipsum",
+      src: "http://localhost/directus_test/public/uploads/_/originals/IMG_8547-min.jpg",
+      title: "Park Baum",
+      description: "Mittweida's Schwanenteich im Sommer.",
       url: ""
     },
     {
-      src: "8",
-      title: "demo title",
-      description: "lorem ipsum",
+      src: "http://localhost/directus_test/public/uploads/_/originals/IMG_8555-min.jpg",
+      title: "Teich",
+      description: "Wunderschöne Wasserreflexionen an einem Sommertag.",
       url: ""
     },
     {
-      src: "10",
-      title: "demo title",
-      description: "lorem ipsum",
+      src: "http://localhost/directus_test/public/uploads/_/originals/IMG_8615-min.jpg",
+      title: "Immergrün",
+      description: "Diese in Mittweida oft zu findenden Büsche sind selbst im Winter grün.",
       url: ""
     }
   ],

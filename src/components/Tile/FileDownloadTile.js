@@ -65,7 +65,7 @@ export default class FileDownloadTile extends React.Component {
   render(){
     return (
       <div class={'tile tile-' + this.type}>
-        <div class="row layout-equal-spaced">
+        <div class="row layout-equal-spaced no-wrap">
           <div class="detailText">
             <p>{this.state.filename}</p>
             <p class="detail">{this.state.details}</p>
