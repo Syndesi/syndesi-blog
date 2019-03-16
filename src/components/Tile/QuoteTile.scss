@@ -1,0 +1,28 @@
+.tile-quote {
+  padding: 0.5rem 3rem;
+  padding-right: 6rem;
+  .quote_start {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 3rem;
+    font-size: 3rem;
+    line-height: 3rem;
+    color: $color-text-hint;
+    text-align: center;
+  }
+  .quote_end {
+    position: absolute;
+    bottom: -2rem;
+    right: -2rem;
+    width: 10rem;
+    font-size: 8rem;
+    line-height: 8rem;
+    color: $color-text-hint;
+    text-align: right;
+  }
+  .author {
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+}

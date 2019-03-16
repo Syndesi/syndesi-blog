@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?vdgna9');
-  src:  url('fonts/icomoon.eot?vdgna9#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?vdgna9') format('truetype'),
-    url('fonts/icomoon.woff?vdgna9') format('woff'),
-    url('fonts/icomoon.svg?vdgna9#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?x2cfir');
+  src:  url('fonts/icomoon.eot?x2cfir#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?x2cfir') format('truetype'),
+    url('fonts/icomoon.woff?x2cfir') format('woff'),
+    url('fonts/icomoon.svg?x2cfir#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -34,6 +34,12 @@ i, .icomoon-liga {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-quote_start:before {
+  content: "\e937";
+}
+.icon-quote_end:before {
+  content: "\e94b";
+}
 .icon-d_rotation:before {
   content: "\e84d";
 }

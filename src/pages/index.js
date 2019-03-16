@@ -9,6 +9,7 @@ import TwitterTile from '../components/Tile/TwitterTile.js';
 import GithubTile from '../components/Tile/GithubTile.js';
 import PrismTile from '../components/Tile/PrismTile.js';
 import GalleryTile from '../components/Tile/GalleryTile.js';
+import QuoteTile from '../components/Tile/QuoteTile.js';
 
 export default class Index extends React.Component {
 
@@ -78,7 +79,7 @@ export default class Index extends React.Component {
       <div className="page">
         <div class="tile p-1">
           <h1>Hello world :)</h1>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+          <p><b>Neodym</b> ist ein chemisches Element mit dem Elementsymbol Nd und der Ordnungszahl 60. Im Periodensystem steht es in der Gruppe der Lanthanoide und zählt damit auch zu den Metallen der Seltenen Erden. Die Elementbezeichnung leitet sich von den griechischen Worten νέος <i>neos</i> ‚neu‘ und δίδυμος <i>didymos</i> ‚Zwilling‘ ab. Das Metall wird in Form der Legierung Neodym-Eisen-Bor für starke Permanentmagnete verwendet.</p>
         </div>
         <div class="tile p-1">
           <p>Hello world :)</p>
@@ -86,6 +87,7 @@ export default class Index extends React.Component {
         <MathTile content="c = \pm\sqrt{a^2 + b^2}" />
         <FileDownloadTile src="6" filename="Mensa HS Mittweida.jpg" />
         <FileDownloadTile src="https://spacenews.com/wp-content/uploads/2018/02/20180206004RP-879x485.jpeg" filename="rocket.jpg" />
+        <QuoteTile />
         <PrismTile />
         <GalleryTile />
         <YouTubeTile />

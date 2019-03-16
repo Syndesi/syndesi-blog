@@ -108,3 +108,10 @@ small, .small {
     color: $color-alert;
     font-family: 'Roboto Mono';
 }
+
+.unselectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
