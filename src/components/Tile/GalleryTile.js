@@ -23,9 +23,10 @@ export default class GalleryTile extends React.Component {
     };
     var tiles = [];
     this.props.images.forEach((el, i) => {
+      var imageClass = el.animation || "";
       tiles.push(
         <div className="slide">
-          <img className="image" src={el.src} />
+          <img className={"image " + imageClass} src={el.src} />
           <div class="text">
             <div className="row">
               <h4>{el.title}</h4>
@@ -65,19 +66,22 @@ GalleryTile.defaultProps = {
       src: "http://localhost/directus_test/public/uploads/_/originals/IMG_8547-min.jpg",
       title: "Park Baum",
       description: "Mittweida's Schwanenteich im Sommer.",
-      url: ""
+      url: "",
+      animation: "zoom-out-center"
     },
     {
       src: "http://localhost/directus_test/public/uploads/_/originals/IMG_8555-min.jpg",
       title: "Teich",
       description: "Wunderschöne Wasserreflexionen an einem Sommertag.",
-      url: ""
+      url: "",
+      animation: "zoom-out-top"
     },
     {
       src: "http://localhost/directus_test/public/uploads/_/originals/IMG_8615-min.jpg",
       title: "Immergrün",
       description: "Diese in Mittweida oft zu findenden Büsche sind selbst im Winter grün.",
-      url: ""
+      url: "",
+      animation: "zoom-out-right"
     }
   ],
   autoplay: true,
