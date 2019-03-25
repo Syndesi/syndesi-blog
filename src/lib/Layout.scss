@@ -19,6 +19,13 @@ $gap: (
         3: 2.0rem
 );
 
+@function gap($size) {
+  @if map-has-key($gap, $size) {
+    @return map-get($gap, $size);
+  }
+  @error "Sorry, but `#{size}` is not an available gap size";
+}
+
 @each $size, $margin in $gap {
   .mt-#{$size} {
     margin-top: $margin;

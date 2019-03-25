@@ -20,8 +20,8 @@ export default class Header extends React.Component {
             <ul class="site-details">
               <li>
                 <a href="/">
-                  <h3 className="icon">syndesi_big</h3>
-                  <h3 className="title">Syndesi</h3>
+                  <h3 class="icon">syndesi_big</h3>
+                  <h3 class="title">Syndesi</h3>
                 </a>
               </li>
               <li>
@@ -35,11 +35,18 @@ export default class Header extends React.Component {
                 </a>
               </li>
             </ul>
-            <div>
-              <button onClick={() => {this.changeLang("en");}}>EN</button>
-              <button onClick={() => {this.changeLang("de");}}>DE</button>
-              <button onClick={() => {this.changeLang("no");}}>NO</button>
-            </div>
+            <ul class="site-options">
+              <li>
+                <a href="#">
+                  <p className="icon">search</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p className="icon">menu</p>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
     );

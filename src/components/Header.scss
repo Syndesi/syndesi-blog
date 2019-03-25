@@ -3,7 +3,7 @@
   top: 0px;
   left: 0px;
   right: 0px;
-  height: 4rem;
+  height: $header-height;
   background-color: $color-white;
   box-shadow: $shadow;
   z-index: $z-index-header;
@@ -22,25 +22,64 @@
       > a {
         height: 100%;
         color: color(gray, 90);
-        font-weight: 300;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
         align-items: center;
         transition: all 0.2s ease-in-out;
+        padding: 0rem 0.25rem;
         &:hover,
         &.active {
           background-color: color(gray, 90);
           color: $color-white;
         }
-        padding: 0rem 0.25rem;
+        * {
+          font-weight: 300;
+        }
       }
     }
     .icon {
       font-size: 36px;
       line-height: 36px;
       padding-right: 0.5rem;
+    }
+  }
+  .site-options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    > li {
+      display: block;
+      > a {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0rem 0.25rem;
+      }
+    }
+    .icon {
+      font-size: 24px;
+      line-height: 24px;
+      border-radius: 50%;
+      color: color(gray, 90);
+      background-color: $color-white;
+      transition: all 0.2s ease-in-out;
+      padding: 0.25rem;
+      &:hover,
+      &.active {
+        color: $color-white;
+        background-color: color(gray, 90);
+      }
+
     }
   }
 }
