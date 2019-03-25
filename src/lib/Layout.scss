@@ -7,6 +7,9 @@
   &.no-wrap {
     flex-wrap: nowrap;
   }
+  &.stretch {
+    align-items: stretch;
+  }
 }
 
 $gap: (

@@ -4,6 +4,10 @@ $border-radius: 3.5px;
 
 $shadow: 0 2px 4px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.12);
 
+$z-index-header: 500;
+$z-index-page: 200;
+$z-index-toast: 550;
+
 
 @import "./lib/Tile.scss";
 @import "./lib/Layout.scss";

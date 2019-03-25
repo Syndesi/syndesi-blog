@@ -1,41 +1,46 @@
 .header {
-  background-color: $color-primary;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 4rem;
+  background-color: $color-white;
   box-shadow: $shadow;
-  margin-bottom: 1rem;
-  color: $color-white;
+  z-index: $z-index-header;
+  color: color(gray, 90);
   .site-details {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: center;
-    > .icon {
-      font-size: 36px;
-      line-height: 36px;
-      padding-right: 0.25rem;
-      vertical-align: middle;
-    }
-    > .title {
-      padding: 0px 0.25rem;
-    }
-    > .navigation {
-      list-style-type: none;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      align-items: stretch;
-      padding: 0px;
-      > li {
-        display: block;
-        padding: 0.25rem 0.25rem 0px 0.25rem;
-        > a {
-          font-size: 1.2rem;
-          line-height: 1.2rem;
-          font-weight: 300;
+    align-items: stretch;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    > li {
+      display: block;
+      > a {
+        height: 100%;
+        color: color(gray, 90);
+        font-weight: 300;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        transition: all 0.2s ease-in-out;
+        &:hover,
+        &.active {
+          background-color: color(gray, 90);
           color: $color-white;
         }
+        padding: 0rem 0.25rem;
       }
+    }
+    .icon {
+      font-size: 36px;
+      line-height: 36px;
+      padding-right: 0.5rem;
     }
   }
 }

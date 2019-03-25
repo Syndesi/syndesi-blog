@@ -16,15 +16,25 @@ export default class Header extends React.Component {
     var s = this.props.store;
     return (
         <div class="header page">
-          <div class="layout-equal-spaced">
-            <div class="site-details">
-              <h3 class="icon">syndesi_big</h3>
-              <h3 class="title">Syndesi</h3>
-              <ul class="navigation">
-                <li><a href={"/" + s.lang + "/"}>Blog</a></li>
-                <li><a href={"/apps/"}>Apps</a></li>
-              </ul>
-            </div>
+          <div class="layout-equal-spaced stretch">
+            <ul class="site-details">
+              <li>
+                <a href="/">
+                  <h3 className="icon">syndesi_big</h3>
+                  <h3 className="title">Syndesi</h3>
+                </a>
+              </li>
+              <li>
+                <a class="active" href={"/" + s.lang + "/"}>
+                  <p>Blog</p>
+                </a>
+              </li>
+              <li>
+                <a href={"/apps/"}>
+                  <p>Apps</p>
+                </a>
+              </li>
+            </ul>
             <div>
               <button onClick={() => {this.changeLang("en");}}>EN</button>
               <button onClick={() => {this.changeLang("de");}}>DE</button>
