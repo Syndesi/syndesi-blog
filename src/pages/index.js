@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer, inject } from 'mobx-react';
 import axios from 'axios';
 
 import Card from '../components/Card.js';
@@ -11,20 +12,21 @@ import PrismTile from '../components/Tile/PrismTile.js';
 import GalleryTile from '../components/Tile/GalleryTile.js';
 import QuoteTile from '../components/Tile/QuoteTile.js';
 
+@inject("store")
+@observer
 export default class Index extends React.Component {
 
   constructor(props){
     super(props);
     this.state = {
-      post: [],
-      lang: 1,
-      langCode: this.props.match.params.lang || 'en'
+      post: []
     };
     this.getData();
   }
 
   getData(){
-    axios.get('http://localhost/directus_test/public/_/items/post_translation?fields=*.*&filter[language.code][eq]=' + this.state.langCode + '&sort=-created_on&limit=3&offset=0')
+    var s = this.props.store;
+    axios.get(s.apiBaseUrl + 'items/post_translation?fields=*.*&filter[language.code][eq]=' + s.lang + '&sort=-created_on&limit=3&offset=0')
     .then((res) => {
       this.setState({
         post: res.data.data
@@ -38,6 +40,7 @@ export default class Index extends React.Component {
   }
 
   render(){
+    var s = this.props.store;
     var cards = [];
     this.state.post.forEach((el, i) => {
       var thumbnailUrl = null;
@@ -70,7 +73,7 @@ export default class Index extends React.Component {
                 date={el.created_on}
                 author={el.created_by.last_name}
                 authorUrl="#"
-                continueUrl={'/' + this.state.langCode + '/post/' + el.post_id.id + '-' + this.titleToUrl(el.title)}
+                continueUrl={'/' + s.lang + '/post/' + el.post_id.id + '-' + this.titleToUrl(el.title)}
           />
         </div>
       );
@@ -82,7 +85,7 @@ export default class Index extends React.Component {
           <p><b>Neodym</b> ist ein chemisches Element mit dem Elementsymbol Nd und der Ordnungszahl 60. Im Periodensystem steht es in der Gruppe der Lanthanoide und zählt damit auch zu den Metallen der Seltenen Erden. Die Elementbezeichnung leitet sich von den griechischen Worten νέος <i>neos</i> ‚neu‘ und δίδυμος <i>didymos</i> ‚Zwilling‘ ab. Das Metall wird in Form der Legierung Neodym-Eisen-Bor für starke Permanentmagnete verwendet.</p>
         </div>
         <div class="tile p-1">
-          <p>Hello world :)</p>
+          <p>{s.lang}</p>
         </div>
         <MathTile content="c = \pm\sqrt{a^2 + b^2}" />
         <FileDownloadTile src="6" filename="Mensa HS Mittweida.jpg" />
