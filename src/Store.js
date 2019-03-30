@@ -3,6 +3,7 @@ import Cookies from "js-cookie";
 
 export default class Store {
 
+  @observable pageTitle = "Syndesi Blog";
   @observable lang = "en";
   @observable loggedIn = false;
   @observable account = null;

@@ -1,10 +1,12 @@
 import React from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import Loadable from 'react-loadable';
-import {Provider} from 'mobx-react';
+import {observer, Provider} from 'mobx-react';
+import {Helmet} from "react-helmet";
 import { ToastContainer } from 'react-toastify';
 
 import Store from './Store.js';
+import Favicon from './components/Favicon.js';
 import Header from './components/Header.js';
 const Loading = () => <div>Loading...</div>;
 
@@ -18,6 +20,7 @@ const Post = Loadable({
   loading: Loading,
 });
 
+@observer
 export default class Router extends React.Component {
 
   constructor(props){
@@ -30,6 +33,11 @@ export default class Router extends React.Component {
     return (
       <Provider store={this.store}>
         <div className="app">
+          <Favicon />
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>{this.store.pageTitle}</title>
+          </Helmet>
           <Route component={Header}/>
           <Switch>
             <Route exact path="/" render={() => (
