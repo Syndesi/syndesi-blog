@@ -1,5 +1,7 @@
 import React from 'react';
 
+import WebCite from '../Cite/WebCite.js';
+
 export default class CiteTile extends React.Component {
 
   constructor(props){
@@ -8,6 +10,21 @@ export default class CiteTile extends React.Component {
   }
 
   render(){
+    var authors = [
+      {
+        name: "Casillas, N.",
+        url: "https://google.de"
+      },
+      {
+        name: "Charlebois, S."
+      },
+      {
+        name: "Smyrl, W. H."
+      },
+      {
+        name: "White, H. S."
+      }
+    ];
     return (
       <div class={'tile tile-' + this.type}>
         <div class="row px-1 cite-title">
@@ -16,7 +33,7 @@ export default class CiteTile extends React.Component {
         <div class="row px-1 pt-1 cite-list">
           <div class="cite pb-1">
             <p class="cite-number unselectable">1.</p>
-            <p class="cite-text">"titanium - definition of titanium in English | Oxford Dictionaries". Oxford University Press. 2017. Retrieved 2017-03-28.</p>
+            <WebCite authors={authors} created='1994' title='Pitting Corrosion of Titanium' url='http://www.dtic.mil/get-tr-doc/pdf?AD=ADA274980' />
           </div>
           <div class="cite pb-1">
             <p class="cite-number unselectable">2.</p>
