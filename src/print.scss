@@ -1,0 +1,21 @@
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+  body {
+    margin-top: 0px !important;
+    background-color: $color-white !important;
+  }
+  .header {
+    display: none !important;
+  }
+  .page {
+    grid-template-columns:
+      [full-start main-start left-start right-start] 1fr
+      [main-end left-end right-end full-end];
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    color: inherit !important;
+  }
+}

@@ -13,10 +13,10 @@
 }
 
 $gap: (
-        0: 0px,
-        1: 0.5rem,
-        2: 1.0rem,
-        3: 2.0rem
+  0: 0px,
+  1: 0.5rem,
+  2: 1.0rem,
+  3: 2.0rem
 );
 
 @function gap($size) {

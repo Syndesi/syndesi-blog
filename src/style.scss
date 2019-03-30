@@ -7,131 +7,132 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 @import "./variables.scss";
+@import "./print.scss";
 
 @import "./components/**/*.scss";
 @import "./pages/**/*.scss";
 
 
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 body {
-    background-color: color(gray, 10);
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    margin: 5rem 0px 0px 0px;
-    padding: 0px;
+  background-color: color(gray, 10);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin: 5rem 0px 0px 0px;
+  padding: 0px;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 p {
-    text-align: left;
-    word-wrap: break-word;
+  text-align: left;
+  word-wrap: break-word;
 }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-weight: 300;
-    margin: 0px;
-    padding: 0px;
-    line-height: 145%;
+  font-weight: 300;
+  margin: 0px;
+  padding: 0px;
+  line-height: 145%;
 }
 
 h1, .h1 {
-    font-size: 3.052rem;
+  font-size: 3.052rem;
 }
 
 h2, .h2 {
-    font-size: 2.441rem;
+  font-size: 2.441rem;
 }
 
 h3, .h3 {
-    font-size: 1.953rem;
+  font-size: 1.953rem;
 }
 
 h4, .h4 {
-    font-size: 1.563rem;
+  font-size: 1.563rem;
 }
 
 h5, .h5 {
-    font-size: 1.250rem;
+  font-size: 1.250rem;
 }
 
 h6, .h6 {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 p, .p, small, .small, a, .a {
-    font-weight: 400;
-    margin: 0px;
-    padding: 0px;
-    line-height: 145%;
+  font-weight: 400;
+  margin: 0px;
+  padding: 0px;
+  line-height: 145%;
 }
 
 p, .p {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 small, .small {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 .detail {
-    font-size: 0.8rem;
-    color: $color-text-hint;
+  font-size: 0.8rem;
+  color: $color-text-hint;
 }
 
 .page {
-    display: grid;
-    /*grid-template-columns:
-        [full-start] minmax(1rem, 1fr)
-        [main-start] minmax(0, 50rem) [main-end right-start]
-        minmax(1rem, 1fr) [right-end full-end];*/
-    grid-template-columns:
-        [full-start] 1rem
-        [left-start] minmax(0, 1fr)
-        [left-end] 1rem
-        [main-start] minmax(0, $page-width)
-        [main-end] 1rem
-        [right-start] minmax(0, 1fr)
-        [right-end] 1rem
-        [full-end];
-    > * {
-        grid-column: main;
-        position: relative;
-    }
-    > .full-width {
-        grid-column: full;
-    }
+  display: grid;
+  /*grid-template-columns:
+    [full-start] minmax(1rem, 1fr)
+    [main-start] minmax(0, 50rem) [main-end right-start]
+    minmax(1rem, 1fr) [right-end full-end];*/
+  grid-template-columns:
+    [full-start] 1rem
+    [left-start] minmax(0, 1fr)
+    [left-end] 1rem
+    [main-start] minmax(0, $page-width)
+    [main-end] 1rem
+    [right-start] minmax(0, 1fr)
+    [right-end] 1rem
+    [full-end];
+  > * {
+    grid-column: main;
+    position: relative;
+  }
+  > .full-width {
+    grid-column: full;
+  }
 }
 
 @media (max-width: 1400px) {
-    .page {
-        grid-template-columns:
-            [full-start] minmax(1rem, 1fr)
-            [main-start left-start right-start] minmax(0, 50rem)
-            [main-end left-end right-end] minmax(1rem, 1fr)
-            [full-end];
-    }
+  .page {
+    grid-template-columns:
+      [full-start] minmax(1rem, 1fr)
+      [main-start left-start right-start] minmax(0, 50rem)
+      [main-end left-end right-end] minmax(1rem, 1fr)
+      [full-end];
+  }
 }
 
 *::selection {
-    color: $color-white;
-    background-color: $color-primary;
+  color: $color-white;
+  background-color: $color-primary;
 }
 
 .error {
-    color: $color-alert;
-    font-family: 'Roboto Mono';
+  color: $color-alert;
+  font-family: 'Roboto Mono';
 }
 
 .unselectable {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

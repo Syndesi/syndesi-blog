@@ -95,3 +95,19 @@
     }
   }
 }
+
+@media print {
+  .tile-gallery {
+    page-break-inside: avoid;
+    .text {
+      p, h4 {
+        background-color: $color-white !important;
+        color: $color-black !important;
+      }
+    }
+    .image {
+      transform: scale(1) translate(0px, 0px) !important;
+      transition: none !important;
+    }
+  }
+}
