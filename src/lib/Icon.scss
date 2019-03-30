@@ -9,6 +9,17 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'syndesi-license-icons';
+  src:  url('~syndesi-license-icons/font/fonts/icomoon.eot');
+  src:  url('~syndesi-license-icons/font/fonts/icomoon.eot') format('embedded-opentype'),
+  url('~syndesi-license-icons/font/fonts/icomoon.ttf') format('truetype'),
+  url('~syndesi-license-icons/font/fonts/icomoon.woff') format('woff'),
+  url('~syndesi-license-icons/font/fonts/icomoon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .icon {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -34,4 +45,7 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  &.license {
+    font-family: 'syndesi-license-icons' !important;
+  }
 }

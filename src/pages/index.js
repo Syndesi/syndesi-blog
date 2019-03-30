@@ -11,6 +11,7 @@ import GithubTile from '../components/Tile/GithubTile.js';
 import PrismTile from '../components/Tile/PrismTile.js';
 import GalleryTile from '../components/Tile/GalleryTile.js';
 import QuoteTile from '../components/Tile/QuoteTile.js';
+import CiteTile from '../components/Tile/CiteTile.js';
 
 @inject("store")
 @observer
@@ -92,8 +93,11 @@ export default class Index extends React.Component {
         <FileDownloadTile src="https://spacenews.com/wp-content/uploads/2018/02/20180206004RP-879x485.jpeg" filename="rocket.jpg" />
         <QuoteTile />
         <PrismTile />
-        <GalleryTile />
+        <GithubTile src="facebook/react" />
+        <CiteTile />
         <YouTubeTile />
+        <GalleryTile />
+        <CiteTile />
         <TwitterTile />
         <div>
           {cards}

@@ -3,6 +3,8 @@ import Slider from "react-slick";
 
 export default class GalleryTile extends React.Component {
 
+  // https://help.github.com/en/articles/github-terms-of-service#5-license-grant-to-other-users
+
   constructor(props){
     super(props);
     this.type = 'gallery';

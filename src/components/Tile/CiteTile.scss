@@ -1,0 +1,28 @@
+.tile-cite {
+  .cite-title {
+    border-bottom: 1px solid color(gray, 20);
+  }
+  .cite-list {
+    columns: 18rem;
+    column-gap: gap(1);
+    > * {
+      break-inside: avoid;
+    }
+  }
+  .cite {
+    position: relative;
+    * {
+      font-size: 0.8rem;
+    }
+    > .cite-number {
+      left: 0px;
+      top: 0px;
+      width: 2.5rem;
+      position: absolute;
+      text-align: right;
+    }
+    > .cite-text {
+      margin-left: 3rem;
+    }
+  }
+}

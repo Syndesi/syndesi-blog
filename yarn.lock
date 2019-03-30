@@ -9061,6 +9061,11 @@ swap-case@^1.1.0:
     lower-case "^1.1.1"
     upper-case "^1.1.1"
 
+syndesi-license-icons@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/syndesi-license-icons/-/syndesi-license-icons-1.0.0.tgz#4e3714d679a13d63c791370c3afdf914ef7332fa"
+  integrity sha512-nyvpuEhpQvY7J2WnVMAJmQ5Cu53HBET76/26Yppn3IfOn7mr5dToo04REw2oQVS14oZeLJq68qXbcS0dhiq3bA==
+
 tapable@^1.0.0, tapable@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-1.1.1.tgz#4d297923c5a72a42360de2ab52dadfaaec00018e"
