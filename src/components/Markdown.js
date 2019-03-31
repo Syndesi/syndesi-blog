@@ -1,6 +1,8 @@
 import React, {createElement} from 'react';
 import marksy from 'marksy';
 
+import CiteLink from './Cite/CiteLink.js';
+
 export default class Markdown extends React.Component {
 
   constructor(props){
@@ -31,7 +33,12 @@ export default class Markdown extends React.Component {
           return <p>{children}</p>
         },
         a: ({href, title, target, children}) => {
-          return <a href={href} target="_blank" title={title}>{children}</a>
+          switch(children.join('')){
+            case 'cite':
+              return <CiteLink citeNumber={href} />;
+            default:
+              return <a href={href} target="_blank" title={title}>{children}</a>
+          }
         },
         blockquote ({children}) {},
         hr () {},
@@ -49,8 +56,8 @@ export default class Markdown extends React.Component {
         del ({children}) {},
         img ({src, alt}) {},
         code ({language, code}) {},
-        codespan ({children}) {},
-      },
+        codespan ({children}) {}
+      }
     });
   }
 
