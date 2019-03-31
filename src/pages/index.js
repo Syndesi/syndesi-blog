@@ -12,6 +12,7 @@ import PrismTile from '../components/Tile/PrismTile.js';
 import GalleryTile from '../components/Tile/GalleryTile.js';
 import QuoteTile from '../components/Tile/QuoteTile.js';
 import CiteTile from '../components/Tile/CiteTile.js';
+import MarkdownTile from '../components/Tile/MarkdownTile.js';
 
 @inject("store")
 @observer
@@ -91,6 +92,7 @@ export default class Index extends React.Component {
         <MathTile content="c = \pm\sqrt{a^2 + b^2}" />
         <FileDownloadTile src="6" filename="Mensa HS Mittweida.jpg" />
         <FileDownloadTile src="https://spacenews.com/wp-content/uploads/2018/02/20180206004RP-879x485.jpeg" filename="rocket.jpg" />
+        <MarkdownTile />
         <QuoteTile />
         <PrismTile />
         <GithubTile src="facebook/react" />
