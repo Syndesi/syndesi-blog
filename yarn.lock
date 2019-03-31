@@ -370,6 +370,11 @@ amdefine@>=0.0.4:
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
   integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
 
+anchor-offset@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/anchor-offset/-/anchor-offset-1.0.6.tgz#ff0f2c7f09bd76e3e0470740d1a3b5d1aa1a063c"
+  integrity sha1-/w8sfwm9duPgRwdA0aO10aoaBjw=
+
 ansi-colors@^3.0.0:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-3.2.4.tgz#e3a3da4bfbae6c86a9c285625de124a234026fbf"

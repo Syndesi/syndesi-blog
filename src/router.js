@@ -4,6 +4,7 @@ import Loadable from 'react-loadable';
 import {observer, Provider} from 'mobx-react';
 import {Helmet} from "react-helmet";
 import { ToastContainer } from 'react-toastify';
+import anchorOffset from 'anchor-offset';
 
 import Store from './Store.js';
 import Favicon from './components/Favicon.js';
@@ -27,6 +28,10 @@ export default class Router extends React.Component {
     super(props);
     this.store = new Store();
     document.store = this.store;
+  }
+
+  componentDidMount() {
+    anchorOffset(5 * parseFloat(getComputedStyle(document.documentElement).fontSize));
   }
 
   render() {

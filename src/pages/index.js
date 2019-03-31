@@ -97,7 +97,6 @@ export default class Index extends React.Component {
         <CiteTile />
         <YouTubeTile />
         <GalleryTile />
-        <CiteTile />
         <TwitterTile />
         <div>
           {cards}

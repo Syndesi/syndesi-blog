@@ -20,7 +20,7 @@ export default class WebCite extends React.Component {
         var a = p.authors[i];
         let author = a.name;
         if(a.url){
-          author = <a href={a.url} type="_blank">{author}</a>;
+          author = <a href={a.url} target="_blank">{author}</a>;
         }
         authors.push(author);
         authors.push("; ");

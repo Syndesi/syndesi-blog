@@ -136,3 +136,8 @@ small, .small {
   -ms-user-select: none;
   user-select: none;
 }
+
+:target {
+  border-radius: $border-radius;
+  box-shadow: $shadow-warning;
+}
