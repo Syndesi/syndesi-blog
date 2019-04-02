@@ -13,6 +13,7 @@ import GalleryTile from '../components/Tile/GalleryTile.js';
 import QuoteTile from '../components/Tile/QuoteTile.js';
 import CiteTile from '../components/Tile/CiteTile.js';
 import MarkdownTile from '../components/Tile/MarkdownTile.js';
+import Footer from '../components/Footer.js';
 
 @inject("store")
 @observer
@@ -82,27 +83,14 @@ export default class Index extends React.Component {
     });
     return (
       <div className="page">
-        <div class="tile p-1">
-          <h1>Hello world :)</h1>
-          <p><b>Neodym</b> ist ein chemisches Element mit dem Elementsymbol Nd und der Ordnungszahl 60. Im Periodensystem steht es in der Gruppe der Lanthanoide und zählt damit auch zu den Metallen der Seltenen Erden. Die Elementbezeichnung leitet sich von den griechischen Worten νέος <i>neos</i> ‚neu‘ und δίδυμος <i>didymos</i> ‚Zwilling‘ ab. Das Metall wird in Form der Legierung Neodym-Eisen-Bor für starke Permanentmagnete verwendet.</p>
-        </div>
-        <div class="tile p-1">
-          <p>{s.lang}</p>
-        </div>
-        <MathTile content="c = \pm\sqrt{a^2 + b^2}" />
-        <FileDownloadTile src="6" filename="Mensa HS Mittweida.jpg" />
-        <FileDownloadTile src="https://spacenews.com/wp-content/uploads/2018/02/20180206004RP-879x485.jpeg" filename="rocket.jpg" />
         <MarkdownTile />
         <QuoteTile />
         <PrismTile />
         <GithubTile src="facebook/react" />
-        <CiteTile />
         <YouTubeTile />
         <GalleryTile />
-        <TwitterTile />
-        <div>
-          {cards}
-        </div>
+        <CiteTile />
+        <Footer />
       </div>
     );
   }
