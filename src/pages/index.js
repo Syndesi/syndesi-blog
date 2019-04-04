@@ -13,7 +13,6 @@ import GalleryTile from '../components/Tile/GalleryTile.js';
 import QuoteTile from '../components/Tile/QuoteTile.js';
 import CiteTile from '../components/Tile/CiteTile.js';
 import MarkdownTile from '../components/Tile/MarkdownTile.js';
-import Footer from '../components/Footer.js';
 
 @inject("store")
 @observer
@@ -90,7 +89,6 @@ export default class Index extends React.Component {
         <YouTubeTile />
         <GalleryTile />
         <CiteTile />
-        <Footer />
       </div>
     );
   }

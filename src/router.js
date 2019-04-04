@@ -9,6 +9,7 @@ import anchorOffset from 'anchor-offset';
 import Store from './Store.js';
 import Favicon from './components/Favicon.js';
 import Header from './components/Header.js';
+import Footer from './components/Footer.js';
 const Loading = () => <div>Loading...</div>;
 
 const Index = Loadable({
@@ -54,6 +55,7 @@ export default class Router extends React.Component {
             <Route exact path='/:lang' component={Index}/>
             <Route path='/:lang/post/:postId' component={Post}/>
           </Switch>
+          <Route component={Footer}/>
           <ToastContainer hideProgressBar="true" />
         </div>
       </Provider>

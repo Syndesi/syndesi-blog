@@ -1,20 +1,39 @@
-$neo-eon-space: 2.5rem;
+$neo-eon-space: 2rem;
 $neo-eon-duration: 10s;
 
 .footer {
-  grid-column: full !important;
   background-color: color(gray, 100);
   color: $color-white;
-  padding: 100px 0.5rem;
-  margin-top: 1rem;
+  margin: 0px;
+  padding: 0px;
+  > .hero {
+    padding: 2rem 0px;
+  }
+  > .legal-links {
+    padding-bottom: 0.5rem;
+    p {
+      font-weight: 300;
+      margin-right: 0.5rem;
+      margin-left: 0.5rem;
+    }
+    ul.flat a {
+      display: block;
+      color: $color-white;
+      &:focus,
+      &:hover,
+      &:active {
+        color: $color-primary;
+      }
+    }
+  }
   .neo-eon {
-    width: 15rem;
-    height: 6rem;
-    margin-left: 5rem;
+    align-self: center;
+    width: 13rem;
+    height: 4rem;
     display: block;
     float: left;
     text-align: left;
-    font-size: 5rem;
+    font-size: 3rem;
     font-family: "Roboto Mono";
     font-weight: 300;
     color: $color-white;
@@ -34,6 +53,37 @@ $neo-eon-duration: 10s;
       top: 50%;
       transform: translate(-50% + #{$neo-eon-space}, -50%);
       animation: neo-eo $neo-eon-duration infinite alternate;
+    }
+  }
+  .social-media-links {
+    align-self: center;
+    a {
+      font-size: 1.25rem; // will be 24px for the icons
+      display: block;
+      padding: 0px;
+      margin: 1rem;
+      border-radius: 50%;
+      background-color: transparent;
+      color: $color-white;
+      transition: all 0.2s ease-in-out;
+      &:hover,
+      &:focus,
+      &:active {
+        color: $color-black;
+        //background-color: $color-white;
+        &.github {
+          color: #24292e;
+        }
+        &.twitter {
+          color: #1da1f2;
+        }
+        &.youtube {
+          color: #ff0000;
+        }
+        &.xing {
+          color: #007575;
+        }
+      }
     }
   }
 }

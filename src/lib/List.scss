@@ -1,0 +1,13 @@
+ul.flat {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  > * {
+    display: block;
+  }
+}
