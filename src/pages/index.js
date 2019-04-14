@@ -14,6 +14,9 @@ import QuoteTile from '../components/Tile/QuoteTile.js';
 import CiteTile from '../components/Tile/CiteTile.js';
 import MarkdownTile from '../components/Tile/MarkdownTile.js';
 
+import TemperatureUnit from '../components/Unit/TemperatureUnit.js';
+import TemperatureConversion from '../lib/conversion/TemperatureConversion.js';
+
 @inject("store")
 @observer
 export default class Index extends React.Component {
@@ -23,6 +26,7 @@ export default class Index extends React.Component {
     this.state = {
       post: []
     };
+    document.tc = new TemperatureConversion();
     this.getData();
   }
 
@@ -84,6 +88,9 @@ export default class Index extends React.Component {
       <div className="page">
         <MarkdownTile />
         <QuoteTile />
+        <div class="tile p-1">
+          <TemperatureUnit />
+        </div>
         <PrismTile />
         <GithubTile src="facebook/react" />
         <YouTubeTile />
