@@ -1,0 +1,26 @@
+import React from 'react';
+import katex from 'katex';
+var HtmlToReactParser = require('html-to-react').Parser;
+
+export default class MathInline extends React.Component {
+
+  render(){
+    var content = null;
+    console.log(this.props.content);
+    try {
+      var math = katex.renderToString(this.props.content, {displayMode: false});
+      content = (new HtmlToReactParser()).parse(math);
+    } catch(e) {
+      content = (
+        <span class="error">{e.toString()}</span>
+      );
+    }
+    return (
+      <span class="math-inline">{content}</span>
+    );
+  }
+}
+
+MathInline.defaultProps = {
+  content: ''
+};

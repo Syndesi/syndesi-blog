@@ -15,6 +15,7 @@ import CiteTile from '../components/Tile/CiteTile.js';
 import MarkdownTile from '../components/Tile/MarkdownTile.js';
 
 import TemperatureUnit from '../components/Unit/TemperatureUnit.js';
+import LengthUnit from '../components/Unit/LengthUnit.js';
 import TemperatureConversion from '../lib/conversion/TemperatureConversion.js';
 
 @inject("store")
@@ -89,7 +90,14 @@ export default class Index extends React.Component {
         <MarkdownTile />
         <QuoteTile />
         <div class="tile p-1">
-          <TemperatureUnit />
+          <TemperatureUnit value="13.7 °C"/>
+          <TemperatureUnit value="286 K"/>
+          <TemperatureUnit value="56.7 °F"/>
+          <TemperatureUnit value="555.67 °Ra"/>
+          <TemperatureUnit value="28.44 °Ré"/>
+          <LengthUnit value="1 mi" />
+          <LengthUnit value="1 au" />
+          <LengthUnit value="750 m" />
         </div>
         <PrismTile />
         <GithubTile src="facebook/react" />
