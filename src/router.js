@@ -22,6 +22,11 @@ const Post = Loadable({
   loading: Loading,
 });
 
+const Credits = Loadable({
+  loader: () => import('./pages/Credits.js'),
+  loading: Loading,
+});
+
 @observer
 export default class Router extends React.Component {
 
@@ -54,6 +59,7 @@ export default class Router extends React.Component {
             <Route exact path="/" render={() => (
               <Redirect to="/en/"/>
             )}/>
+            <Route exact path='/credits' component={Credits}/>
             <Route exact path='/:lang' component={Index}/>
             <Route path='/:lang/post/:postId' component={Post}/>
           </Switch>

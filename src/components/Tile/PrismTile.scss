@@ -64,3 +64,12 @@ pre[class*="language-"].line-numbers > code {
   padding-right: 0.8em;
   text-align: right;
 }
+
+@media (max-width: $breakpoint-small) {
+  .tile-prism {
+    pre[class*="language-"] {
+      // font size should be 0.8, but in this case we need an even smaller size so that more code is visible
+      font-size: 0.7rem;
+    }
+  }
+}
