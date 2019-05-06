@@ -123,6 +123,15 @@ $neo-eon-duration: 10s;
     > .layout-equal-spaced.stretch {
       flex-direction: column;
       align-items: center;
+      &.hero {
+        padding: 0.5rem 0px;
+      }
+      &.legal-links {
+        flex-direction: column-reverse;
+        ul.flat {
+          justify-content: center;
+        }
+      }
     }
   }
 }
