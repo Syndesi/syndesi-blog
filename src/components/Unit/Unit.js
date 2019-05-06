@@ -4,7 +4,7 @@ import MathInline from '../MathInline.js';
 import Tooltip from 'rc-tooltip';
 
 
-export default class TemperatureUnit extends React.Component {
+export default class Unit extends React.Component {
 
   constructor(props){
     super(props);
@@ -44,14 +44,14 @@ export default class TemperatureUnit extends React.Component {
   }
 
   render(){
-    var tc = new TemperatureConversion();
-    var converted = tc.convertToAll(this.props.value);
-    var primary = converted[tc.primary];
+    var c = this.props.conversion;
+    var converted = c.convertToAll(this.props.value);
+    var primary = converted[c.primary];
     var original = converted["original"];
     var tooltip = this.generateTooltip(converted);
     return (
       <Tooltip placement="bottom" overlay={tooltip}>
-        <span class="unit unit-temperature">
+        <span class="unit">
           <span class="unit-converted">
             <MathInline content={this.valueToKatexString(primary)} />
           </span>
@@ -65,6 +65,7 @@ export default class TemperatureUnit extends React.Component {
   }
 }
 
-TemperatureUnit.defaultProps = {
-  value: "10 °C"
+Unit.defaultProps = {
+  value: "10 °C",
+  conversion: new TemperatureConversion()
 };

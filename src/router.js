@@ -45,6 +45,8 @@ export default class Router extends React.Component {
           <Favicon />
           <Helmet>
             <meta charSet="utf-8" />
+            <meta name="theme-color" content="#ffffff" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
             <title>{this.store.pageTitle}</title>
           </Helmet>
           <Route component={Header}/>

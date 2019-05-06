@@ -12,7 +12,6 @@
 @import "./components/**/*.scss";
 @import "./pages/**/*.scss";
 
-
 html {
   font-size: 16px;
 }
@@ -93,13 +92,9 @@ small, .small {
     [main-start] minmax(0, 50rem) [main-end right-start]
     minmax(1rem, 1fr) [right-end full-end];*/
   grid-template-columns:
-    [full-start] 1rem
-    [left-start] minmax(0, 1fr)
-    [left-end] 1rem
-    [main-start] minmax(0, $page-width)
-    [main-end] 1rem
-    [right-start] minmax(0, 1fr)
-    [right-end] 1rem
+    [full-start] minmax(1rem, 1fr)
+    [main-start left-start right-start] minmax(0, 50rem)
+    [main-end left-end right-end] minmax(1rem, 1fr)
     [full-end];
   > * {
     grid-column: main;
@@ -107,16 +102,6 @@ small, .small {
   }
   > .full-width {
     grid-column: full;
-  }
-}
-
-@media (max-width: 1400px) {
-  .page {
-    grid-template-columns:
-      [full-start] minmax(1rem, 1fr)
-      [main-start left-start right-start] minmax(0, 50rem)
-      [main-end left-end right-end] minmax(1rem, 1fr)
-      [full-end];
   }
 }
 

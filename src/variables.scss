@@ -4,6 +4,7 @@ $border-radius: 3.5px;
 
 $shadow: 0 2px 4px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.12);
 $shadow-warning: 0px 0px 0px 2px $color-warning;
+$shadow-raised: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
 $z-index-header: 500;
 $z-index-page: 200;
@@ -13,9 +14,14 @@ $header-height: 4rem;
 
 $page-width: 50rem;
 
+$breakpoint-smartphone: 1400px;
+$breakpoint-smartphone: 52rem;
+$breakpoint-small: 32rem;
+
 
 @import "./lib/Tile.scss";
 @import "./lib/Layout.scss";
 @import "./lib/Icon.scss";
 @import "./lib/ReactToastify.scss";
 @import "./lib/List.scss";
+@import "./lib/Tooltip.scss";

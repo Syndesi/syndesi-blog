@@ -83,7 +83,7 @@ export default class LengthConversion {
     }
   };
 
-  primary = "meter";
+  primary = "kilometer";
 
   getUnitFromSymbol(symbol){
     for(var unitKey in this.units){

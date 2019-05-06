@@ -2,6 +2,10 @@ import React, {createElement} from 'react';
 import marksy from 'marksy';
 
 import CiteLink from './Cite/CiteLink.js';
+import TemperatureUnit from './Unit/TemperatureUnit.js';
+import Unit from './Unit/Unit.js';
+import LengthConversion from "../lib/conversion/LengthConversion.js";
+import TemperatureConversion from "../lib/conversion/TemperatureConversion.js";
 
 export default class Markdown extends React.Component {
 
@@ -36,6 +40,12 @@ export default class Markdown extends React.Component {
           switch(children.join('')){
             case 'cite':
               return <CiteLink citeNumber={href} />;
+            case 'unit|temperature':
+              //return <TemperatureUnit value={href} />;
+              return <Unit value={href} conversion={new TemperatureConversion()} />;
+            case 'unit|length':
+              //return <LengthUnit value={href} />;
+              return <Unit value={href} conversion={new LengthConversion()} />;
             default:
               return <a href={href} target="_blank" title={title}>{children}</a>
           }

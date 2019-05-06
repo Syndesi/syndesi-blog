@@ -1,7 +1,7 @@
 .tile-quote {
   padding: 0.5rem 3rem;
   padding-right: 6rem;
-  .quote_start {
+  .quote-start {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -11,7 +11,7 @@
     color: $color-text-hint !important;
     text-align: center;
   }
-  .quote_end {
+  .quote-end {
     position: absolute;
     bottom: -2rem;
     right: -2rem;
@@ -24,5 +24,20 @@
   .author {
     font-size: 0.8rem;
     font-style: italic;
+  }
+}
+
+@media (max-width: $breakpoint-smartphone) {
+  .tile-quote {
+    padding: 0.5rem 3rem;
+    .quote-end {
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      width: 3rem;
+      font-size: 3rem;
+      line-height: 3rem;
+      text-align: center;
+    }
   }
 }

@@ -6,7 +6,6 @@ export default class MathInline extends React.Component {
 
   render(){
     var content = null;
-    console.log(this.props.content);
     try {
       var math = katex.renderToString(this.props.content, {displayMode: false});
       content = (new HtmlToReactParser()).parse(math);

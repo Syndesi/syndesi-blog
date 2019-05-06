@@ -32,7 +32,7 @@ export default class Footer extends React.Component {
           </div>
         </div>
         <div class="layout-equal-spaced stretch legal-links">
-          <ul class="flat">
+          <ul class="flat py-1">
             <li>
               <a href="#" target="_blank">
                 <p>Contact</p>
@@ -49,7 +49,7 @@ export default class Footer extends React.Component {
               </a>
             </li>
           </ul>
-          <p><span class="icon">copyright</span> by Sören Klein, 2019</p>
+          <p class="py-1"><span class="icon">copyright</span> by Sören Klein, 2019</p>
         </div>
       </div>
     );

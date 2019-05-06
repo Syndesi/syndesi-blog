@@ -40,8 +40,8 @@ export default class TemperatureConversion {
     },
     reaumur: {
       name: "Réaumur",
-      symbols: ["°Re", "°re", "°Ré", "°ré"],
-      katexSymbols: ["\\text{°Re}"],
+      symbols: ["°Ré", "°ré", "°Re", "°re"],
+      katexSymbols: ["\\text{°Ré}"],
       convertIntoPrimary: (reaumur) => {return reaumur.mul(1.25).add(273.15);},
       convertFromPrimary: (kelvin) => {return kelvin.sub(273.15).mul(0.8);}
     },

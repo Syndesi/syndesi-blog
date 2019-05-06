@@ -18,18 +18,18 @@ export default class Header extends React.Component {
         <div class="header page">
           <div class="layout-equal-spaced stretch">
             <ul class="site-details">
-              <li>
+              <li class="site-logo">
                 <a href="/">
                   <h3 class="icon">syndesi_big</h3>
                   <h3 class="title">Syndesi</h3>
                 </a>
               </li>
-              <li>
+              <li class="site-link">
                 <a class="active" href={"/" + s.lang + "/"}>
                   <p>Blog</p>
                 </a>
               </li>
-              <li>
+              <li class="site-link">
                 <a href={"/apps/"}>
                   <p>Apps</p>
                 </a>

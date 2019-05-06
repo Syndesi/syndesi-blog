@@ -79,7 +79,14 @@
         color: $color-white;
         background-color: color(gray, 90);
       }
+    }
+  }
+}
 
+@media (max-width: $breakpoint-small) {
+  .header {
+    .site-link {
+      display: none !important;
     }
   }
 }

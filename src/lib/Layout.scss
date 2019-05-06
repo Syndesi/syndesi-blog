@@ -28,52 +28,52 @@ $gap: (
 
 @each $size, $margin in $gap {
   .mt-#{$size} {
-    margin-top: $margin;
+    margin-top: $margin !important;
   }
   .mr-#{$size} {
-    margin-right: $margin;
+    margin-right: $margin !important;
   }
   .mb-#{$size} {
-    margin-bottom: $margin;
+    margin-bottom: $margin !important;
   }
   .ml-#{$size} {
-    margin-left: $margin;
+    margin-left: $margin !important;
   }
   .mx-#{$size} {
-    margin-left: $margin;
-    margin-right: $margin;
+    margin-left: $margin !important;
+    margin-right: $margin !important;
   }
   .my-#{$size} {
-    margin-top: $margin;
-    margin-bottom: $margin;
+    margin-top: $margin !important;
+    margin-bottom: $margin !important;
   }
   .m-#{$size} {
-    margin: $margin;
+    margin: $margin !important;
   }
 }
 
 @each $size, $margin in $gap {
   .pt-#{$size} {
-    padding-top: $margin;
+    padding-top: $margin !important;
   }
   .pr-#{$size} {
-    padding-right: $margin;
+    padding-right: $margin !important;
   }
   .pb-#{$size} {
-    padding-bottom: $margin;
+    padding-bottom: $margin !important;
   }
   .pl-#{$size} {
-    padding-left: $margin;
+    padding-left: $margin !important;
   }
   .px-#{$size} {
-    padding-left: $margin;
-    padding-right: $margin;
+    padding-left: $margin !important;
+    padding-right: $margin !important;
   }
   .py-#{$size} {
-    padding-top: $margin;
-    padding-bottom: $margin;
+    padding-top: $margin !important;
+    padding-bottom: $margin !important;
   }
   .p-#{$size} {
-    padding: $margin;
+    padding: $margin !important;
   }
 }

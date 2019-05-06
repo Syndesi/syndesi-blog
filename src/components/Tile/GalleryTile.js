@@ -59,27 +59,27 @@ export default class GalleryTile extends React.Component {
 GalleryTile.defaultProps = {
   images: [
     {
-      src: "http://localhost/directus_test/public/uploads/_/originals/IMG_8640-min.jpg",
+      src: "https://api.syndesi.dev/uploads/_/originals/satellite-1030780_1920.jpg",
       title: "Mensa Mittweida",
       description: "Das Gebäude beherbergt die Bibliothek, Mensa und ein Raketentriebwerk.",
       url: ""
     },
     {
-      src: "http://localhost/directus_test/public/uploads/_/originals/IMG_8547-min.jpg",
+      src: "https://api.syndesi.dev/uploads/_/originals/iceland-2111811_1920.jpg",
       title: "Park Baum",
       description: "Mittweida's Schwanenteich im Sommer.",
       url: "",
       animation: "zoom-out-center"
     },
     {
-      src: "http://localhost/directus_test/public/uploads/_/originals/IMG_8555-min.jpg",
+      src: "https://api.syndesi.dev/uploads/_/originals/cape-canaveral-693254_1920.jpg",
       title: "Teich",
       description: "Wunderschöne Wasserreflexionen an einem Sommertag.",
       url: "",
       animation: "zoom-out-top"
     },
     {
-      src: "http://localhost/directus_test/public/uploads/_/originals/IMG_8615-min.jpg",
+      src: "https://api.syndesi.dev/uploads/_/originals/aurora-borealis-1032517_1920.jpg",
       title: "Immergrün",
       description: "Diese in Mittweida oft zu findenden Büsche sind selbst im Winter grün.",
       url: "",
