@@ -1,5 +1,6 @@
 import React from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom';
+import { withRouter } from "react-router";
 import Loadable from 'react-loadable';
 import {observer, Provider} from 'mobx-react';
 import {Helmet} from "react-helmet";
@@ -27,6 +28,7 @@ const Credits = Loadable({
   loading: Loading,
 });
 
+@withRouter
 @observer
 export default class Router extends React.Component {
 
@@ -57,7 +59,7 @@ export default class Router extends React.Component {
           <Route component={Header}/>
           <Switch>
             <Route exact path="/" render={() => (
-              <Redirect to="/en/"/>
+              <Redirect to="/en"/>
             )}/>
             <Route exact path='/credits' component={Credits}/>
             <Route exact path='/:lang' component={Index}/>
