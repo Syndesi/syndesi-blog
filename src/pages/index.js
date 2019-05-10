@@ -16,6 +16,8 @@ import MarkdownTile from '../components/Tile/MarkdownTile.js';
 import CommentTile from '../components/Tile/CommentTile.js';
 import FormTile from '../components/Tile/FormTile.js';
 
+import Error from '../components/Error.js';
+
 @inject("store")
 @observer
 export default class Index extends React.Component {
@@ -88,6 +90,9 @@ export default class Index extends React.Component {
         <QuoteTile />
         <PrismTile />
         <GithubTile src="facebook/react" />
+        <div class="tile">
+          <Error />
+        </div>
         <GalleryTile />
         <CiteTile />
       </div>

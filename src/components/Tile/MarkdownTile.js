@@ -19,5 +19,5 @@ export default class MarkdownTile extends React.Component {
 }
 
 MarkdownTile.defaultProps = {
-  markdown: '# Hello world :)\n\nThis is a sample paragraph\nAs a metal, titanium is recognized for its high ratio [unit|temperature](300 K)[cite](1). It is a strong metal with low density that is quite ductile (especially in an oxygen-free environment), [unit|length](2.5 mi)[cite](2) lustrous, and metallic-white in color.[cite](3) The relatively high melting point makes it useful as a refractory metal. It is paramagnetic and has fairly low electrical and thermal conductivity.[cite](4)'
+  markdown: '# Hello world :)\n\nThis is a sample paragraph\nAs a metal, titanium is recognized for its high ratio [unit|temperatur2](https://google.de) [unit|temperature](300 K) [cite](1). It is a strong metal with low density that is quite ductile (especially in an oxygen-free environment), [unit|length](2.5 mi) [cite](2) lustrous, and metallic-white in color.[cite](3) The relatively high melting point makes it useful as a refractory metal. It is paramagnetic and has fairly low electrical and thermal conductivity.[cite](4)'
 };

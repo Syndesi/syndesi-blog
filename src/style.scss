@@ -82,6 +82,12 @@ small, .small {
   font-size: 0.8rem;
 }
 
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0px;
+}
+
 .detail {
   font-size: 0.8rem;
   color: $color-text-hint;
@@ -117,11 +123,6 @@ small, .small {
 *::selection {
   color: $color-white;
   background-color: $color-primary;
-}
-
-.error {
-  color: $color-alert;
-  font-family: 'Roboto Mono';
 }
 
 .unselectable {

@@ -5934,19 +5934,19 @@ markdown-escapes@^1.0.0:
   resolved "https://registry.yarnpkg.com/markdown-escapes/-/markdown-escapes-1.0.3.tgz#6155e10416efaafab665d466ce598216375195f5"
   integrity sha512-XUi5HJhhV5R74k8/0H2oCbCiYf/u4cO/rX8tnGkRvrqhsr5BRNU6Mg0yt/8UIx1iIS8220BNJsDb7XnILhLepw==
 
-marked@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.6.2.tgz#c574be8b545a8b48641456ca1dbe0e37b6dccc1a"
-  integrity sha512-LqxwVH3P/rqKX4EKGz7+c2G9r98WeM/SW34ybhgNGhUQNKtf1GmmSkJ6cDGJ/t6tiyae49qRkpyTw2B9HOrgUA==
+marked@^0.3.12:
+  version "0.3.19"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.19.tgz#5d47f709c4c9fc3c216b6d46127280f40b39d790"
+  integrity sha512-ea2eGWOqNxPcXv8dyERdSr/6FmzvWwzjMxpfGB/sbMccXoct+xY+YukPD+QTUZwyvK7BZwcr4m21WBOW41pAkg==
 
-marksy@^7.0.1:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/marksy/-/marksy-7.0.1.tgz#fb26f780ce56bf5ca48fc137efdef1f97dd4c7ef"
-  integrity sha512-tB4cQxIY7f8PWTcIouJO/V60rl9JVVOmCDjmukYVO7mdpGM1JWl4qIP98iDYItexSXZ0DkEqk6yXFxgdmZRMxA==
+marksy@6:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/marksy/-/marksy-6.1.0.tgz#36482148a1115cc78570855f7ebd744bb453d5cc"
+  integrity sha512-xVAuJQxwdAljvFVqlY7CIRewn5YHGvCqeJkY1bbcTBfZV4dNDSZpHWTREb1MNu/oXYzKgg5pmTfE1DIW6M1zrA==
   dependencies:
     babel-standalone "^6.26.0"
     he "^1.1.1"
-    marked "^0.6.2"
+    marked "^0.3.12"
 
 mat4-decompose@^1.0.3:
   version "1.0.4"

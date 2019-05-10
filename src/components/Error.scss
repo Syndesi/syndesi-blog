@@ -1,0 +1,39 @@
+.error {
+  color: $color-text-secondary;
+
+  &.error-exception {
+    color: $color-alert;
+  }
+
+  > .error-code {
+    font-family: 'Roboto Mono';
+    text-align: center;
+  }
+  > .error-description {
+    text-align: center;
+    &:before {
+      content: 'remove';
+      font-family: 'icomoon';
+      margin-right: gap(1);
+      font-size: 1.2rem;
+    }
+    &:after {
+      content: 'remove';
+      font-family: 'icomoon';
+      margin-left: gap(1);
+      font-size: 1.2rem;
+    }
+  }
+  > .error-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    > * {
+      margin-right: 0.25rem;
+      margin-left: 0.25rem;
+      font-size: 1.2rem;
+    }
+  }
+}

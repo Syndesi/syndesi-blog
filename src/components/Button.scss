@@ -1,17 +1,43 @@
 .btn {
-  padding: 0.5rem 1rem;
+  padding: gap(1) gap(2);
   background-color: $color-primary;
   color: $color-white;
   transition: 0.2s ease-in-out;
   cursor: pointer;
-  border: 0px solid transparent;
+  border: 0px solid $color-transparent;
   border-radius: $border-radius;
   &:hover,
   &:focus,
   &:active {
-    background-color: color(blue, 50);
+    background-color: $color-primary-light;
   }
   &.icon {
     padding: 0.5rem;
+  }
+}
+
+.btn-round {
+  padding: 0.25rem;
+  background-color: $color-primary;
+  color: $color-white;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  border: 0px solid $color-transparent;
+  border-radius: 50%;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-primary-light;
+  }
+}
+
+.btn-transparent {
+  background-color: $color-transparent;
+  color: inherit;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-primary;
+    color: $color-white;
   }
 }

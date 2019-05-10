@@ -134,6 +134,7 @@ $color-warning: #fdd13a; // Yellow 30
 $color-success: #24a249; // Green 50
 
 $color-primary: #1a6fe6; // Syndesi blue (not part of the IBM colors)
+$color-primary-light: lighten($color-primary, 10%);
 $color-text-primary: color(gray, 100);
 $color-text-secondary: color(gray, 70);
 $color-text-hint: color(gray, 40);
