@@ -13,6 +13,8 @@ import GalleryTile from '../components/Tile/GalleryTile.js';
 import QuoteTile from '../components/Tile/QuoteTile.js';
 import CiteTile from '../components/Tile/CiteTile.js';
 import MarkdownTile from '../components/Tile/MarkdownTile.js';
+import CommentTile from '../components/Tile/CommentTile.js';
+import FormTile from '../components/Tile/FormTile.js';
 
 @inject("store")
 @observer

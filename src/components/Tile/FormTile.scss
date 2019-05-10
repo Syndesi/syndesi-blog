@@ -1,0 +1,10 @@
+.tile-form {
+  overflow: visible;
+  box-shadow: none;
+  background-color: transparent;
+  > iframe {
+    min-height: 800px;
+    min-width: 640px;
+    width: 100%;
+  }
+}
