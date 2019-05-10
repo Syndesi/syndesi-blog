@@ -11,21 +11,21 @@ import Store from './Store.js';
 import Favicon from './components/Favicon.js';
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
-const Loading = () => <div>Loading...</div>;
+import Loader from './components/Loader.js';
 
 const Index = Loadable({
   loader: () => import('./pages/Index.js'),
-  loading: Loading,
+  loading: Loader,
 });
 
 const Post = Loadable({
   loader: () => import('./pages/Post.js'),
-  loading: Loading,
+  loading: Loader,
 });
 
 const Credits = Loadable({
   loader: () => import('./pages/Credits.js'),
-  loading: Loading,
+  loading: Loader,
 });
 
 @withRouter

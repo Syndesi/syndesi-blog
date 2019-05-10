@@ -90,6 +90,7 @@ export default class Index extends React.Component {
         <QuoteTile />
         <PrismTile />
         <GithubTile src="facebook/react" />
+        <GithubTile src="facebook/react/2" />
         <div class="tile">
           <Error />
         </div>

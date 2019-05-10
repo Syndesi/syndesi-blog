@@ -23,13 +23,14 @@ export default class Error extends React.Component {
   render(){
     let p = this.props;
     let actions = [];
+    let actionsRow = null;
     if(p.additionalInformation){
       let tooltip = (
         <p>{p.additionalInformation}</p>
       );
       actions.push(
         <Tooltip placement="bottom" overlay={tooltip}>
-          <span className="btn-round btn-transparent icon">help_outline</span>
+          <span class="btn-round btn-transparent icon">help_outline</span>
         </Tooltip>
       );
     }
@@ -38,21 +39,27 @@ export default class Error extends React.Component {
         <span class="btn-round btn-transparent icon" onClick={() => {this.update();}}>refresh</span>
       );
     }
-    return (
-      <div class="error py-1">
-        <h3 class="error-code pt-1">{p.code}</h3>
-        <p class="error-description">{p.description}</p>
-        <ul class="error-actions py-1 unselectable">
+    if(actions.length > 0){
+      actionsRow = (
+        <ul class="error-actions py-1 unselectable bg-level-1">
           {actions}
         </ul>
+      );
+    }
+
+    return (
+      <div class="error">
+        <h3 class="error-code pt-1">{p.code}</h3>
+        <p class="error-description pb-1">{p.description}</p>
+        {actionsRow}
       </div>
     );
   }
 }
 
 Error.defaultProps = {
-  code: '403',
-  description: 'content cannot be loaded',
-  additionalInformation: 'additional informations to the error code',
-  reload: () => {console.log('tile reloading...');}
+  code:                 '500',
+  description:          'unknown error',
+  additionalInformation: null,
+  reload:                null
 };

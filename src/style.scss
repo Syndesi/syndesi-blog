@@ -120,6 +120,10 @@ ul, ol {
   }
 }
 
+.text-center {
+  text-align: center;
+}
+
 *::selection {
   color: $color-white;
   background-color: $color-primary;

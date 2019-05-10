@@ -2,7 +2,22 @@
   color: $color-text-secondary;
 
   &.error-exception {
+    color: $color-exception;
+    .bg-level-1 {
+      background-color: color(purple, 10);
+    }
+  }
+
+  &.error-alert {
     color: $color-alert;
+    .bg-level-1 {
+      background-color: color(red, 10);
+    }
+  }
+
+  // do not use warning, yellow is very hard to read on white
+  &.error-warning {
+    color: $color-warning;
   }
 
   > .error-code {

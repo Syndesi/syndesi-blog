@@ -12,7 +12,6 @@ export default class Markdown extends React.Component {
   constructor(props){
     super(props);
     this.state = {};
-    console.log('markdown rendering in progress');
     this.marksy = marksy({
       createElement,
       elements: {
@@ -40,18 +39,14 @@ export default class Markdown extends React.Component {
         a: ({href, title, target, children}) => {
           switch(children.join('')){
             case 'cite':
-              console.log('markdown cite');
               return <CiteLink citeNumber={href} />;
             case 'unit|temperature':
-              console.log('markdown temp');
               //return <TemperatureUnit value={href} />;
               return <Unit value={href} conversion={new TemperatureConversion()} />;
             case 'unit|length':
-              console.log('markdown length');
               //return <LengthUnit value={href} />;
               return <Unit value={href} conversion={new LengthConversion()} />;
             default:
-              console.log('markdown other: '+children.join(''));
               return <a href={href} target="_blank" title={title}>{children}</a>
           }
         },
