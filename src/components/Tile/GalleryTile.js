@@ -1,5 +1,8 @@
 import React from 'react';
-import Slider from "react-slick";
+import Slider from 'react-slick';
+import { ContextMenu, SubMenu, MenuItem, ContextMenuTrigger } from 'react-contextmenu';
+import Error from '../Error.js';
+import Loader from '../Loader.js';
 
 export default class GalleryTile extends React.Component {
 
@@ -9,21 +12,40 @@ export default class GalleryTile extends React.Component {
     super(props);
     this.type = 'gallery';
     this.state = {
-      project: ''
+      project: '',
+      index: 0 // the current index of the slider
     };
   }
 
+  setSize(size){
+    console.log('set size: ' + size);
+  }
+
+  setQuality(quality){
+    console.log('set quality: ' + quality);
+  }
+
+  toggleFullscreen(){
+    console.log('toggle fullscreen');
+  }
+
+  open(){
+    window.open(this.props.images[this.state.index].src, "_blank")
+  }
+
   render(){
-    var settings = {
+    let settings = {
       dots: false,
       arrows: false,
       infinite: true,
-      autoplay: false,
-      speed: 500,
+      autoplay: this.props.autoplay,
+      autoplaySpeed: this.props.autoplaySpeed,
+      speed: this.props.speed,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      afterChange: (e) => {this.setState({index: e});}
     };
-    var tiles = [];
+    let tiles = [];
     this.props.images.forEach((el, i) => {
       var imageClass = el.animation || "";
       tiles.push(
@@ -42,15 +64,40 @@ export default class GalleryTile extends React.Component {
     });
     return (
       <div class={'tile tile-' + this.type}>
-        <div class="row">
-          <div className="aspect-ratio-3-2">
-            <div className="aspect-ratio-inside">
-              <Slider {...settings}>
-                {tiles}
-              </Slider>
+        <ContextMenuTrigger id="some_unique_identifier">
+          <div class="row">
+            <div class="aspect-ratio-3-2">
+              <div class="aspect-ratio-inside">
+                <Slider {...settings}>
+                  {tiles}
+                </Slider>
+              </div>
             </div>
           </div>
-        </div>
+        </ContextMenuTrigger>
+        <ContextMenu id="some_unique_identifier">
+          <MenuItem onClick={() => {this.toggleFullscreen();}}>
+            Fullscreen
+          </MenuItem>
+          <MenuItem divider />
+          <SubMenu title='Size'>
+            <MenuItem onClick={() => {this.setSize('original');}}>Original</MenuItem>
+            <MenuItem onClick={() => {this.setSize('hd');}}>Full HD</MenuItem>
+            <MenuItem onClick={() => {this.setSize('desktop');}}>Desktop</MenuItem>
+            <MenuItem onClick={() => {this.setSize('sm');}}>Smartphone</MenuItem>
+          </SubMenu>
+          <SubMenu title='Quality'>
+            <MenuItem onClick={() => {this.setQuality(1.00);}}>Original</MenuItem>
+            <MenuItem onClick={() => {this.setQuality(0.75);}}>75%</MenuItem>
+            <MenuItem onClick={() => {this.setQuality(0.50);}}>50%</MenuItem>
+            <MenuItem onClick={() => {this.setQuality(0.25);}}>25%</MenuItem>
+          </SubMenu>
+          <MenuItem divider />
+          <MenuItem onClick={() => {this.open();}}>
+            Open image
+          </MenuItem>
+
+        </ContextMenu>
       </div>
     );
   }
@@ -86,7 +133,9 @@ GalleryTile.defaultProps = {
       animation: "zoom-out-right"
     }
   ],
-  autoplay: true,
+  autoplay: false,
+  autoplaySpeed: 20000,
+  speed: 500,
   aspectRatio: "3-2",
   fullscreenAvailable: true
 };

@@ -6,9 +6,10 @@ $shadow: 0 2px 4px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.12);
 $shadow-warning: 0px 0px 0px 2px $color-warning;
 $shadow-raised: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
-$z-index-header: 500;
-$z-index-page: 200;
-$z-index-toast: 550;
+$z-index-page:         200;
+$z-index-context-menu: 250;
+$z-index-header:       500;
+$z-index-toast:        550;
 
 $header-height: 4rem;
 
@@ -25,3 +26,4 @@ $breakpoint-small: 32rem;
 @import "./lib/ReactToastify.scss";
 @import "./lib/List.scss";
 @import "./lib/Tooltip.scss";
+@import "./lib/ContextMenu.scss";

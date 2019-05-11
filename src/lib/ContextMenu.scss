@@ -1,0 +1,71 @@
+.react-contextmenu {
+  background-color: $color-white;
+  box-shadow: $shadow-raised;
+  border-radius: $border-radius;
+  margin: gap(0);
+  min-width: 10rem;
+  outline: none;
+  opacity: 0;
+  //overflow: hidden;
+  padding: 0px;
+  pointer-events: none;
+  font-weight: 400;
+  text-align: left;
+  transition: opacity 0.2s ease !important;
+  &.react-contextmenu--visible {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: $z-index-context-menu;
+  }
+  .react-contextmenu {
+    min-width: 7rem;
+  }
+  > *:first-child {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+  > *:last-child {
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+  .react-contextmenu-item {
+    background: 0 0;
+    border: 0;
+    cursor: pointer;
+    padding: gap(1) gap(1);
+    white-space: nowrap;
+    &.react-contextmenu-item--active,
+    &.react-contextmenu-item--selected {
+      color: $color-white;
+      background-color: $color-primary;
+      text-decoration: none;
+    }
+    &.react-contextmenu-item--disabled,
+    &.react-contextmenu-item--disabled:hover {
+      background-color: $color-transparent;
+      color: $color-text-hint;
+    }
+    &.react-contextmenu-submenu {
+      padding: 0;
+      > .react-contextmenu-item {
+      }
+      > .react-contextmenu-item:after {
+        content: "chevron_right";
+        font-family: 'icomoon' !important;
+        font-size: 1.2rem;
+        speak: none;
+        display: inline-block;
+        position: absolute;
+        right: 0.25rem;
+      }
+    }
+  }
+  .react-contextmenu-item--divider {
+    border-bottom: 1px solid color(gray, 20);
+    cursor: inherit;
+    padding: 0;
+  }
+}
+
+
+

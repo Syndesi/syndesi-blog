@@ -30,6 +30,7 @@ export default class GithubTile extends React.Component {
   }
 
   loadData(){
+    // check if the given repository-name is valid
     if(!(/^[\w-_]+\/[\w-_]+$/.test(this.props.src))){
       this.setState({
         error: {
@@ -39,6 +40,7 @@ export default class GithubTile extends React.Component {
       });
       return;
     }
+    // try to load the repository data
     axios.get('https://api.github.com/repos/' + this.props.src)
         .then((res) => {
           var d = res.data;
@@ -65,6 +67,7 @@ export default class GithubTile extends React.Component {
             }
           });
         });
+    // try to load data to the latest release
     axios.get('https://api.github.com/repos/' + this.props.src + '/releases')
         .then((res) => {
           var d = res.data;
@@ -81,9 +84,9 @@ export default class GithubTile extends React.Component {
   }
 
   render(){
-    let s = this.state;
-    let created = (moment(s.created_at)).format('DD.MM.YYYY');
-    let content = null;
+    let s             = this.state;
+    let created       = (moment(s.created_at)).format('DD.MM.YYYY');
+    let content       = null;
     let latestRelease = null;
     if(s.error){
       content = (
@@ -110,6 +113,7 @@ export default class GithubTile extends React.Component {
           <p class="small">{s.license + ', ' + s.issues}<i class="icon">error_outline</i>, {s.stars} <i class="icon">star_border</i></p>
         </div>,
       ];
+      // append release-data if loaded
       if(s.latestRelease){
         let latestReleaseDate = (moment(s.latestRelease.date)).format('DD.MM.YYYY');
         content.push(
