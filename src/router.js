@@ -28,6 +28,21 @@ const Credits = Loadable({
   loading: Loader,
 });
 
+const AppsRoute = Loadable({
+  loader: () => import('./pages/AppsRoute.js'),
+  loading: Loader,
+});
+
+const ErrorRoute = Loadable({
+  loader: () => import('./pages/ErrorRoute.js'),
+  loading: Loader,
+});
+
+const E404 = Loadable({
+  loader: () => import('./pages/Error/E404.js'),
+  loading: Loader,
+});
+
 @withRouter
 @observer
 export default class Router extends React.Component {
@@ -62,8 +77,11 @@ export default class Router extends React.Component {
               <Redirect to="/en"/>
             )}/>
             <Route exact path='/credits' component={Credits}/>
-            <Route exact path='/:lang' component={Index}/>
+            <Route exact path='/:lang(\w{2})' component={Index}/>
             <Route path='/:lang/post/:postId' component={Post}/>
+            <Route path='/apps' component={AppsRoute}/>
+            <Route path='/error' component={ErrorRoute}/>
+            <Route exact path='/*' component={E404} />
           </Switch>
           <Route component={Footer}/>
           <ToastContainer hideProgressBar="true" />
