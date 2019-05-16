@@ -31,6 +31,7 @@ export default class ErrorRoute extends React.Component {
         <Route exact path={url + '/:httpCode(4\\d{2})'} component={E4xx}/>
         <Route exact path={url + '/:httpCode(5\\d{2})'} component={E5xx}/>
         <Route exact path={url + '/*'} component={E404} />
+        <Route exact path={url + '/'} component={E404} />
       </Switch>
     );
   }

@@ -8,7 +8,7 @@ export default class E5xx extends React.Component {
 
   render(){
     let code = this.props.match.params.httpCode;
-    let description = 'Bad Request';
+    let description = 'Internal Server Error';
     if(code in this.props.descriptions){
       description = this.props.descriptions[code];
     }
