@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 import {inject, observer} from "mobx-react";
 import Cookies from "js-cookie";
 
@@ -25,14 +26,14 @@ export default class Header extends React.Component {
                 </a>
               </li>
               <li class="site-link">
-                <a class="active" href={"/" + s.lang + "/"}>
+                <NavLink activeClassName='active' to={"/" + s.lang + "/"}>
                   <p>Blog</p>
-                </a>
+                </NavLink>
               </li>
               <li class="site-link">
-                <a href={"/apps/"}>
+                <NavLink activeClassName='active' to="/apps/">
                   <p>Apps</p>
-                </a>
+                </NavLink>
               </li>
             </ul>
             <ul class="site-options">
