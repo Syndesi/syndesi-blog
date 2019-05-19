@@ -54,7 +54,8 @@ export default class GithubTile extends React.Component {
             issues: d.open_issues,
             stars: d.stargazers_count,
             created_at: d.created_at,
-            isLoading: false
+            isLoading: false,
+            error: false
           });
         })
         .catch((e) => {
