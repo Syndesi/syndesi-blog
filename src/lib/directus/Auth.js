@@ -5,24 +5,45 @@ export default class Auth {
 
   d           = null;
   authChecker = null;
+  onLogin     = null;
+  onLogout    = null;
+  onRefresh   = null;
 
   constructor(directus, checkInterval) {
     this.d = directus;
     this.refresh();
     this.authChecker = setInterval(() => {
       this.refresh();
-    }, 1000 * 60 * 1); // run intervall all 10 min
+    }, 1000 * 60 * 4); // run intervall all 4 min, token will expire after 5 min
   }
 
   destroy(){
     clearInterval(this.authChecker);
   }
 
+  setOnLogin(c){
+    this.onLogin = c;
+  }
+
+  setOnLogout(c){
+    this.onLogout = c;
+  }
+
+  setOnRefresh(c){
+    this.onRefresh = c;
+  }
+
   async login(email, password){
     let d = this.d;
     let token = null;
     if(d.token != null){
-      console.login('need to logout before login s possible');
+      try {
+        await this.logout();
+      } catch (e) {
+        // exit login-function if previous user cannot be reliably removed
+        console.log(e);
+        return false;
+      }
     } else {
       try {
         let res = await axios.post(d.baseUrl + 'auth/authenticate', {
@@ -36,12 +57,21 @@ export default class Auth {
     }
     // update token
     d.setToken(token);
+    if(typeof(this.onLogin) == "function"){
+      this.onLogin();
+    }
   }
 
-  logout(){}
+  async logout(){
+    let d = this.d;
+    d.sterilizeData();
+    if(typeof(this.onLogout) == "function"){
+      this.onLogout();
+    }
+    return true;
+  }
 
   async refresh(){
-    console.log("refreshing token...");
     let d = this.d;
     let token = null;
     if(d.token != null){
@@ -68,7 +98,9 @@ export default class Auth {
     }
     // update token
     d.setToken(token);
-    console.log("refresh complete");
+    if(typeof(this.onRefresh) == "function"){
+      this.onRefresh();
+    }
   }
 
 }

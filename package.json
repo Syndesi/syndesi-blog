@@ -28,7 +28,7 @@
     "node-waves": "^0.7.6",
     "normalize.css": "^8.0.1",
     "plotly.js": "^1.47.4",
-    "prismjs": "^1.16.0",
+    "prismjs": "1.15",
     "rc-tooltip": "^3.7.3",
     "react": "^16.8.6",
     "react-contextmenu": "^2.11.0",

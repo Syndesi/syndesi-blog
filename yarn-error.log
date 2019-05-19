@@ -1,5 +1,5 @@
 Arguments: 
-  C:\xampp\htdocs\syndesi\syndesi-blog\node_modules\node\bin\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js upgrade marksy@6
+  C:\xampp\htdocs\syndesi\syndesi-blog\node_modules\node\bin\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js upgrade prismjs@1.15
 
 PATH: 
   C:\xampp\htdocs\syndesi\syndesi-blog\node_modules\.bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python27\;C:\Python27\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Java\jdk1.8.0_202\bin;C:\Users\soeren\AppData\Local\Microsoft\WindowsApps;C:\Users\soeren\AppData\Roaming\npm;C:\Users\soeren\AppData\Local\Yarn\bin;C:\Users\soeren\AppData\Roaming\Composer\vendor\bin;C:\Program Files\JetBrains\PhpStorm 2018.3.3\bin;;C:\Users\soeren\Documents\Programme\cmder;
@@ -40,14 +40,14 @@ npm manifest:
       "image-luminosity": "^0.1.1",
       "js-cookie": "^2.2.0",
       "katex": "^0.10.1",
-      "marksy": "^7.0.1",
+      "marksy": "6",
       "mobx": "^5.9.4",
       "mobx-react": "^5.4.3",
       "moment": "^2.24.0",
       "node-waves": "^0.7.6",
       "normalize.css": "^8.0.1",
       "plotly.js": "^1.47.4",
-      "prismjs": "^1.16.0",
+      "prismjs": "1.15",
       "rc-tooltip": "^3.7.3",
       "react": "^16.8.6",
       "react-contextmenu": "^2.11.0",
@@ -69,6 +69,7 @@ npm manifest:
       "babel-plugin-syntax-dynamic-import": "^6.18.0",
       "babel-plugin-transform-class-properties": "^6.24.1",
       "babel-plugin-transform-decorators-legacy": "^1.3.5",
+      "babel-polyfill": "^6.26.0",
       "babel-preset-env": "^1.7.0",
       "babel-preset-react": "^6.24.1",
       "babel-preset-stage-0": "^6.24.1",
@@ -1396,6 +1397,15 @@ Lockfile:
     dependencies:
       babel-runtime "^6.22.0"
       babel-types "^6.24.1"
+  
+  babel-polyfill@^6.26.0:
+    version "6.26.0"
+    resolved "https://registry.yarnpkg.com/babel-polyfill/-/babel-polyfill-6.26.0.tgz#379937abc67d7895970adc621f284cd966cf2153"
+    integrity sha1-N5k3q8Z9eJWXCtxiHyhM2WbPIVM=
+    dependencies:
+      babel-runtime "^6.26.0"
+      core-js "^2.5.0"
+      regenerator-runtime "^0.10.5"
   
   babel-preset-env@^1.7.0:
     version "1.7.0"
@@ -6034,19 +6044,19 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/markdown-escapes/-/markdown-escapes-1.0.3.tgz#6155e10416efaafab665d466ce598216375195f5"
     integrity sha512-XUi5HJhhV5R74k8/0H2oCbCiYf/u4cO/rX8tnGkRvrqhsr5BRNU6Mg0yt/8UIx1iIS8220BNJsDb7XnILhLepw==
   
-  marked@^0.6.2:
-    version "0.6.2"
-    resolved "https://registry.yarnpkg.com/marked/-/marked-0.6.2.tgz#c574be8b545a8b48641456ca1dbe0e37b6dccc1a"
-    integrity sha512-LqxwVH3P/rqKX4EKGz7+c2G9r98WeM/SW34ybhgNGhUQNKtf1GmmSkJ6cDGJ/t6tiyae49qRkpyTw2B9HOrgUA==
+  marked@^0.3.12:
+    version "0.3.19"
+    resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.19.tgz#5d47f709c4c9fc3c216b6d46127280f40b39d790"
+    integrity sha512-ea2eGWOqNxPcXv8dyERdSr/6FmzvWwzjMxpfGB/sbMccXoct+xY+YukPD+QTUZwyvK7BZwcr4m21WBOW41pAkg==
   
-  marksy@^7.0.1:
-    version "7.0.1"
-    resolved "https://registry.yarnpkg.com/marksy/-/marksy-7.0.1.tgz#fb26f780ce56bf5ca48fc137efdef1f97dd4c7ef"
-    integrity sha512-tB4cQxIY7f8PWTcIouJO/V60rl9JVVOmCDjmukYVO7mdpGM1JWl4qIP98iDYItexSXZ0DkEqk6yXFxgdmZRMxA==
+  marksy@6:
+    version "6.1.0"
+    resolved "https://registry.yarnpkg.com/marksy/-/marksy-6.1.0.tgz#36482148a1115cc78570855f7ebd744bb453d5cc"
+    integrity sha512-xVAuJQxwdAljvFVqlY7CIRewn5YHGvCqeJkY1bbcTBfZV4dNDSZpHWTREb1MNu/oXYzKgg5pmTfE1DIW6M1zrA==
     dependencies:
       babel-standalone "^6.26.0"
       he "^1.1.1"
-      marked "^0.6.2"
+      marked "^0.3.12"
   
   mat4-decompose@^1.0.3:
     version "1.0.4"
@@ -7598,10 +7608,10 @@ Lockfile:
       renderkid "^2.0.1"
       utila "~0.4"
   
-  prismjs@^1.16.0:
-    version "1.16.0"
-    resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.16.0.tgz#406eb2c8aacb0f5f0f1167930cb83835d10a4308"
-    integrity sha512-OA4MKxjFZHSvZcisLGe14THYsug/nF6O1f0pAJc0KN0wTyAcLqmsbE+lTGKSpyh+9pEW57+k6pg2AfYR+coyHA==
+  prismjs@1.15:
+    version "1.15.0"
+    resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.15.0.tgz#8801d332e472091ba8def94976c8877ad60398d9"
+    integrity sha512-Lf2JrFYx8FanHrjoV5oL8YHCclLQgbJcVZR+gikGGMqz6ub5QVWDTM6YIwm3BuPxM/LOV+rKns3LssXNLIf+DA==
     optionalDependencies:
       clipboard "^2.0.0"
   
@@ -8204,6 +8214,11 @@ Lockfile:
     version "1.4.0"
     resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.4.0.tgz#4a856ec4b56e4077c557589cae85e7a4c8869a11"
     integrity sha512-1G6jJVDWrt0rK99kBjvEtziZNCICAuvIPkSiUFIQxVP06RCVpq3dmDo2oi6ABpYaDYaTRr67BEhL8r1wgEZZKg==
+  
+  regenerator-runtime@^0.10.5:
+    version "0.10.5"
+    resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.10.5.tgz#336c3efc1220adcedda2c9fab67b5a7955a33658"
+    integrity sha1-M2w+/BIgrc7dosn6tntaeVWjNlg=
   
   regenerator-runtime@^0.11.0:
     version "0.11.1"

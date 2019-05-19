@@ -20,14 +20,14 @@ export default class PrismTile extends React.Component {
   }
 
   render(){
-    var language = this.props.language;
-    var html = Prism.highlight(this.props.code, Prism.languages[language], language);
-    var code = (new HtmlToReactParser()).parse(html);
+    let language = this.props.language;
+    let html = Prism.highlight(this.props.code, Prism.languages[language], language);
+    let codeContent = (new HtmlToReactParser()).parse(html);
     return (
       <div class={'tile tile-' + this.type}>
         <div class="row">
-          <pre class="line-numbers"><code class={'language-' + language}>
-            {code}
+          <pre class={'line-numbers language-' + language}><code>
+            {codeContent}
           </code></pre>
           <div class="buttongroup">
             <button class="btn icon" onClick={(e) => {this.copyToClipboard();}}>content_copy</button>
