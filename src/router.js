@@ -23,6 +23,11 @@ const Post = Loadable({
   loading: Loader,
 });
 
+const Story = Loadable({
+  loader: () => import('./pages/Story.js'),
+  loading: Loader,
+});
+
 const Credits = Loadable({
   loader: () => import('./pages/Credits.js'),
   loading: Loader,
@@ -79,6 +84,7 @@ export default class Router extends React.Component {
             <Route exact path='/credits' component={Credits}/>
             <Route exact path='/:lang(\w{2})' component={Index}/>
             <Route path='/:lang/post/:postId' component={Post}/>
+            <Route path='/:lang/story/:storyId' component={Story}/>
             <Route path='/apps' component={AppsRoute}/>
             <Route path='/error' component={ErrorRoute}/>
             <Route exact path='/*' component={E404} />
