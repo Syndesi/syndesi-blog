@@ -1,15 +1,21 @@
 import { observable, computed } from "mobx";
 import Cookies from "js-cookie";
+import axios from "axios";
+
+import Directus from "./lib/directus/Directus.js";
 
 export default class Store {
 
-  @observable pageTitle = "Syndesi Blog";
-  @observable lang = "en";
-  @observable loggedIn = false;
-  @observable account = null;
-  @observable apiBaseUrl = "http://localhost/directus_test/public/_/";
-  @observable loaded = false;
-  @observable cites = [];
+  @observable pageTitle  = "Syndesi Blog";
+  @observable lang       = "en";
+  @observable apiBaseUrl = "https://api.syndesi.dev/_/";
+  @observable directus   = null;
+  @observable account    = null;
+  @observable loggedIn   = false;
+  @observable token      = null;
+  @observable loaded     = false;
+  @observable cites      = [];
+  @observable d          = null;
 
   constructor(){
     this.loadLanguage();
@@ -108,7 +114,53 @@ export default class Store {
         ]
       }
     ];
+    this.d = new Directus("https://api.syndesi.dev/_/");
   }
+
+  loadOwnAccount(){
+    if(!this.loggedIn){
+      return false;
+    }
+    this.directus.get(this.apiBaseUrl + 'users/me')
+      .then((res) => {
+        if(res.stats != 200){
+          console.log('Was not able to load user');
+        }
+        this.account = res.data.data;
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }
+
+  login(email, password){
+    axios.post(this.apiBaseUrl + 'auth/authenticate', {
+      email:    email,
+      password: password
+    })
+    .then((res) => {
+      if(res.status != 200){
+        return;
+      }
+      let token = res.data.data.token;
+      this.token = token;
+      this.loggedIn = true;
+      this.directus = axios.create({
+        headers: {
+          'Authorization': ' Bearer '+token
+        }
+      });
+      Cookies.set('token', token, {
+        secure: true  // token is deleted when browser is closed
+      });
+      console.log(res);
+      this.loadOwnAccount();
+    })
+    .catch((e) => {
+      console.log(e);
+    });
+  }
+
 
   /**
    * Returns the preffered language
