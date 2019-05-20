@@ -29,14 +29,15 @@ export default class Directus {
 
   setToken(token){
     this.token = token;
-    Cookies.set(this.baseUrl + '-token', token);
     if(this.token == null){
       // no valid token -> anonymous requests etc.
       console.log("anonymous token");
+      Cookies.remove(this.baseUrl + '-token');
       this.axios = axios.create();
     } else {
       // valid token does exist
       console.log("valid token");
+      Cookies.set(this.baseUrl + '-token', token);
       this.axios = axios.create({
         headers: {
           'Authorization': ' Bearer '+token

@@ -17,12 +17,12 @@ export default class Post extends React.Component {
 
   getData(){
     axios.get('http://localhost/directus_test/public/_/items/post_translation?single=1&fields=*.*&filter[language.code][eq]=' + this.props.match.params.lang + '&filter[post_id][eq]=' + this.getPostId())
-        .then((res) => {
-          console.log(res.data.data);
-          this.setState({
-            data: res.data.data
-          });
+      .then((res) => {
+        console.log(res.data.data);
+        this.setState({
+          data: res.data.data
         });
+      });
   }
 
   getPostId(){

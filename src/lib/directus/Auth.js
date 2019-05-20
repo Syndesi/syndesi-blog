@@ -85,7 +85,7 @@ export default class Auth {
         // no token available
       }
     }
-    if(token != null){
+    if(token){
       // try to refresh token
       try {
         let res = await axios.post(d.baseUrl + 'auth/refresh', {
