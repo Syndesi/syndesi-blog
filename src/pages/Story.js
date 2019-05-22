@@ -11,31 +11,43 @@ export default class Post extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      data: null,
+      story: null,
       posts: []
     };
   }
 
   async componentDidMount() {
     let p = this.props;
-    let data = await p.store.directus.story.getStory(p.match.params.storyId, p.match.params.lang);
-    //let posts = await p.store.directus.post.getPostFromStory(p.match.params.storyId, p.match.params.lang);
+    let story = await p.store.directus.story.getStory(p.match.params.storyId, p.match.params.lang);
+    let posts = await p.store.directus.story.getAllPosts(p.match.params.storyId, p.match.params.lang);
     this.setState({
-      data: data
+      story: story,
+      posts: posts
     });
   }
 
   render(){
     console.log('Story is rendered');
-    let d = this.state.data;
+    let s = this.state.story;
     let content = null;
-    if(d){
+    let posts = [];
+    this.state.posts.forEach((p) => {
+      console.log(p);
+      posts.push(
+        <div key={p.post_id}>
+          <h4>{p.title}</h4>
+          <p>{p.summary}</p>
+        </div>
+      );
+    });
+    if(s){
       content = (
           <div>
-            <h1>{d.title}</h1>
-            <p>{d.summary}</p>
-            <p>created on <span>{d.created_on}</span>, updated on <span>{d.modified_on}</span></p>
-            <img src={d.thumbnail.data.thumbnails[1].url} />
+            <h1>{s.title}</h1>
+            <p>{s.summary}</p>
+            <p>created on <span>{s.created_on}</span>, updated on <span>{s.modified_on}</span></p>
+            <img src={s.thumbnail.data.thumbnails[1].url} />
+            {posts}
           </div>
       );
     }

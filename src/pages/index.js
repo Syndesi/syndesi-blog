@@ -27,17 +27,6 @@ export default class Index extends React.Component {
     this.state = {
       post: []
     };
-    this.getData();
-  }
-
-  getData(){
-    var s = this.props.store;
-    axios.get(s.apiBaseUrl + 'items/post_translation?fields=*.*&filter[language.code][eq]=' + s.lang + '&sort=-created_on&limit=3&offset=0')
-    .then((res) => {
-      this.setState({
-        post: res.data.data
-      });
-    });
   }
 
   titleToUrl(str){

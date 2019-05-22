@@ -19,7 +19,7 @@ module.exports = {
   output: {
     path:       path.resolve(__dirname, 'dist'),
     filename:   'js/bundle.[hash].js',
-    publicPath: '/'
+    publicPath: '/blog/'
   },
   devtool:      'eval',
   devServer: {

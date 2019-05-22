@@ -26,7 +26,7 @@ export default class Story {
       postsInStory.data.data.forEach((el) => {
         postIds.push(el.id);
       });
-      let res = await axios.get(d.baseUrl + 'items/post_translation?filter[post_id][in]='+postIds.join(',')+'&filter[language.code][eq]='+languageCode);
+      let res = await axios.get(d.baseUrl + 'items/post_translation?sort=created_on&fields=*.*,post_id.*,post_id.created_by.*,post_id.tag.tag&filter[post_id][in]='+postIds.join(',')+'&filter[language.code][eq]='+languageCode);
       return res.data.data;
     } catch (e) {
       return false;
