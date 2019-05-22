@@ -1,5 +1,4 @@
 import React from 'react';
-import Card from "./Card";
 
 
 export default class PostCard extends React.Component {
@@ -9,19 +8,24 @@ export default class PostCard extends React.Component {
     return (
       <div class="card">
         <div class="row">
+          <div class="aspect-ratio aspect-ratio-3-2">
+            <img class="aspect-ratio-inside" src={p.thumbnailUrl} />
+          </div>
+        </div>
+        <div class="row">
           <h4>{p.title}</h4>
         </div>
-        {post}
+        <div class="adaptive-height"></div>
       </div>
     );
   }
 }
 
 PostCard.defaultProps = {
-  title:        null,
+  title:        'Title of the card',
   author:       null,
   created:      null,
   summary:      null,
   moreUrl:      null,
-  thumbnailUrl: null
+  thumbnailUrl: 'https://api.syndesi.dev/uploads/_/originals/satellite-1030780_1920.jpg'
 };

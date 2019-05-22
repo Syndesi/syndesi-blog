@@ -1,4 +1,4 @@
-.card {
+.card2 {
     border-radius: $border-radius;
     box-shadow: $shadow;
     background-color: $color-white;

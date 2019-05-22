@@ -1,0 +1,6 @@
+.matrix {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: gap(2);
+  grid-row-gap: gap(2);
+}

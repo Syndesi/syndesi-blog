@@ -20,10 +20,15 @@ $breakpoint-smartphone: 52rem;
 $breakpoint-small: 32rem;
 
 
-@import "./lib/Tile.scss";
+
 @import "./lib/Layout.scss";
+@import "./lib/Tile.scss";
+@import "./lib/Typography.scss";
+@import "./lib/Image.scss";
 @import "./lib/Icon.scss";
 @import "./lib/ReactToastify.scss";
 @import "./lib/List.scss";
 @import "./lib/Tooltip.scss";
 @import "./lib/ContextMenu.scss";
+@import "./lib/AspectRatio.scss";
+@import "./lib/Card.scss";

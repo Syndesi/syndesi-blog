@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 
+import Loader from '../components/Loader.js';
+
 
 export default class Post extends React.Component {
 

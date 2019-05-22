@@ -1,0 +1,21 @@
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+a {
+  color: $color-primary;
+  transition: 0.2s ease-in-out;
+  &:hover,
+  &:focus {
+    color: #68a2f3;
+  }
+}
+
+a.gray {
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
+}

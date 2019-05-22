@@ -1,4 +1,4 @@
-.tile {
+.card {
   border-radius: $border-radius;
   box-shadow: $shadow;
   background-color: $color-white;
@@ -8,7 +8,6 @@
   align-items: stretch;
   overflow: hidden;
   position: relative;
-  margin-bottom: gap(2);
   > .row {
     flex-grow: 0;
     flex-shrink: 0;
@@ -18,13 +17,5 @@
     flex-grow: 1;
     padding: 0px;
     position: relative;
-  }
-  &.tile-overflow {
-    overflow: visible;
-  }
-  &.tile-transparent {
-    border-radius: 0px;
-    box-shadow: none;
-    background-color: $color-transparent;
   }
 }

@@ -2,6 +2,10 @@ import React from 'react';
 import { withRouter } from "react-router";
 import {inject, observer} from "mobx-react";
 
+import Loader from '../components/Loader.js';
+import PostCard from '../components/Card/PostCard.js';
+import Matrix from '../components/Matrix.js';
+import ContainerTile from '../components/Tile/ContainerTile.js';
 
 @inject("store")
 @withRouter
@@ -27,29 +31,41 @@ export default class Post extends React.Component {
   }
 
   render(){
-    console.log('Story is rendered');
     let s = this.state.story;
     let content = null;
-    let posts = [];
-    this.state.posts.forEach((p) => {
-      console.log(p);
-      posts.push(
-        <div key={p.post_id}>
-          <h4>{p.title}</h4>
-          <p>{p.summary}</p>
+    if(s){
+      let posts = [];
+      this.state.posts.forEach((p) => {
+        //posts.push(
+        //  <div key={p.post_id} class="mb-1">
+        //    <h4>{p.title}</h4>
+        //    <p>{p.summary}</p>
+        //  </div>
+        //);
+        posts.push(
+          <PostCard {...p} />
+        );
+      });
+      let img = null;
+      if(s.thumbnail){
+        img = <img src={s.thumbnail.data.thumbnails[1].url} />;
+      }
+      content = (
+        <div>
+          <h1>{s.title}</h1>
+          <p>{s.summary}</p>
+          <p>created on <span>{s.created_on}</span>, updated on <span>{s.modified_on}</span></p>
+          {img}
+          <h3>Posts in this story:</h3>
+          <ContainerTile>
+            <Matrix>
+              {posts}
+            </Matrix>
+          </ContainerTile>
         </div>
       );
-    });
-    if(s){
-      content = (
-          <div>
-            <h1>{s.title}</h1>
-            <p>{s.summary}</p>
-            <p>created on <span>{s.created_on}</span>, updated on <span>{s.modified_on}</span></p>
-            <img src={s.thumbnail.data.thumbnails[1].url} />
-            {posts}
-          </div>
-      );
+    } else {
+      content = <Loader />;
     }
     return (
       <div class="page">
