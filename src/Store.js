@@ -6,7 +6,7 @@ import Directus from "./lib/directus/Directus.js";
 
 export default class Store {
 
-  @observable pageTitle  = "Syndesi Blog";
+  @observable pageTitle  = process.env.APP_TITLE;
   @observable lang       = "en";
   @observable directus   = null;
   @observable loaded     = false;
@@ -110,7 +110,7 @@ export default class Store {
         ]
       }
     ];
-    this.directus = new Directus("https://api.syndesi.dev/_/");
+    this.directus = new Directus(process.env.API_BASE_PATH);
   }
 
   /**
@@ -123,7 +123,10 @@ export default class Store {
       (navigator.languages && navigator.languages[0]) ||
       navigator.language ||
       navigator.userLanguage ||
-      "en";
+      process.env.APP_DEFAULT_LANGUAGE_CODE;
+    if(lang.length > 2){
+      lang = lang.substr(0, 2);
+    }
     this.lang = lang;
   }
 

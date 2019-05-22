@@ -1,5 +1,5 @@
 Arguments: 
-  C:\xampp\htdocs\syndesi\syndesi-blog\node_modules\node\bin\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js upgrade prismjs@1.15
+  C:\xampp\htdocs\syndesi\syndesi-blog\node_modules\node\bin\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add dotenv-webpack --dev
 
 PATH: 
   C:\xampp\htdocs\syndesi\syndesi-blog\node_modules\.bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python27\;C:\Python27\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Java\jdk1.8.0_202\bin;C:\Users\soeren\AppData\Local\Microsoft\WindowsApps;C:\Users\soeren\AppData\Roaming\npm;C:\Users\soeren\AppData\Local\Yarn\bin;C:\Users\soeren\AppData\Roaming\Composer\vendor\bin;C:\Program Files\JetBrains\PhpStorm 2018.3.3\bin;;C:\Users\soeren\Documents\Programme\cmder;

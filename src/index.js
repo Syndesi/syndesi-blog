@@ -7,7 +7,7 @@ import Router from './router.js';
 
 
 ReactDOM.render((
-  <BrowserRouter basename="/blog/">
+  <BrowserRouter basename={process.env.WEB_BASE_PATH}>
     <Router/>
   </BrowserRouter>
 ), document.getElementById('app'));

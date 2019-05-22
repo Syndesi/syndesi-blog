@@ -22,7 +22,7 @@ export default class Header extends React.Component {
               <li class="site-logo">
                 <a href="/">
                   <h3 class="icon">syndesi_big</h3>
-                  <h3 class="title">Syndesi</h3>
+                  <h3 class="title">{process.env.APP_NAME}</h3>
                 </a>
               </li>
               <li class="site-link">
