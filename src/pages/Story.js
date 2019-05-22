@@ -36,6 +36,7 @@ export default class Post extends React.Component {
     if(s){
       let posts = [];
       this.state.posts.forEach((p) => {
+        console.log(p);
         //posts.push(
         //  <div key={p.post_id} class="mb-1">
         //    <h4>{p.title}</h4>
@@ -58,7 +59,7 @@ export default class Post extends React.Component {
           {img}
           <h3>Posts in this story:</h3>
           <ContainerTile>
-            <Matrix>
+            <Matrix className="my-2">
               {posts}
             </Matrix>
           </ContainerTile>

@@ -3,6 +3,7 @@ a:hover,
 a:active,
 a:focus {
   text-decoration: none;
+  cursor: pointer;
 }
 a {
   color: $color-primary;

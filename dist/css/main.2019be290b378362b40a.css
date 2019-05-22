@@ -2747,7 +2747,8 @@ a,
 a:hover,
 a:active,
 a:focus {
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
 
 a {
   color: #1a6fe6;
@@ -3343,6 +3344,14 @@ ul.flat {
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 1rem;
   grid-row-gap: 1rem; }
+
+@media (max-width: 52rem) {
+  .matrix {
+    grid-template-columns: 1fr 1fr; } }
+
+@media (max-width: 32rem) {
+  .matrix {
+    grid-template-columns: 1fr; } }
 
 .tile-cite .cite-title {
   border-bottom: 1px solid #dcdcdc; }
