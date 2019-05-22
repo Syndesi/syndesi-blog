@@ -14,7 +14,7 @@ export default class Header extends React.Component {
   }
 
   render(){
-    var s = this.props.store;
+    let s = this.props.store;
     return (
         <div class="header page">
           <div class="layout-equal-spaced stretch">
@@ -26,14 +26,14 @@ export default class Header extends React.Component {
                 </a>
               </li>
               <li class="site-link">
-                <NavLink activeClassName='active' to={"/" + s.lang + "/"}>
+                <NavLink className='active' to={"/" + s.lang + "/"}>
                   <p>Blog</p>
                 </NavLink>
               </li>
               <li class="site-link">
-                <NavLink activeClassName='active' to="/apps/">
+                <a href="/apps/">
                   <p>Apps</p>
-                </NavLink>
+                </a>
               </li>
             </ul>
             <ul class="site-options">
