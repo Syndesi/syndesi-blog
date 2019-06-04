@@ -1,6 +1,6 @@
 {
   "name": "syndesi-blog",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "index.js",
   "repository": "https://github.com/Syndesi/syndesi-blog",
@@ -8,7 +8,8 @@
   "license": "Apache-2.0",
   "scripts": {
     "build": "webpack --progress --mode production",
-    "start": "webpack-dev-server --content-base src/ --inline --history-api-fallback"
+    "start": "webpack-dev-server --content-base src/ --inline --history-api-fallback",
+    "postversion": "git push --tags && git push && echo \"Successfully released version $npm_package_version!\""
   },
   "dependencies": {
     "anchor-offset": "^1.0.6",
