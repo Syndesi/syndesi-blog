@@ -1,12 +1,25 @@
 import React from 'react';
 import moment from 'moment';
+import {NavLink} from 'react-router-dom';
+import {inject, observer} from "mobx-react";
 
 
+@inject("store")
+@observer
 export default class PostCard extends React.Component {
 
   render(){
     let p = this.props;
+    let s = this.props.store;
     let created = moment(p.created_on).format('DD.MM.YYYY');
+    let author = null;
+    if(p.created_by){
+      author = (
+        <p class="detail">
+          by <NavLink className="detail" to={"/" + s.lang + "/author/" + p.created_by.id + "-" + p.created_by.last_name}>{p.created_by.last_name}</NavLink>
+        </p>
+      );
+    }
     return (
       <div class="card">
         <div class="row">
@@ -18,7 +31,7 @@ export default class PostCard extends React.Component {
           <h4>{p.title}</h4>
         </div>
         <div class="row px-1 pb-1 layout-equal-spaced">
-          <p class="detail">by <a class="detail" href={p.authorUrl}>{p.created_by.last_name}</a></p>
+          {author}
           <p class="detail">{'created on ' + created}</p>
         </div>
         <div class="rpw px-1 pb-1">

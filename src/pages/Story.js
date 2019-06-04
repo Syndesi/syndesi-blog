@@ -37,12 +37,6 @@ export default class Post extends React.Component {
       let posts = [];
       this.state.posts.forEach((p) => {
         console.log(p);
-        //posts.push(
-        //  <div key={p.post_id} class="mb-1">
-        //    <h4>{p.title}</h4>
-        //    <p>{p.summary}</p>
-        //  </div>
-        //);
         posts.push(
           <PostCard {...p} />
         );

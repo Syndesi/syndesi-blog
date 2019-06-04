@@ -8,6 +8,24 @@ export default class Post {
     this.d = directus;
   }
 
+  getPostObject(data, languageCode){
+    return {
+      title: '',
+      subtitle: '',
+      summary: '',
+      content: '',
+      author: [],
+      created: null,
+      updated: null,
+      language: null,
+      postId: null,
+      tag: [],
+      story: null,
+      status: 'published',
+      thumbnail: null
+    };
+  }
+
   async getPost(id, languageCode){
     let d = this.d;
     try {
