@@ -1,0 +1,19 @@
+{
+  "codeTile.buttonHover": "نسخة الكود",
+  "codeTile.codeCopiedToast": "نسخ إلى الحافظة.",
+  "githubTile.author": "{{author}} بواسطة",
+  "githubTile.createdOn": "{{date}} تم إنشاؤها على",
+  "githubTile.latestVersion": "{{version}} :احدث اصدار",
+  "githubTile.versionReleasedBy": "{{author}} بواسطة",
+  "githubTile.versionReleasedOn": "{{date}} على",
+  "imageTile.menu.fullscreen": "شاشة كاملة",
+  "imageTile.menu.openImage": "صورة مفتوحة",
+  "imageTile.menu.quality.number": "% {{percentage}}",
+  "imageTile.menu.quality.original": "أصلي",
+  "imageTile.menu.size": "بحجم",
+  "imageTile.menu.size.desktop": "سطح المكتب",
+  "imageTile.menu.size.fullHd": "دقة عالية",
+  "imageTile.menu.size.original": "أصلي",
+  "imageTile.menu.size.smartphone": "الهاتف الذكي",
+  "imageTile.pagination": "{{allPages}} من {{currentPage}}"
+}

@@ -1,0 +1,19 @@
+{
+  "codeTile.buttonHover": "kopi kode",
+  "codeTile.codeCopiedToast": "Kopiert til utklippstavlen.",
+  "githubTile.author": "av {{author}}",
+  "githubTile.createdOn": "opprettet på {{date}}",
+  "githubTile.latestVersion": "Nyeste versjonen: {{version}}",
+  "githubTile.versionReleasedBy": "av {{author}}",
+  "githubTile.versionReleasedOn": "på {{date}}",
+  "imageTile.menu.fullscreen": "Fullscreen",
+  "imageTile.menu.openImage": "Åpne bilde",
+  "imageTile.menu.quality.number": "{{percentage}} %",
+  "imageTile.menu.quality.original": "Original",
+  "imageTile.menu.size": "Størrelse",
+  "imageTile.menu.size.desktop": "Desktop",
+  "imageTile.menu.size.fullHd": "Full HD",
+  "imageTile.menu.size.original": "Original",
+  "imageTile.menu.size.smartphone": "Smarttelefon",
+  "imageTile.pagination": "{{currentPage}} av {{allPages}}"
+}

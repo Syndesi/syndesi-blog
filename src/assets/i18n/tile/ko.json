@@ -1,0 +1,19 @@
+{
+  "codeTile.buttonHover": "코드 복사",
+  "codeTile.codeCopiedToast": "클립 보드에 복사되었습니다.",
+  "githubTile.author": "으로 {{author}}",
+  "githubTile.createdOn": "에 만든 {{date}}",
+  "githubTile.latestVersion": "최신 버전: {{version}}",
+  "githubTile.versionReleasedBy": "으로 {{author}}",
+  "githubTile.versionReleasedOn": "에 {{date}}",
+  "imageTile.menu.fullscreen": "전체 화면",
+  "imageTile.menu.openImage": "이미지 열기",
+  "imageTile.menu.quality.number": "{{percentage}} %",
+  "imageTile.menu.quality.original": "기발한",
+  "imageTile.menu.size": "크기",
+  "imageTile.menu.size.desktop": "데스크톱",
+  "imageTile.menu.size.fullHd": "가득 차있는 hd",
+  "imageTile.menu.size.original": "기발한",
+  "imageTile.menu.size.smartphone": "스마트 폰",
+  "imageTile.pagination": "{{currentPage}} 의 {{allPages}}"
+}

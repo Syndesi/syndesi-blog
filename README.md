@@ -19,3 +19,8 @@ This is the software used for my own blog. It depends on an custom API (powered 
 1. Open a console in the root folder.
 2. Execute `yarn build`.
 3. If nothing failed, the compiled files are available at `/dist/`. Make sure to place these files at the same folder as specified in `.env.prod` (normally `/blog/`).
+
+### Commits & co
+
+1. Commit all required patches/features.
+2. Execute `yarn version --patch`.
