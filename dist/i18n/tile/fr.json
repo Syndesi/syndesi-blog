@@ -1,0 +1,23 @@
+{
+  "codeTile.buttonHover": "copier le code",
+  "codeTile.codeCopiedToast": "Copié dans le presse-papier.",
+  "demo": "demo fr",
+  "github": {
+    "author": "par <1>{{author}}</1>",
+    "innerfolder": {}
+  },
+  "githubTile.createdOn": "créé sur {{date}}",
+  "githubTile.latestVersion": "Dernière version: {{version}}",
+  "githubTile.versionReleasedBy": "par {{author}}",
+  "githubTile.versionReleasedOn": "sur {{date}}",
+  "imageTile.menu.fullscreen": "Fullscreen",
+  "imageTile.menu.openImage": "Ouvrir l'image",
+  "imageTile.menu.quality.number": "{{percentage}} %",
+  "imageTile.menu.quality.original": "Originale",
+  "imageTile.menu.size": "Taille",
+  "imageTile.menu.size.desktop": "Bureau",
+  "imageTile.menu.size.fullHd": "Full HD",
+  "imageTile.menu.size.original": "Originale",
+  "imageTile.menu.size.smartphone": "téléphone intelligent",
+  "imageTile.pagination": "{{currentPage}} de {{allPages}}"
+}

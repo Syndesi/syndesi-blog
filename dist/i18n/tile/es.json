@@ -1,0 +1,23 @@
+{
+  "codeTile.buttonHover": "copiar código",
+  "codeTile.codeCopiedToast": "Copiado al portapapeles.",
+  "demo": "demo es",
+  "github": {
+    "author": "por <1>{{author}}</1>",
+    "innerfolder": {}
+  },
+  "githubTile.createdOn": "creado en {{date}}",
+  "githubTile.latestVersion": "Ultima versión: {{version}}",
+  "githubTile.versionReleasedBy": "por {{author}}",
+  "githubTile.versionReleasedOn": "en {{date}}",
+  "imageTile.menu.fullscreen": "Fullscreen",
+  "imageTile.menu.openImage": "Abrir imagen",
+  "imageTile.menu.quality.number": "{{percentage}} %",
+  "imageTile.menu.quality.original": "Original",
+  "imageTile.menu.size": "Tamaño",
+  "imageTile.menu.size.desktop": "Escritorio",
+  "imageTile.menu.size.fullHd": "Full HD",
+  "imageTile.menu.size.original": "Original",
+  "imageTile.menu.size.smartphone": "Smartphone",
+  "imageTile.pagination": "{{currentPage}} de {{allPages}}"
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import { withRouter } from "react-router";
 import Loadable from 'react-loadable';
@@ -43,6 +43,11 @@ const E404 = Loadable({
   loading: Loader,
 });
 
+const Wip = Loadable({
+  loader: () => import('./pages/Wip.js'),
+  loading: Loader,
+});
+
 @withRouter
 @observer
 export default class Router extends React.Component {
@@ -63,29 +68,32 @@ export default class Router extends React.Component {
   render() {
     return (
       <Provider store={this.store}>
-        <div className="app">
-          <Favicon />
-          <Helmet>
-            <meta charSet="utf-8" />
-            <meta name="theme-color" content="#ffffff" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-            <title>{this.store.pageTitle}</title>
-          </Helmet>
-          <Route component={Header}/>
-          <Switch>
-            <Route exact path="/" render={() => (
-              <Redirect to="/en"/>
-            )}/>
-            <Route exact path='/credits' component={Credits}/>
-            <Route exact path='/:lang(\w{2})' component={Index}/>
-            <Route path='/:lang/post/:postId' component={Post}/>
-            <Route path='/:lang/story/:storyId' component={Story}/>
-            <Route path='/error' component={ErrorRoute}/>
-            <Route exact path='/*' component={E404} />
-          </Switch>
-          <Route component={Footer}/>
-          <ToastContainer hideProgressBar="true" />
-        </div>
+        <Suspense fallback={Loader}>
+          <div className="app">
+            <Favicon />
+            <Helmet>
+              <meta charSet="utf-8" />
+              <meta name="theme-color" content="#ffffff" />
+              <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+              <title>{this.store.pageTitle}</title>
+            </Helmet>
+            <Route component={Header}/>
+            <Switch>
+              <Route exact path="/" render={() => (
+                <Redirect to="/en"/>
+              )}/>
+              <Route exact path='/credits' component={Credits}/>
+              <Route exact path='/wip' component={Wip}/>
+              <Route exact path='/:lang(\w{2})' component={Index}/>
+              <Route path='/:lang/post/:postId' component={Post}/>
+              <Route path='/:lang/story/:storyId' component={Story}/>
+              <Route path='/error' component={ErrorRoute}/>
+              <Route exact path='/*' component={E404} />
+            </Switch>
+            <Route component={Footer}/>
+            <ToastContainer hideProgressBar="true" />
+          </div>
+        </Suspense>
       </Provider>
     );
   }

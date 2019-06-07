@@ -3,7 +3,9 @@ import axios from "axios";
 import moment from 'moment';
 import Error from '../Error.js';
 import Loader from '../Loader.js';
+import { withNamespaces, translate, Trans } from 'react-i18next';
 
+//@translate
 export default class GithubTile extends React.Component {
 
   constructor(props){
@@ -98,13 +100,17 @@ export default class GithubTile extends React.Component {
         <Loader />
       );
     } else {
+      // <p className="detail">by <a className="detail" href={s.ownerUrl} target="_blank">{s.owner}</a></p>
+      //<Trans i18nKey='githubTile.author'>
+      //             by <a class="detail" href={s.ownerUrl} target="_blank">{s.owner}</a>
+      //           </Trans>
       content = [
         <div class="row px-1 layout-equal-spaced">
           <h4>{s.project}</h4>
           <p class="icon">github</p>
         </div>,
         <div class="row px-1 layout-equal-spaced">
-          <p class="detail">by <a class="detail" href={s.ownerUrl} target="_blank">{s.owner}</a></p>
+          <p class="detail"></p>
           <p class="detail">{'created on ' + created}</p>
         </div>,
         <div class="row px-1 pt-1">
