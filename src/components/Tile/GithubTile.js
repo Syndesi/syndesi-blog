@@ -3,9 +3,10 @@ import axios from "axios";
 import moment from 'moment';
 import Error from '../Error.js';
 import Loader from '../Loader.js';
-import { withNamespaces, translate, Trans } from 'react-i18next';
+import {Trans, withTranslation} from 'react-i18next';
 
-//@translate
+
+@withTranslation('tile')
 export default class GithubTile extends React.Component {
 
   constructor(props){
@@ -104,14 +105,19 @@ export default class GithubTile extends React.Component {
       //<Trans i18nKey='githubTile.author'>
       //             by <a class="detail" href={s.ownerUrl} target="_blank">{s.owner}</a>
       //           </Trans>
+
       content = [
         <div class="row px-1 layout-equal-spaced">
           <h4>{s.project}</h4>
           <p class="icon">github</p>
         </div>,
         <div class="row px-1 layout-equal-spaced">
-          <p class="detail"></p>
-          <p class="detail">{'created on ' + created}</p>
+          <p class="detail"><Trans i18nKey="githubTile.createdBy">
+            by <a class="detail" href={s.ownerUrl} target="_blank">{{createdBy: s.owner}}</a>
+          </Trans></p>
+          <p class="detail"><Trans i18nKey="githubTile.createdOn">
+            created on {{date: created}}
+          </Trans></p>
         </div>,
         <div class="row px-1 pt-1">
           <p>{s.description}</p>
@@ -125,7 +131,9 @@ export default class GithubTile extends React.Component {
         let latestReleaseDate = (moment(s.latestRelease.date)).format('DD.MM.YYYY');
         content.push(
           <div class="row px-1 pt-1 bg-level-1">
-            <p>Latest release: <a class="text-primary" href={s.latestRelease.versionUrl} target="_blank">{s.latestRelease.version}</a></p>
+            <p><Trans i18nKey="githubTile.latestVersion">
+              Latest release: <a class="text-primary" href={s.latestRelease.versionUrl} target="_blank">{{version: s.latestRelease.version}}</a>
+            </Trans></p>
           </div>);
         content.push(
           <div class="row px-1 pb-1 layout-equal-spaced bg-level-1">

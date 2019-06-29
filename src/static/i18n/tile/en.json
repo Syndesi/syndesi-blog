@@ -1,23 +1,37 @@
 {
-  "codeTile.buttonHover": "copy code",
-  "codeTile.codeCopiedToast": "Copied to clipboard.",
+  "codeTile": {
+    "buttonHover": "copy code",
+    "codeCopiedToast": "Copied to clipboard."
+  },
   "demo": "demo en",
   "github": {
     "author": "by <1>{{author}}</1>",
-    "innerfolder": {}
+    "demo": "en {{demo}} en"
   },
-  "githubTile.createdOn": "created on {{date}}",
-  "githubTile.latestVersion": "Latest version: {{version}}",
-  "githubTile.versionReleasedBy": "by {{author}}",
-  "githubTile.versionReleasedOn": "on {{date}}",
-  "imageTile.menu.fullscreen": "Fullscreen",
-  "imageTile.menu.openImage": "Open image",
-  "imageTile.menu.quality.number": "{{percentage}} %",
-  "imageTile.menu.quality.original": "Original",
-  "imageTile.menu.size": "Size",
-  "imageTile.menu.size.desktop": "Desktop",
-  "imageTile.menu.size.fullHd": "Full HD",
-  "imageTile.menu.size.original": "Original",
-  "imageTile.menu.size.smartphone": "Smartphone",
-  "imageTile.pagination": "{{currentPage}} of {{allPages}}"
+  "githubTile": {
+    "createdBy": "by <1>{{createdBy}}</1>",
+    "createdOn": "created on {{date}}",
+    "latestVersion": "Latest version: <1>{{version}}</1>",
+    "versionReleasedBy": "by {{author}}",
+    "versionReleasedOn": "on {{date}}"
+  },
+  "imageTile": {
+    "menu": {
+      "fullscreen": "Fullscreen",
+      "openImage": "Open image",
+      "quality": {
+        "number": "{{percentage}} %",
+        "original": "Original",
+        "quality": "Quality"
+      },
+      "size": {
+        "desktop": "Desktop",
+        "fullHd": "Full HD",
+        "original": "Original",
+        "size": "Size",
+        "smartphone": "Smartphone"
+      }
+    },
+    "pagination": "{{currentPage}} of {{allPages}}"
+  }
 }

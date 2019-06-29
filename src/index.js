@@ -8,6 +8,8 @@ import {initReactI18next} from "react-i18next";
 
 import './style.scss';
 import Router from './router.js';
+import {Provider} from "mobx-react";
+import Store from './Store.js';
 
 i18next
   .use(Backend)
@@ -24,10 +26,15 @@ i18next
     load: 'languageOnly'
   });
 
+var store = new Store();
+document.store = store;
+
 ReactDOM.render((
   <I18nextProvider i18n={i18next}>
-    <BrowserRouter basename={process.env.WEB_BASE_PATH}>
-      <Router/>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter basename={process.env.WEB_BASE_PATH}>
+        <Router/>
+      </BrowserRouter>
+    </Provider>
   </I18nextProvider>
 ), document.getElementById('app'));

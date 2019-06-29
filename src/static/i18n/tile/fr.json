@@ -1,23 +1,37 @@
 {
-  "codeTile.buttonHover": "copier le code",
-  "codeTile.codeCopiedToast": "Copié dans le presse-papier.",
+  "codeTile": {
+    "buttonHover": "copier le code",
+    "codeCopiedToast": "Copié dans le presse-papier."
+  },
   "demo": "demo fr",
   "github": {
     "author": "par <1>{{author}}</1>",
-    "innerfolder": {}
+    "demo": "fr {{demo}} fr"
   },
-  "githubTile.createdOn": "créé sur {{date}}",
-  "githubTile.latestVersion": "Dernière version: {{version}}",
-  "githubTile.versionReleasedBy": "par {{author}}",
-  "githubTile.versionReleasedOn": "sur {{date}}",
-  "imageTile.menu.fullscreen": "Fullscreen",
-  "imageTile.menu.openImage": "Ouvrir l'image",
-  "imageTile.menu.quality.number": "{{percentage}} %",
-  "imageTile.menu.quality.original": "Originale",
-  "imageTile.menu.size": "Taille",
-  "imageTile.menu.size.desktop": "Bureau",
-  "imageTile.menu.size.fullHd": "Full HD",
-  "imageTile.menu.size.original": "Originale",
-  "imageTile.menu.size.smartphone": "téléphone intelligent",
-  "imageTile.pagination": "{{currentPage}} de {{allPages}}"
+  "githubTile": {
+    "createdBy": "par <1>{{createdBy}}</1>",
+    "createdOn": "créé sur {{date}}",
+    "latestVersion": "Dernière version: {{version}}",
+    "versionReleasedBy": "par {{author}}",
+    "versionReleasedOn": "sur {{date}}"
+  },
+  "imageTile": {
+    "menu": {
+      "fullscreen": "Fullscreen",
+      "openImage": "Ouvrir l'image",
+      "quality": {
+        "number": "{{percentage}} %",
+        "original": "Originale",
+        "quality": "Qualité"
+      },
+      "size": {
+        "desktop": "Bureau",
+        "fullHd": "Full HD",
+        "original": "Originale",
+        "size": "Taille",
+        "smartphone": "téléphone intelligent"
+      }
+    },
+    "pagination": "{{currentPage}} de {{allPages}}"
+  }
 }

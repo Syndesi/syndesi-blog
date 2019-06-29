@@ -1,23 +1,37 @@
 {
-  "codeTile.buttonHover": "نسخة الكود",
-  "codeTile.codeCopiedToast": "نسخ إلى الحافظة.",
+  "codeTile": {
+    "buttonHover": "نسخة الكود",
+    "codeCopiedToast": "نسخ إلى الحافظة."
+  },
   "demo": "demo ar",
   "github": {
     "author": "<1>{{author}}</1> بواسطة",
-    "innerfolder": {}
+    "demo": "ar {{demo}} ar"
   },
-  "githubTile.createdOn": "{{date}} تم إنشاؤها على",
-  "githubTile.latestVersion": "{{version}} :احدث اصدار",
-  "githubTile.versionReleasedBy": "{{author}} بواسطة",
-  "githubTile.versionReleasedOn": "{{date}} على",
-  "imageTile.menu.fullscreen": "شاشة كاملة",
-  "imageTile.menu.openImage": "صورة مفتوحة",
-  "imageTile.menu.quality.number": "% {{percentage}}",
-  "imageTile.menu.quality.original": "أصلي",
-  "imageTile.menu.size": "بحجم",
-  "imageTile.menu.size.desktop": "سطح المكتب",
-  "imageTile.menu.size.fullHd": "دقة عالية",
-  "imageTile.menu.size.original": "أصلي",
-  "imageTile.menu.size.smartphone": "الهاتف الذكي",
-  "imageTile.pagination": "{{allPages}} من {{currentPage}}"
+  "githubTile": {
+    "createdBy": "<1>{{createdBy}}</1> بواسطة",
+    "createdOn": "{{date}} تم إنشاؤها على",
+    "latestVersion": "<1>{{version}}</1> :احدث اصدار",
+    "versionReleasedBy": "{{author}} بواسطة",
+    "versionReleasedOn": "{{date}} على"
+  },
+  "imageTile": {
+    "menu": {
+      "fullscreen": "شاشة كاملة",
+      "openImage": "صورة مفتوحة",
+      "quality": {
+        "number": "% {{percentage}}",
+        "original": "أصلي",
+        "quality": "جودة"
+      },
+      "size": {
+        "desktop": "سطح المكتب",
+        "fullHd": "دقة عالية",
+        "original": "أصلي",
+        "size": "بحجم",
+        "smartphone": "الهاتف الذكي"
+      }
+    },
+    "pagination": "{{allPages}} من {{currentPage}}"
+  }
 }

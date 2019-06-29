@@ -1,5 +1,6 @@
 import { observable, computed } from "mobx";
 import Cookies from "js-cookie";
+import i18next from 'i18next';
 import axios from "axios";
 
 import Directus from "./lib/directus/Directus.js";
@@ -12,6 +13,7 @@ export default class Store {
   @observable loaded     = false;
   @observable cites      = [];
   @observable d          = null;
+  i18n                   = null;
 
   constructor(){
     this.loadLanguage();
@@ -124,10 +126,15 @@ export default class Store {
       navigator.language ||
       navigator.userLanguage ||
       process.env.APP_DEFAULT_LANGUAGE_CODE;
-    if(lang.length > 2){
-      lang = lang.substr(0, 2);
+    this.setLanguage(lang);
+  }
+
+  setLanguage(code){
+    if(code.length > 2){
+      code = code.substr(0, 2);
     }
-    this.lang = lang;
+    this.lang = code;
+    i18next.changeLanguage(code);
   }
 
 }

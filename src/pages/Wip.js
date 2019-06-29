@@ -16,12 +16,19 @@ export default class Wip extends React.Component {
 
   render(){
     console.log(this.props);
+    let demo = "demo whatever?";
+    let author = "AuthorName";
     return (
       <div class="page" style={{"padding-bottom": "800px"}}>
         <p>WIP, hello world :)</p>
         <p>{this.props.t('demo')}</p>
-        <p><Trans i18nKey="github.author" author="author">
-          text davor <p>autor</p>
+        <p>{this.props.t('github.author', {author:"author"})}</p>
+        <hr />
+        <p><Trans i18nKey="github.author">
+          text davor <span>{{author}}</span> text danach
+        </Trans></p>
+        <p><Trans i18nKey="github.demo">
+          nolang {{demo}} nolang
         </Trans></p>
       </div>
     );
