@@ -16,7 +16,7 @@ i18next
   .use(initReactI18next)
   .init({
     interpolation: { escapeValue: false },  // React already does escaping
-    lng: 'ko',                              // language to use
+    lng: 'en',                              // language to use
     backend: {
       // for all available options read the backend's repository readme file
       loadPath: '/i18n/{{ns}}/{{lng}}.json'

@@ -3499,6 +3499,69 @@ ul.flat {
 .flex-wrap {
   flex-wrap: wrap; }
 
+.tile-image {
+  background-color: transparent; }
+  .tile-image .aspect-ratio-3-2 {
+    background-color: transparent; }
+  .tile-image .image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .tile-image .text {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px; }
+    .tile-image .text p, .tile-image .text h4 {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #ffffff;
+      display: inline;
+      padding: 2px 0.5rem;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone; }
+    .tile-image .text .row {
+      width: 100%;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      padding-bottom: 0.4rem; }
+  .tile-image.fullscreen {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 0px;
+    z-index: 550;
+    background-color: #000000; }
+    .tile-image.fullscreen .image {
+      object-fit: contain; }
+    .tile-image.fullscreen ul.iconlist {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      list-style-type: none; }
+      .tile-image.fullscreen ul.iconlist > li {
+        margin: 0px;
+        padding: 0px;
+        color: #ffffff;
+        font-size: 2rem;
+        cursor: pointer; }
+
+@media print {
+  .tile-image {
+    page-break-inside: avoid; }
+    .tile-image .text p, .tile-image .text h4 {
+      background-color: #ffffff !important;
+      color: #000000 !important; }
+    .tile-image .image {
+      transform: scale(1) translate(0px, 0px) !important;
+      transition: none !important; } }
+
 .tile-math .katex-display {
   margin: 0px; }
 

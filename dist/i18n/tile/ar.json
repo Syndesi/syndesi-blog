@@ -17,6 +17,8 @@
   },
   "imageTile": {
     "menu": {
+      "copyImageUrl": "انسخ رابط الصورة",
+      "copyImageUrlToast": "تم نسخ عنوان URL للصورة",
       "fullscreen": "شاشة كاملة",
       "openImage": "صورة مفتوحة",
       "quality": {

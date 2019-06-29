@@ -17,6 +17,8 @@
   },
   "imageTile": {
     "menu": {
+      "copyImageUrl": "Kopiere Bild-URL",
+      "copyImageUrlToast": "Bild-URL kopiert",
       "fullscreen": "Fullscreen",
       "openImage": "Bild öffnen",
       "quality": {

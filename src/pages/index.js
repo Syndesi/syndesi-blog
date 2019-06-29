@@ -15,6 +15,7 @@ import CiteTile from '../components/Tile/CiteTile.js';
 import MarkdownTile from '../components/Tile/MarkdownTile.js';
 import CommentTile from '../components/Tile/CommentTile.js';
 import FormTile from '../components/Tile/FormTile.js';
+import ImageTile from '../components/Tile/ImageTile.js';
 
 import Error from '../components/Error.js';
 
@@ -80,6 +81,9 @@ export default class Index extends React.Component {
         <PrismTile />
         <GithubTile src="facebook/react" />
         <GithubTile src="facebook/react/2" />
+        <ImageTile />
+        <ImageTile src="https://api.syndesi.dev/uploads/_/originals/img_0622.jpg" />
+        <ImageTile src="https://api.syndesi.dev/uploads/_/originals/img_0264.jpg" />
         <div class="tile">
           <Error />
         </div>

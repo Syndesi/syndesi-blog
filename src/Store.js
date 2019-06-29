@@ -2,8 +2,12 @@ import { observable, computed } from "mobx";
 import Cookies from "js-cookie";
 import i18next from 'i18next';
 import axios from "axios";
+import copy from 'copy-to-clipboard';
+import { toast } from 'react-toastify';
 
 import Directus from "./lib/directus/Directus.js";
+
+
 
 export default class Store {
 
@@ -135,6 +139,12 @@ export default class Store {
     }
     this.lang = code;
     i18next.changeLanguage(code);
+  }
+
+  copyToClipboard(data, message = 'tile:demo'){
+    message = i18next.t(message);
+    copy(data);
+    toast(message);
   }
 
 }

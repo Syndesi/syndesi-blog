@@ -42,6 +42,7 @@
     "react-slick": "^0.24.0",
     "react-toastify": "^5.1.0",
     "react-twitter-embed": "^2.0.8",
+    "react-uid": "^2.2.0",
     "slick-carousel": "^1.8.1",
     "syndesi-license-icons": "^1.0.0"
   },

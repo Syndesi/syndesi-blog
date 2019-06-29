@@ -47,6 +47,9 @@ export default class Header extends React.Component {
                 <a href="#" onClick={(e) => {this.props.store.setLanguage('ar');e.preventDefault();}}>AR</a>
               </li>
               <li>
+                <a href="#" onClick={(e) => {this.props.store.setLanguage('ko');e.preventDefault();}}>KO</a>
+              </li>
+              <li>
                 <a href="#">
                   <p className="icon">search</p>
                 </a>
