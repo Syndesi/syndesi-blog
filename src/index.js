@@ -19,7 +19,7 @@ i18next
     lng: 'en',                              // language to use
     backend: {
       // for all available options read the backend's repository readme file
-      loadPath: '/i18n/{{ns}}/{{lng}}.json'
+      loadPath: process.env.WEB_BASE_PATH + 'i18n/{{ns}}/{{lng}}.json'
     },
     ns: ['footer', 'header', 'tile'],
     defaultNS: 'tile',
