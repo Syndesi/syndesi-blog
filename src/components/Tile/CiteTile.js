@@ -1,9 +1,10 @@
 import React from 'react';
 import {inject} from "mobx-react";
-
+import {Trans, withTranslation} from 'react-i18next';
 import WebCite from '../Cite/WebCite.js';
 
 
+@withTranslation('tile')
 @inject("store")
 export default class CiteTile extends React.Component {
 
@@ -33,7 +34,9 @@ export default class CiteTile extends React.Component {
     return (
       <div class={'tile tile-' + this.type} id="cite" >
         <div class="row px-1 cite-title">
-          <h4>Sources</h4>
+          <h4><Trans i18nKey="citeTile.sources">
+            Sources
+          </Trans></h4>
         </div>
         <div class="row p-1 cite-list">
           {cites}

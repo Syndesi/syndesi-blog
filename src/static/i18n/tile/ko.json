@@ -1,7 +1,6 @@
 {
-  "codeTile": {
-    "buttonHover": "코드 복사",
-    "codeCopiedToast": "클립 보드에 복사되었습니다."
+  "citeTile": {
+    "sources": "출처"
   },
   "demo": "demo ko",
   "github": {
@@ -35,5 +34,9 @@
       }
     },
     "pagination": "{{currentPage}} 의 {{allPages}}"
+  },
+  "prismTile": {
+    "buttonHover": "코드 복사",
+    "codeCopiedToast": "클립 보드에 복사되었습니다"
   }
 }

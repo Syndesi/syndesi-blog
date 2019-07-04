@@ -1,7 +1,6 @@
 {
-  "codeTile": {
-    "buttonHover": "Code kopieren",
-    "codeCopiedToast": "In die Zwischenablage kopiert."
+  "citeTile": {
+    "sources": "Quellen"
   },
   "demo": "demo de",
   "github": {
@@ -35,5 +34,9 @@
       }
     },
     "pagination": "{{currentPage}} von {{allPages}}"
+  },
+  "prismTile": {
+    "buttonHover": "Code kopieren",
+    "codeCopiedToast": "In die Zwischenablage kopiert"
   }
 }

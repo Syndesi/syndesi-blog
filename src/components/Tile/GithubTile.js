@@ -4,6 +4,7 @@ import moment from 'moment';
 import Error from '../Error.js';
 import Loader from '../Loader.js';
 import {Trans, withTranslation} from 'react-i18next';
+import i18next from 'i18next';
 
 
 @withTranslation('tile')
@@ -89,7 +90,7 @@ export default class GithubTile extends React.Component {
 
   render(){
     let s             = this.state;
-    let created       = (moment(s.created_at)).format('DD.MM.YYYY');
+    let created       = (moment(s.created_at)).format(i18next.t('l10n:dateTime.dateFormat'));
     let content       = null;
     let latestRelease = null;
     if(s.error){
@@ -101,11 +102,6 @@ export default class GithubTile extends React.Component {
         <Loader />
       );
     } else {
-      // <p className="detail">by <a className="detail" href={s.ownerUrl} target="_blank">{s.owner}</a></p>
-      //<Trans i18nKey='githubTile.author'>
-      //             by <a class="detail" href={s.ownerUrl} target="_blank">{s.owner}</a>
-      //           </Trans>
-
       content = [
         <div class="row px-1 layout-equal-spaced">
           <h4>{s.project}</h4>
@@ -137,8 +133,12 @@ export default class GithubTile extends React.Component {
           </div>);
         content.push(
           <div class="row px-1 pb-1 layout-equal-spaced bg-level-1">
-            <p class="small text-secondary">by <a class="text-secondary" href={s.latestRelease.authorUrl} target="_blank">{s.latestRelease.author}</a></p>
-            <p class="small text-secondary">{'on ' + latestReleaseDate}</p>
+            <p class="small text-secondary"><Trans i18nKey="githubTile.versionReleasedBy">
+              by <a class="text-secondary" href={s.latestRelease.authorUrl} target="_blank">{{author: s.latestRelease.author}}</a>
+            </Trans></p>
+            <p class="small text-secondary"><Trans i18nKey="githubTile.versionReleasedOn">
+              by {{date: latestReleaseDate}}
+            </Trans></p>
           </div>
         );
       }

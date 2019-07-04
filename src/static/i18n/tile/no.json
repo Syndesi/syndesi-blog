@@ -1,7 +1,6 @@
 {
-  "codeTile": {
-    "buttonHover": "kopi kode",
-    "codeCopiedToast": "Kopiert til utklippstavlen."
+  "citeTile": {
+    "sources": "Kilder"
   },
   "demo": "demo no",
   "github": {
@@ -35,5 +34,9 @@
       }
     },
     "pagination": "{{currentPage}} av {{allPages}}"
+  },
+  "prismTile": {
+    "buttonHover": "kopi kode",
+    "codeCopiedToast": "Kopiert til utklippstavlen"
   }
 }

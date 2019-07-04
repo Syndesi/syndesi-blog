@@ -21,7 +21,7 @@ i18next
       // for all available options read the backend's repository readme file
       loadPath: process.env.WEB_BASE_PATH + 'i18n/{{ns}}/{{lng}}.json'
     },
-    ns: ['footer', 'header', 'tile'],
+    ns: ['footer', 'header', 'tile', 'l10n'],
     defaultNS: 'tile',
     load: 'languageOnly'
   });

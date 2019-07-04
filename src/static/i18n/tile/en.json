@@ -1,7 +1,6 @@
 {
-  "codeTile": {
-    "buttonHover": "copy code",
-    "codeCopiedToast": "Copied to clipboard."
+  "citeTile": {
+    "sources": "Sources"
   },
   "demo": "demo en",
   "github": {
@@ -35,5 +34,9 @@
       }
     },
     "pagination": "{{currentPage}} of {{allPages}}"
+  },
+  "prismTile": {
+    "buttonHover": "copy code",
+    "codeCopiedToast": "Copied to clipboard"
   }
 }

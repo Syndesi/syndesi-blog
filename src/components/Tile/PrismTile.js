@@ -1,9 +1,10 @@
 import React from 'react';
 import Prism from 'prismjs';
-import copy from 'copy-to-clipboard';
-import { toast } from 'react-toastify';
+import {inject} from "mobx-react";
 var HtmlToReactParser = require('html-to-react').Parser;
 
+
+@inject("store")
 export default class PrismTile extends React.Component {
 
   constructor(props){
@@ -15,8 +16,7 @@ export default class PrismTile extends React.Component {
   }
 
   copyToClipboard(e){
-    copy(this.props.code);
-    toast("Copied to clipboard");
+    this.props.store.copyToClipboard(this.props.code, 'tile:prismTile.codeCopiedToast');
   }
 
   render(){
