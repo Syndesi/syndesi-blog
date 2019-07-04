@@ -57,6 +57,7 @@ export default class Router extends React.Component {
   }
 
   componentDidMount() {
+    this.props.store.setHistory(this.props.history);
     anchorOffset(5 * parseFloat(getComputedStyle(document.documentElement).fontSize));
     setTimeout(() => {
       anchorOffset(5 * parseFloat(getComputedStyle(document.documentElement).fontSize));

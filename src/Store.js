@@ -18,6 +18,7 @@ export default class Store {
   @observable cites      = [];
   @observable d          = null;
   i18n                   = null;
+  history                = null;
 
   constructor(){
     this.loadLanguage();
@@ -139,6 +140,18 @@ export default class Store {
     }
     this.lang = code;
     i18next.changeLanguage(code);
+    if(this.history){
+      let nextUrl = '/' + code;
+      let currentUrl = this.history.location.pathname;
+      if(currentUrl.length > 3){
+        nextUrl += currentUrl.substr(3);
+      }
+      this.history.push(nextUrl);
+    }
+  }
+
+  setHistory(history){
+    this.history = history;
   }
 
   copyToClipboard(data, message = 'tile:demo'){
