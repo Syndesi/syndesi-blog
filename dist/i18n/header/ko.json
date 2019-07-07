@@ -1,4 +1,7 @@
 {
-  "apps": "Apps",
-  "blog": "블로그"
+  "links": {
+    "apps": "Apps",
+    "blog": "블로그"
+  },
+  "title": "Syndesi"
 }

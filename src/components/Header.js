@@ -2,16 +2,50 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import {inject, observer} from "mobx-react";
 import Cookies from "js-cookie";
+import headerConfig from '../assets/header.json';
+import {Trans, withTranslation} from "react-i18next";
 
 
+@withTranslation('header')
 @inject("store")
 @observer
 export default class Header extends React.Component {
 
   changeLang(lang){
-    Cookies.set("lang", lang);
-    this.props.store.loadLanguage();
+    this.props.store.setLanguage(lang);
   }
+
+  renderLinks() {
+    let links = [];
+    headerConfig.links.forEach((link, i) => {
+      switch (link.id) {
+        case "blog":
+          links.push(
+              <li class="site-link" key={i}>
+                <NavLink class='active' to={"/" + this.props.store.lang + "/"}>
+                  <p><Trans i18nKey={link.title}>
+                    {link.title}
+                  </Trans></p>
+                </NavLink>
+              </li>
+          );
+          break;
+        default:
+          links.push(
+              <li class="site-link" key={i}>
+                <NavLink to={link.url}>
+                  <p><Trans i18nKey={link.title}>
+                    {link.title}
+                  </Trans></p>
+                </NavLink>
+              </li>
+          );
+          break;
+      }
+    });
+    return links;
+  }
+
 
   render(){
     let s = this.props.store;
@@ -22,19 +56,12 @@ export default class Header extends React.Component {
               <li class="site-logo">
                 <a href="/">
                   <h3 class="icon">syndesi_big</h3>
-                  <h3 class="title">{process.env.APP_NAME}</h3>
+                  <h3 class="title"><Trans i18nKey="title">
+                    {process.env.APP_NAME}
+                  </Trans></h3>
                 </a>
               </li>
-              <li class="site-link">
-                <NavLink className='active' to={"/" + s.lang + "/"}>
-                  <p>Blog</p>
-                </NavLink>
-              </li>
-              <li class="site-link">
-                <a href="/apps/">
-                  <p>Apps</p>
-                </a>
-              </li>
+              {this.renderLinks()}
             </ul>
             <ul class="site-options">
               <li>
@@ -51,12 +78,12 @@ export default class Header extends React.Component {
               </li>
               <li>
                 <a href="#">
-                  <p className="icon">search</p>
+                  <p class="icon">search</p>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <p className="icon">menu</p>
+                  <p class="icon">menu</p>
                 </a>
               </li>
             </ul>

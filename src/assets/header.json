@@ -1,0 +1,12 @@
+{
+  "links": [
+    {
+      "id": "blog",
+      "title": "header:links.blog"
+    },
+    {
+      "title": "header:links.apps",
+      "url": "/apps/"
+    }
+  ]
+}
