@@ -12,6 +12,14 @@ a {
   &:focus {
     color: #68a2f3;
   }
+  &.unstyled {
+    color:inherit;
+    font-weight: inherit;
+    &:hover,
+    &:focus {
+      color: #68a2f3;
+    }
+  }
 }
 
 a.gray {

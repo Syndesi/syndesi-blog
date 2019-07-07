@@ -11,7 +11,7 @@
     "createdBy": "por <1>{{createdBy}}</1>",
     "createdOn": "creado en {{date}}",
     "latestVersion": "Ultima versión: {{version}}",
-    "versionReleasedBy": "por {{author}}",
+    "versionReleasedBy": "por <1>{{author}}</1>",
     "versionReleasedOn": "en {{date}}"
   },
   "imageTile": {

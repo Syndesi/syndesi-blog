@@ -11,7 +11,7 @@
     "createdBy": "으로 <1>{{createdBy}}</1>",
     "createdOn": "에 만든 {{date}}",
     "latestVersion": "최신 버전: {{version}}",
-    "versionReleasedBy": "으로 {{author}}",
+    "versionReleasedBy": "으로 <1>{{author}}</1>",
     "versionReleasedOn": "에 {{date}}"
   },
   "imageTile": {

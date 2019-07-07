@@ -2766,6 +2766,11 @@ a {
   transition: 0.2s ease-in-out; }
   a:hover, a:focus {
     color: #68a2f3; }
+  a.unstyled {
+    color: inherit;
+    font-weight: inherit; }
+    a.unstyled:hover, a.unstyled:focus {
+      color: #68a2f3; }
 
 a.gray:hover, a.gray:focus {
   color: #1a6fe6; }

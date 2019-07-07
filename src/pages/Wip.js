@@ -13,7 +13,6 @@ export default class Wip extends React.Component {
   }
 
   render(){
-    console.log(demoPost);
     return (
       <div class="page">
         <TileRenderer content={demoPost} />

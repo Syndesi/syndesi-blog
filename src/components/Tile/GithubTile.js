@@ -47,23 +47,24 @@ export default class GithubTile extends React.Component {
     // try to load the repository data
     axios.get('https://api.github.com/repos/' + this.props.src)
         .then((res) => {
-          var d = res.data;
-          this.setState({
-            project: d.name,
-            projectUrl: d.html_url,
-            description: d.description,
-            owner: d.owner.login,
-            ownerUrl: d.owner.html_url,
-            license: d.license.spdx_id,
-            issues: d.open_issues,
-            stars: d.stargazers_count,
-            created_at: d.created_at,
-            isLoading: false,
-            error: false
-          });
+          let d = res.data;
+          if(d){
+            this.setState({
+              project: d.name,
+              projectUrl: d.html_url,
+              description: d.description,
+              owner: d.owner.login,
+              ownerUrl: d.owner.html_url,
+              license: d.license.spdx_id,
+              issues: d.open_issues,
+              stars: d.stargazers_count,
+              created_at: d.created_at,
+              isLoading: false,
+              error: false
+            });
+          }
         })
         .catch((e) => {
-          console.log(e.response);
           this.setState({
             error: {
               code: e.response.status,
@@ -75,16 +76,18 @@ export default class GithubTile extends React.Component {
     // try to load data to the latest release
     axios.get('https://api.github.com/repos/' + this.props.src + '/releases')
         .then((res) => {
-          var d = res.data;
-          this.setState({
-            latestRelease: {
-              date: d[0].published_at,
-              version: d[0].tag_name,
-              versionUrl: d[0].html_url,
-              author: d[0].author.login,
-              authorUrl: d[0].author.html_url
-            }
-          });
+          let d = res.data;
+          if(d.length > 0){
+            this.setState({
+              latestRelease: {
+                date: d[0].published_at,
+                version: d[0].tag_name,
+                versionUrl: d[0].html_url,
+                author: d[0].author.login,
+                authorUrl: d[0].author.html_url
+              }
+            });
+          }
         });
   }
 
@@ -104,7 +107,7 @@ export default class GithubTile extends React.Component {
     } else {
       content = [
         <div class="row px-1 layout-equal-spaced">
-          <h4>{s.project}</h4>
+          <h4><a class="unstyled" href={s.projectUrl} target="_blank">{s.project}</a></h4>
           <p class="icon">github</p>
         </div>,
         <div class="row px-1 layout-equal-spaced">
@@ -119,7 +122,11 @@ export default class GithubTile extends React.Component {
           <p>{s.description}</p>
         </div>,
         <div class="row px-1 pb-1">
-          <p class="small">{s.license + ', ' + s.issues}<i class="icon">error_outline</i>, {s.stars} <i class="icon">star_border</i></p>
+          <p class="small">
+            <a class="unstyled" href={"https://choosealicense.com/licenses/"+s.license.toLowerCase()+"/"} target="_blank">{s.license}</a>,{' '}
+            <a class="unstyled" href={s.projectUrl+"/issues"} target="_blank">{s.issues} <i class="icon">error_outline</i></a>,{' '}
+            <a class="unstyled" href={s.projectUrl+"/stargazers"} target="_blank">{s.stars} <i class="icon">star_border</i></a>
+          </p>
         </div>,
       ];
       // append release-data if loaded
