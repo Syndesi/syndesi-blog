@@ -4,6 +4,7 @@ import i18next from 'i18next';
 import axios from "axios";
 import copy from 'copy-to-clipboard';
 import { toast } from 'react-toastify';
+import FontFaceObserver from 'fontfaceobserver';
 
 import Directus from "./lib/directus/Directus.js";
 
@@ -11,18 +12,20 @@ import Directus from "./lib/directus/Directus.js";
 
 export default class Store {
 
-  @observable pageTitle  = process.env.APP_TITLE;
-  @observable lang       = "en";
-  @observable directus   = null;
-  @observable loaded     = false;
-  @observable cites      = [];
-  @observable d          = null;
-  i18n                   = null;
-  history                = null;
+  @observable pageTitle    = process.env.APP_TITLE;
+  @observable lang         = "en";
+  @observable directus     = null;
+  @observable loaded       = false;
+  @observable iconsEnabled = false;
+  @observable cites        = [];
+  @observable d            = null;
+  i18n                     = null;
+  history                  = null;
 
   constructor(){
     this.loadLanguage();
     this.loaded = true;
+    this.trackIconFont();
     this.cites = [
       {
         type: "web",
@@ -118,6 +121,13 @@ export default class Store {
       }
     ];
     this.directus = new Directus(process.env.API_BASE_PATH);
+  }
+
+  trackIconFont(){
+    let iconFont = new FontFaceObserver('icomoon');
+    iconFont.load().then(() => {
+      this.iconsEnabled = true;
+    });
   }
 
   /**

@@ -49,3 +49,8 @@
     font-family: 'syndesi-license-icons' !important;
   }
 }
+
+.icon-disabled .icon {
+  /* hide icons when the required icon-font isn't loaded yet */
+  display: none;
+}

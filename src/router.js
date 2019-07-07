@@ -66,9 +66,14 @@ export default class Router extends React.Component {
 
   render() {
     let s = this.props.store;
+    let appClasses = ["app"];
+    if(!s.iconsEnabled){
+      appClasses.push("icon-disabled");
+    }
+    appClasses = appClasses.join(" ");
     return (
       <Suspense fallback={Loader}>
-        <div className="app">
+        <div class={appClasses}>
           <Favicon />
           <Helmet>
             <meta charSet="utf-8" />
