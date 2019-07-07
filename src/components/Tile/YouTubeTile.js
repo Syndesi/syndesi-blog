@@ -24,8 +24,8 @@ export default class YouTubeTile extends React.Component {
     return (
         <div class={'tile tile-' + this.type}>
           <div class="row">
-            <div className="aspect-ratio-16-9">
-              <div className="aspect-ratio-inside">
+            <div class="aspect-ratio aspect-ratio-16-9">
+              <div class="aspect-ratio-inside">
                 <iframe
                   width="100%"
                   height="100%"

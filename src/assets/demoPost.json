@@ -1,0 +1,66 @@
+{
+  "type": "post",
+  "version": "1.0",
+  "content": [
+    {
+      "type": "image-tile",
+      "parameters": {
+        "src": "https://api.syndesi.dev/uploads/_/originals/img_0519.jpg",
+        "title": "hello world :D",
+        "description": "some description"
+      }
+    },
+    {
+      "type": "markdown-tile",
+      "parameters": {
+        "content": "# Hello world :P\n\nThis is a new post, lorem ipsum etc. :)"
+      }
+    },
+    {
+      "type": "math-tile",
+      "parameters": {
+        "content": "\\lambda = \\frac{c}{f}"
+      }
+    },
+    {
+      "type": "quote-tile",
+      "parameters": {
+        "quote": "I could either watch it happen or be a part of it",
+        "author": "Elon Musk"
+      }
+    },
+    {
+      "type": "prism-tile",
+      "parameters": {
+        "code": "function demo(){\n    console.log(\"Hello world! :D\");\n}",
+        "language": "js"
+      }
+    },
+    {
+      "type": "markdown-tile",
+      "parameters": {
+        "content": "And of course I can use tiles multiple times inside a post, e.g. here (markdown)"
+      }
+    },
+    {
+      "type": "github-tile",
+      "parameters": {
+        "src": "Syndesi/syndesi-blog"
+      }
+    },
+    {
+      "type": "youtube-tile",
+      "parameters": {
+        "src": "OE0_-g7YV1M"
+      }
+    },
+    {
+      "type": "twitter-tile",
+      "parameters": {
+        "id": "1143276971696283648",
+        "type": "tweet"
+      }
+    }
+  ],
+  "metadata": []
+}
