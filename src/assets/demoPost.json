@@ -6,8 +6,8 @@
       "type": "image-tile",
       "parameters": {
         "src": "https://api.syndesi.dev/uploads/_/originals/img_0519.jpg",
-        "title": "hello world :D",
-        "description": "some description"
+        "title": "Just the title",
+        "description": ""
       }
     },
     {

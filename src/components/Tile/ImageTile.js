@@ -48,12 +48,16 @@ export default class ImageTile extends React.Component {
             <div class="aspect-ratio-inside">
               <img class="image" src={this.props.src}/>
               <div class="text">
-                <div class="row">
-                  <h4>{this.props.title}</h4>
-                </div>
-                <div class="row">
-                  <p>{this.props.description}</p>
-                </div>
+                {this.props.title && (
+                  <div class="row">
+                    <h4>{this.props.title}</h4>
+                  </div>
+                )}
+                {this.props.description && (
+                  <div class="row">
+                    <p>{this.props.description}</p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -71,12 +75,16 @@ export default class ImageTile extends React.Component {
           </li>
         </ul>
         <div class="text">
-          <div class="row">
-            <h4>{this.props.title}</h4>
-          </div>
-          <div class="row">
-            <p>{this.props.description}</p>
-          </div>
+          {this.props.title && (
+            <div class="row">
+              <h4>{this.props.title}</h4>
+            </div>
+          )}
+          {this.props.description && (
+            <div class="row">
+              <p>{this.props.description}</p>
+            </div>
+          )}
         </div>
       </div>
     );
