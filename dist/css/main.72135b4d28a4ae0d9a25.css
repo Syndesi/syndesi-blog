@@ -3082,6 +3082,7 @@ ul.flat {
   background-color: #171717;
   color: #ffffff;
   margin: 0px;
+  margin-top: auto;
   padding: 0px; }
   .footer > .hero {
     padding: 2rem 0px; }
@@ -3690,8 +3691,8 @@ body {
   background-color: #f3f3f3;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  margin: 5rem 0px 0px 0px;
-  padding: 0px;
+  margin: 0px;
+  padding: 5rem 0px 0px 0px;
   height: 100%; }
 
 * {
@@ -3750,7 +3751,9 @@ ul, ol {
 #app {
   height: 100%; }
   #app > .app {
-    height: 100%; }
+    height: 100%;
+    display: flex;
+    flex-direction: column; }
 
 .page {
   display: grid;
