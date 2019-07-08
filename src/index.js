@@ -15,8 +15,9 @@ i18next
   .use(Backend)
   .use(initReactI18next)
   .init({
-    interpolation: { escapeValue: false },  // React already does escaping
-    lng: 'en',                              // language to use
+    interpolation: { escapeValue: false },                // React already does escaping
+    lng: process.env.APP_DEFAULT_LANGUAGE_CODE,           // language to use
+    fallbackLng: process.env.APP_DEFAULT_LANGUAGE_CODE,   // fallback-language, by default EN
     backend: {
       // for all available options read the backend's repository readme file
       loadPath: process.env.WEB_BASE_PATH + 'i18n/{{ns}}/{{lng}}.json'
@@ -26,7 +27,7 @@ i18next
     load: 'languageOnly'
   });
 
-var store = new Store();
+let store = new Store();
 document.store = store;
 
 ReactDOM.render((
