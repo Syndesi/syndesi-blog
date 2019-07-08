@@ -10,6 +10,9 @@
   "githubTile": {
     "createdBy": "<1>{{createdBy}}</1> بواسطة",
     "createdOn": "{{date}} تم إنشاؤها على",
+    "iconGithub": "Github",
+    "iconIssue": "مسائل",
+    "iconStar": "النجوم",
     "latestVersion": "<1>{{version}}</1> :احدث اصدار",
     "versionReleasedBy": "<1>{{author}}</1> بواسطة",
     "versionReleasedOn": "{{date}} على"
@@ -37,6 +40,7 @@
   },
   "prismTile": {
     "buttonHover": "نسخة الكود",
-    "codeCopiedToast": "نسخ إلى الحافظة"
+    "codeCopiedToast": "نسخ إلى الحافظة",
+    "iconCopy": "نسخ"
   }
 }

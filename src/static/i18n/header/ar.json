@@ -1,4 +1,7 @@
 {
+  "iconLogo": "Syndesi",
+  "iconMenu": "menu",
+  "iconSearch": "search",
   "links": {
     "apps": "التطبيقات",
     "blog": "مدونة"

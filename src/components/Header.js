@@ -4,6 +4,7 @@ import {inject, observer} from "mobx-react";
 import Cookies from "js-cookie";
 import headerConfig from '../assets/header.json';
 import {Trans, withTranslation} from "react-i18next";
+import Icon from "./Icon.js";
 
 
 @withTranslation('header')
@@ -55,7 +56,7 @@ export default class Header extends React.Component {
             <ul class="site-details">
               <li class="site-logo">
                 <a href="/">
-                  <h3 class="icon">syndesi_big</h3>
+                  <h3 class="icon"><Icon icon="syndesi_big" i18nText="header:iconLogo" /></h3>
                   <h3 class="title"><Trans i18nKey="title">
                     {process.env.APP_NAME}
                   </Trans></h3>
@@ -78,12 +79,12 @@ export default class Header extends React.Component {
               </li>
               <li>
                 <a href="#">
-                  <p class="icon">search</p>
+                  <Icon icon="search" i18nText="header:iconSearch" />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <p class="icon">menu</p>
+                  <Icon icon="menu" i18nText="header:iconMenu" />
                 </a>
               </li>
             </ul>

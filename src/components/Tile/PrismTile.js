@@ -1,6 +1,7 @@
 import React from 'react';
 import Prism from 'prismjs';
 import {inject} from "mobx-react";
+import Icon from "../Icon.js";
 var HtmlToReactParser = require('html-to-react').Parser;
 
 
@@ -30,7 +31,7 @@ export default class PrismTile extends React.Component {
             {codeContent}
           </code></pre>
           <div class="buttongroup">
-            <button class="btn icon" onClick={(e) => {this.copyToClipboard();}}>content_copy</button>
+            <button class="btn" onClick={(e) => {this.copyToClipboard();}}><Icon icon="content_copy" i18nText="tile:prismTile.iconCopy" /></button>
           </div>
         </div>
       </div>

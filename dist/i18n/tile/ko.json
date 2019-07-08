@@ -10,6 +10,9 @@
   "githubTile": {
     "createdBy": "으로 <1>{{createdBy}}</1>",
     "createdOn": "에 만든 {{date}}",
+    "iconGithub": "Github",
+    "iconIssue": "문제",
+    "iconStar": "별",
     "latestVersion": "최신 버전: {{version}}",
     "versionReleasedBy": "으로 <1>{{author}}</1>",
     "versionReleasedOn": "에 {{date}}"
@@ -37,6 +40,7 @@
   },
   "prismTile": {
     "buttonHover": "코드 복사",
-    "codeCopiedToast": "클립 보드에 복사되었습니다"
+    "codeCopiedToast": "클립 보드에 복사되었습니다",
+    "iconCopy": "부"
   }
 }

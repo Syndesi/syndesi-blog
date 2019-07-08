@@ -10,6 +10,9 @@
   "githubTile": {
     "createdBy": "par <1>{{createdBy}}</1>",
     "createdOn": "créé sur {{date}}",
+    "iconGithub": "Github",
+    "iconIssue": "problèmes",
+    "iconStar": "étoile",
     "latestVersion": "Dernière version: {{version}}",
     "versionReleasedBy": "par <1>{{author}}</1>",
     "versionReleasedOn": "sur {{date}}"
@@ -37,6 +40,7 @@
   },
   "prismTile": {
     "buttonHover": "copier le code",
-    "codeCopiedToast": "Copié dans le presse-papier"
+    "codeCopiedToast": "Copié dans le presse-papier",
+    "iconCopy": "copie"
   }
 }

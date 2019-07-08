@@ -76,19 +76,21 @@ export default class Index extends React.Component {
     });
     return (
       <div className="page">
-        <MarkdownTile />
-        <QuoteTile />
-        <PrismTile />
-        <GithubTile src="facebook/react" />
-        <GithubTile src="facebook/react/2" />
-        <ImageTile />
-        <ImageTile src="https://api.syndesi.dev/uploads/_/originals/img_0622.jpg" />
-        <ImageTile src="https://api.syndesi.dev/uploads/_/originals/img_0264.jpg" />
-        <div class="tile">
-          <Error />
-        </div>
-        <GalleryTile />
-        <CiteTile />
+        <article>
+          <MarkdownTile />
+          <QuoteTile />
+          <PrismTile />
+          <GithubTile src="facebook/react" />
+          <GithubTile src="facebook/react/2" />
+          <ImageTile />
+          <ImageTile src="https://api.syndesi.dev/uploads/_/originals/img_0622.jpg" />
+          <ImageTile src="https://api.syndesi.dev/uploads/_/originals/img_0264.jpg" />
+          <div class="tile">
+            <Error />
+          </div>
+          <GalleryTile />
+          <CiteTile />
+        </article>
       </div>
     );
   }

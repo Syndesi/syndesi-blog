@@ -6,6 +6,8 @@ import Loader from '../Loader.js';
 import {Trans, withTranslation} from 'react-i18next';
 import i18next from 'i18next';
 
+import Icon from '../Icon.js';
+
 
 @withTranslation('tile')
 export default class GithubTile extends React.Component {
@@ -108,7 +110,7 @@ export default class GithubTile extends React.Component {
       content = [
         <div class="row px-1 layout-equal-spaced">
           <h4><a class="unstyled" href={s.projectUrl} target="_blank">{s.project}</a></h4>
-          <p class="icon">github</p>
+          <Icon icon="github" i18nText="tile:githubTile.iconGithub" />
         </div>,
         <div class="row px-1 layout-equal-spaced">
           <p class="detail"><Trans i18nKey="githubTile.createdBy">
@@ -124,8 +126,8 @@ export default class GithubTile extends React.Component {
         <div class="row px-1 pb-1">
           <p class="small">
             <a class="unstyled" href={"https://choosealicense.com/licenses/"+s.license.toLowerCase()+"/"} target="_blank">{s.license}</a>,{' '}
-            <a class="unstyled" href={s.projectUrl+"/issues"} target="_blank">{s.issues} <i class="icon">error_outline</i></a>,{' '}
-            <a class="unstyled" href={s.projectUrl+"/stargazers"} target="_blank">{s.stars} <i class="icon">star_border</i></a>
+            <a class="unstyled" href={s.projectUrl+"/issues"} target="_blank">{s.issues} <Icon icon="error_outline" i18nText="tile:githubTile.iconIssue" /></a>,{' '}
+            <a class="unstyled" href={s.projectUrl+"/stargazers"} target="_blank">{s.stars} <Icon icon="star_border" i18nText="tile:githubTile.iconStar" /></a>
           </p>
         </div>,
       ];

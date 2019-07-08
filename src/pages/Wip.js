@@ -15,7 +15,9 @@ export default class Wip extends React.Component {
   render(){
     return (
       <div class="page">
-        <TileRenderer content={demoPost} />
+        <article>
+          <TileRenderer content={demoPost} />
+        </article>
       </div>
     );
   }

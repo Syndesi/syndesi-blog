@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from "../Icon.js";
 
 export default class QuoteTile extends React.Component {
 

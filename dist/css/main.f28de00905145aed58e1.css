@@ -2783,50 +2783,6 @@ img {
   height: 100%;
   object-fit: cover; }
 
-@font-face {
-  font-family: 'icomoon';
-  src: url(/blog/fonts/icomoon.bf91f02e2b96bebb5cadc2b25c052038.eot);
-  src: url(/blog/fonts/icomoon.bf91f02e2b96bebb5cadc2b25c052038.eot) format("embedded-opentype"), url(/blog/fonts/icomoon.e1a1b6cc7989732d6401a699f4d0168d.ttf) format("truetype"), url(/blog/fonts/icomoon.22fbc46a1147d137301524a0f58b704b.woff) format("woff"), url(/blog/images/icomoon.d7a0243564435ea7e154abc65a25a259.svg) format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'syndesi-license-icons';
-  src: url(/blog/fonts/icomoon.266d89bfb7a4d338adad4ca97590ddf6.eot);
-  src: url(/blog/fonts/icomoon.266d89bfb7a4d338adad4ca97590ddf6.eot) format("embedded-opentype"), url(/blog/fonts/icomoon.a89164bdc2322acd1b17549e00bbf893.ttf) format("truetype"), url(/blog/fonts/icomoon.3a385c01cabe924f8159809b4eb815b8.woff) format("woff"), url(/blog/images/icomoon.5b32dfa0e7dfcaa23567605008aab77d.svg) format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-.icon {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  font-size: 1.2em;
-  vertical-align: text-bottom;
-  /* Enable Ligatures ================ */
-  letter-spacing: 0;
-  -webkit-font-feature-settings: "liga";
-  -moz-font-feature-settings: "liga=1";
-  -moz-font-feature-settings: "liga";
-  -ms-font-feature-settings: "liga" 1;
-  font-feature-settings: "liga";
-  -webkit-font-variant-ligatures: discretionary-ligatures;
-  font-variant-ligatures: discretionary-ligatures;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-  .icon.license {
-    font-family: 'syndesi-license-icons' !important; }
-
-.icon-disabled .icon {
-  /* hide icons when the required icon-font isn't loaded yet */
-  display: none; }
-
 .Toastify__toast {
   border-radius: 3.5px;
   padding: 0.5rem;
@@ -3259,6 +3215,57 @@ ul.flat {
 @media (max-width: 32rem) {
   .header .site-link {
     display: none !important; } }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url(/blog/fonts/icomoon.bf91f02e2b96bebb5cadc2b25c052038.eot);
+  src: url(/blog/fonts/icomoon.bf91f02e2b96bebb5cadc2b25c052038.eot) format("embedded-opentype"), url(/blog/fonts/icomoon.e1a1b6cc7989732d6401a699f4d0168d.ttf) format("truetype"), url(/blog/fonts/icomoon.22fbc46a1147d137301524a0f58b704b.woff) format("woff"), url(/blog/images/icomoon.d7a0243564435ea7e154abc65a25a259.svg) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'syndesi-license-icons';
+  src: url(/blog/fonts/icomoon.266d89bfb7a4d338adad4ca97590ddf6.eot);
+  src: url(/blog/fonts/icomoon.266d89bfb7a4d338adad4ca97590ddf6.eot) format("embedded-opentype"), url(/blog/fonts/icomoon.a89164bdc2322acd1b17549e00bbf893.ttf) format("truetype"), url(/blog/fonts/icomoon.3a385c01cabe924f8159809b4eb815b8.woff) format("woff"), url(/blog/images/icomoon.5b32dfa0e7dfcaa23567605008aab77d.svg) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.icon {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 1.2em;
+  vertical-align: text-bottom;
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-container > .text {
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  position: absolute;
+  height: 1px;
+  width: 1px; }
+
+.icon-container.icon-license > .icon {
+  font-family: 'syndesi-license-icons' !important; }
+
+.icon-disabled .icon {
+  /* hide icons when the required icon-font isn't loaded yet */
+  display: none; }
 
 /*!
  * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)

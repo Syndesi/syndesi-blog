@@ -21,7 +21,6 @@
 }
 
 .icon {
-  /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
@@ -31,7 +30,6 @@
   line-height: 1;
   font-size: 1.2em;
   vertical-align: text-bottom;
-
   /* Enable Ligatures ================ */
   letter-spacing: 0;
   -webkit-font-feature-settings: "liga";
@@ -41,12 +39,24 @@
   font-feature-settings: "liga";
   -webkit-font-variant-ligatures: discretionary-ligatures;
   font-variant-ligatures: discretionary-ligatures;
-
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  &.license {
-    font-family: 'syndesi-license-icons' !important;
+}
+
+.icon-container {
+  > .icon {}
+  > .text {
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    position: absolute;
+    height: 1px;
+    width: 1px;
+  }
+  &.icon-license {
+    > .icon {
+      font-family: 'syndesi-license-icons' !important;
+    }
   }
 }
 
