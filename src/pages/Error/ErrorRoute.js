@@ -3,20 +3,20 @@ import {Switch, Route, Redirect} from 'react-router-dom';
 import { withRouter } from "react-router";
 import Loadable from 'react-loadable';
 
-import Loader from '../components/Loader.js';
+import Loader from '../../components/Loader.js';
 
 const E404 = Loadable({
-  loader: () => import('./Error/E404.js'),
+  loader: () => import('./E404.js'),
   loading: Loader,
 });
 
 const E4xx = Loadable({
-  loader: () => import('./Error/E4xx.js'),
+  loader: () => import('./E4xx.js'),
   loading: Loader,
 });
 
 const E5xx = Loadable({
-  loader: () => import('./Error/E5xx.js'),
+  loader: () => import('./E5xx.js'),
   loading: Loader,
 });
 

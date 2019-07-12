@@ -22,8 +22,8 @@ export default class Post extends React.Component {
 
   async componentDidMount() {
     let p = this.props;
-    let story = await p.store.directus.story.getStory(p.match.params.storyId, p.match.params.lang);
-    let posts = await p.store.directus.story.getAllPosts(p.match.params.storyId, p.match.params.lang);
+    let story = await p.store.directus.story.getStory(p.match.params.storyId, p.store.lang);
+    let posts = await p.store.directus.story.getAllPosts(p.match.params.storyId, p.store.lang);
     this.setState({
       story: story,
       posts: posts
@@ -36,7 +36,6 @@ export default class Post extends React.Component {
     if(s){
       let posts = [];
       this.state.posts.forEach((p) => {
-        console.log(p);
         posts.push(
           <PostCard {...p} />
         );

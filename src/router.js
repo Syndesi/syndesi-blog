@@ -12,33 +12,19 @@ import Header from './components/Header.js';
 import Footer from './components/Footer.js';
 import Loader from './components/Loader.js';
 
-const Index = Loadable({
-  loader: () => import('./pages/Index.js'),
+
+const PublicRoute = Loadable({
+  loader: () => import('./pages/PublicRoute.js'),
   loading: Loader,
 });
 
-const Post = Loadable({
-  loader: () => import('./pages/Post.js'),
-  loading: Loader,
-});
-
-const Story = Loadable({
-  loader: () => import('./pages/Story.js'),
-  loading: Loader,
-});
-
-const Credits = Loadable({
-  loader: () => import('./pages/Credits.js'),
+const AdminRoute = Loadable({
+  loader: () => import('./pages/Admin/AdminRoute.js'),
   loading: Loader,
 });
 
 const ErrorRoute = Loadable({
-  loader: () => import('./pages/ErrorRoute.js'),
-  loading: Loader,
-});
-
-const E404 = Loadable({
-  loader: () => import('./pages/Error/E404.js'),
+  loader: () => import('./pages/Error/ErrorRoute.js'),
   loading: Loader,
 });
 
@@ -81,20 +67,15 @@ export default class Router extends React.Component {
             <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
             <title>{s.pageTitle}</title>
           </Helmet>
-          <Route component={Header}/>
           <Switch>
             <Route exact path="/" render={() => (
               <Redirect to="/en"/>
             )}/>
-            <Route exact path='/credits' component={Credits}/>
-            <Route exact path='/wip' component={Wip}/>
-            <Route exact path='/:lang(\w{2})' component={Index}/>
-            <Route path='/:lang/post/:postId' component={Post}/>
-            <Route path='/:lang/story/:storyId' component={Story}/>
-            <Route path='/error' component={ErrorRoute}/>
-            <Route exact path='/*' component={E404} />
+            <Route exact path='/:lang(\w{2})/wip' component={Wip}/>
+            <Route path='/:lang(\w{2})' component={PublicRoute}/>
+            <Route path='/:lang(\w{2})/error' component={ErrorRoute}/>
+            <Route path='/:lang(\w{2})/admin' component={AdminRoute}/>
           </Switch>
-          <Route component={Footer}/>
           <ToastContainer hideProgressBar="true" />
         </div>
       </Suspense>
