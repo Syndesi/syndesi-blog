@@ -41,7 +41,7 @@ export default class ImageTile extends React.Component {
   }
 
   renderNormalImage(){
-    let p = p;
+    let p = this.props;
     return (
       <div class="row">
         <div class="aspect-ratio aspect-ratio-3-2">
