@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import FileDownloadTile from './FileDownloadTile';
 
 
 export default class ContainerTile extends React.Component {

@@ -2,14 +2,12 @@ import React, { Suspense } from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import { withRouter } from 'react-router';
 import Loadable from 'react-loadable';
-import {inject, observer, Provider} from 'mobx-react';
+import {inject, observer} from 'mobx-react';
 import {Helmet} from 'react-helmet';
 import { ToastContainer } from 'react-toastify';
 import anchorOffset from 'anchor-offset';
 
 import Favicon from './components/Favicon.js';
-import Header from './components/Header.js';
-import Footer from './components/Footer.js';
 import Loader from './components/Loader.js';
 
 

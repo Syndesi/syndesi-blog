@@ -3,6 +3,7 @@ import moment from 'moment';
 import React from 'react';
 
 import Button from '../Button.js';
+import PropTypes from 'prop-types';
 
 export default class FileDownloadTile extends React.Component {
 
@@ -19,22 +20,22 @@ export default class FileDownloadTile extends React.Component {
       this.parseFileId(this.props.src);
     } else {
       // it's assumed that the src is a valid URL
-      var domain = this.getHostName(this.props.src);
+      let domain = this.getHostName(this.props.src);
       this.state.details = domain;
     }
   }
 
   parseFileId(id){
-    axios.get('http://localhost/directus_test/public/_/files/' + id)
+    axios.get(process.env.API_BASE_PATH + '/files/' + id)
       .then((res) => {
-        var uploaded = moment(res.data.data.uploaded_on).format('DD.MM.YYYY');
-        var filesize = this.formatBytes(res.data.data.filesize, 1);
-        var filename = this.state.filename;
+        let uploaded = moment(res.data.data.uploaded_on).format('DD.MM.YYYY');
+        let filesize = this.formatBytes(res.data.data.filesize, 1);
+        let filename = this.state.filename;
         if(!filename){
           filename = res.data.data.filename;
         }
         this.setState({
-          details:  'syndesi.dev, ' + uploaded + ', ' + filesize,
+          details:  process.env.WEB_DOMAIN + ', ' + uploaded + ', ' + filesize,
           filename: filename,
           href:     res.data.data.data.full_url
         });
@@ -44,7 +45,7 @@ export default class FileDownloadTile extends React.Component {
   // https://stackoverflow.com/questions/15900485/correct-way-to-convert-size-in-bytes-to-kb-mb-gb-in-javascript
   formatBytes(bytes,decimals) {
     if(bytes == 0) return '0 Bytes';
-    var k = 1024,
+    let k = 1024,
       dm = decimals <= 0 ? 0 : decimals || 2,
       sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
       i = Math.floor(Math.log(bytes) / Math.log(k));
@@ -53,7 +54,7 @@ export default class FileDownloadTile extends React.Component {
 
   // http://www.primaryobjects.com/2012/11/19/parsing-hostname-and-domain-from-a-url-with-javascript/
   getHostName(url) {
-    var match = url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
+    let match = url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
     if (match != null && match.length > 2 && typeof match[2] === 'string' && match[2].length > 0) {
       return match[2];
     }
@@ -64,13 +65,13 @@ export default class FileDownloadTile extends React.Component {
 
   render(){
     return (
-      <div className={'tile tile-' + this.type}>
-        <div className="row layout-equal-spaced no-wrap">
-          <div className="detailText">
+      <div class={'tile tile-' + this.type}>
+        <div class="row layout-equal-spaced no-wrap">
+          <div class="detailText">
             <p>{this.state.filename}</p>
-            <p className="detail">{this.state.details}</p>
+            <p class="detail">{this.state.details}</p>
           </div>
-          <a href={this.state.href} download={this.state.filename} target="_blank" className="download">
+          <a href={this.state.href} download={this.state.filename} target="_blank" rel="noopener noreferrer" class="download">
             <Button>Download</Button>
           </a>
         </div>
@@ -82,4 +83,9 @@ export default class FileDownloadTile extends React.Component {
 FileDownloadTile.defaultProps = {
   filename: null,
   src: null
+};
+
+FileDownloadTile.propTypes = {
+  filename: PropTypes.string,
+  src: PropTypes.string
 };

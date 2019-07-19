@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class YouTubeTile extends React.Component {
 
@@ -8,9 +9,9 @@ export default class YouTubeTile extends React.Component {
   }
 
   render(){
-    var {src, ...playerOptions} = this.props;
-    var options = [];
-    for (var i of Object.keys(playerOptions)){
+    let {src, ...playerOptions} = this.props;
+    let options = [];
+    for (let i of Object.keys(playerOptions)){
       if(playerOptions[i] == null){
         continue;
       }
@@ -63,4 +64,8 @@ YouTubeTile.defaultProps = {
   rel:            0,
   showinfo:       1,
   start:          null
+};
+
+YouTubeTile.propTypes = {
+  src: PropTypes.string
 };

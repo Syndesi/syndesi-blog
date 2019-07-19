@@ -3989,7 +3989,14 @@ escodegen@~1.9.0:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-plugin-react@^7.14.2:
+eslint-plugin-injected-proptypes@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-injected-proptypes/-/eslint-plugin-injected-proptypes-0.3.0.tgz#c3f93ce1735790c672f85279de60deac8a5f5f03"
+  integrity sha512-rBt8a7EwGg/QNk9hPZXNVDVoqEQhzCDyOdVca+v1jYmvYdJiPinCkl2SpwNwLol4qmhvqtwVM0EvdFdwYG5K+Q==
+  dependencies:
+    eslint-plugin-react "^7.9.1"
+
+eslint-plugin-react@^7.14.2, eslint-plugin-react@^7.9.1:
   version "7.14.2"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.14.2.tgz#94c193cc77a899ac0ecbb2766fbef88685b7ecc1"
   integrity sha512-jZdnKe3ip7FQOdjxks9XPN0pjUKZYq48OggNMd16Sk+8VXx6JOvXmlElxROCgp7tiUsTsze3jd78s/9AFJP2mA==

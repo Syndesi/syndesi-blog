@@ -1,7 +1,8 @@
 module.exports = {
     'env': {
         'browser': true,
-        'es6': true
+        'es6': true,
+        'node': true
     },
     'extends': [
         'eslint:recommended',
@@ -21,7 +22,8 @@ module.exports = {
         'sourceType': 'module'
     },
     'plugins': [
-        'react'
+        'react',
+        'injected-proptypes'
     ],
     'rules': {
         'indent': [
@@ -39,6 +41,18 @@ module.exports = {
         'semi': [
             'error',
             'always'
+        ],
+        'react/prop-types': [
+            2,
+            {
+                'ignore': ['store', 'history', 'match', 'children']
+            }
+        ],
+        "react/no-unknown-property": [
+            2,
+            {
+                "ignore": ["class"]
+            }
         ]
     }
 };

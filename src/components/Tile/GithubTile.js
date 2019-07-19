@@ -7,6 +7,7 @@ import {Trans, withTranslation} from 'react-i18next';
 import i18next from 'i18next';
 
 import Icon from '../Icon.js';
+import PropTypes from 'prop-types';
 
 
 @withTranslation('tile')
@@ -97,7 +98,6 @@ export default class GithubTile extends React.Component {
     let s             = this.state;
     let created       = (moment(s.created_at)).format(i18next.t('l10n:dateTime.dateFormat'));
     let content       = null;
-    let latestRelease = null;
     if(s.error){
       content = (
         <Error {...s.error} />
@@ -108,26 +108,26 @@ export default class GithubTile extends React.Component {
       );
     } else {
       content = [
-        <div className="row px-1 layout-equal-spaced">
-          <h4><a className="unstyled" href={s.projectUrl} target="_blank">{s.project}</a></h4>
+        <div class="row px-1 layout-equal-spaced">
+          <h4><a class="unstyled" href={s.projectUrl} target="_blank" rel="noopener noreferrer">{s.project}</a></h4>
           <Icon icon="github" i18nText="tile:githubTile.iconGithub" />
         </div>,
-        <div className="row px-1 layout-equal-spaced">
-          <p className="detail"><Trans i18nKey="githubTile.createdBy">
-            by <a className="detail" href={s.ownerUrl} target="_blank">{{createdBy: s.owner}}</a>
+        <div class="row px-1 layout-equal-spaced">
+          <p class="detail"><Trans i18nKey="githubTile.createdBy">
+            by <a class="detail" href={s.ownerUrl} target="_blank" rel="noopener noreferrer">{{createdBy: s.owner}}</a>
           </Trans></p>
-          <p className="detail"><Trans i18nKey="githubTile.createdOn">
+          <p class="detail"><Trans i18nKey="githubTile.createdOn">
             created on {{date: created}}
           </Trans></p>
         </div>,
-        <div className="row px-1 pt-1">
+        <div class="row px-1 pt-1">
           <p>{s.description}</p>
         </div>,
-        <div className="row px-1 pb-1">
-          <p className="small">
-            <a className="unstyled" href={'https://choosealicense.com/licenses/'+s.license.toLowerCase()+'/'} target="_blank">{s.license}</a>,{' '}
-            <a className="unstyled" href={s.projectUrl+'/issues'} target="_blank">{s.issues} <Icon icon="error_outline" i18nText="tile:githubTile.iconIssue" /></a>,{' '}
-            <a className="unstyled" href={s.projectUrl+'/stargazers'} target="_blank">{s.stars} <Icon icon="star_border" i18nText="tile:githubTile.iconStar" /></a>
+        <div class="row px-1 pb-1">
+          <p class="small">
+            <a class="unstyled" href={'https://choosealicense.com/licenses/'+s.license.toLowerCase()+'/'} target="_blank" rel="noopener noreferrer">{s.license}</a>,{' '}
+            <a class="unstyled" href={s.projectUrl+'/issues'} target="_blank" rel="noopener noreferrer">{s.issues} <Icon icon="error_outline" i18nText="tile:githubTile.iconIssue" /></a>,{' '}
+            <a class="unstyled" href={s.projectUrl+'/stargazers'} target="_blank" rel="noopener noreferrer">{s.stars} <Icon icon="star_border" i18nText="tile:githubTile.iconStar" /></a>
           </p>
         </div>,
       ];
@@ -135,17 +135,17 @@ export default class GithubTile extends React.Component {
       if(s.latestRelease){
         let latestReleaseDate = (moment(s.latestRelease.date)).format('DD.MM.YYYY');
         content.push(
-          <div className="row px-1 pt-1 bg-level-1">
+          <div class="row px-1 pt-1 bg-level-1">
             <p><Trans i18nKey="githubTile.latestVersion">
-              Latest release: <a className="text-primary" href={s.latestRelease.versionUrl} target="_blank">{{version: s.latestRelease.version}}</a>
+              Latest release: <a class="text-primary" href={s.latestRelease.versionUrl} target="_blank" rel="noopener noreferrer">{{version: s.latestRelease.version}}</a>
             </Trans></p>
           </div>);
         content.push(
-          <div className="row px-1 pb-1 layout-equal-spaced bg-level-1">
-            <p className="small text-secondary"><Trans i18nKey="githubTile.versionReleasedBy">
-              by <a className="text-secondary" href={s.latestRelease.authorUrl} target="_blank">{{author: s.latestRelease.author}}</a>
+          <div class="row px-1 pb-1 layout-equal-spaced bg-level-1">
+            <p class="small text-secondary"><Trans i18nKey="githubTile.versionReleasedBy">
+              by <a class="text-secondary" href={s.latestRelease.authorUrl} target="_blank" rel="noopener noreferrer">{{author: s.latestRelease.author}}</a>
             </Trans></p>
-            <p className="small text-secondary"><Trans i18nKey="githubTile.versionReleasedOn">
+            <p class="small text-secondary"><Trans i18nKey="githubTile.versionReleasedOn">
               by {{date: latestReleaseDate}}
             </Trans></p>
           </div>
@@ -153,7 +153,7 @@ export default class GithubTile extends React.Component {
       }
     }
     return (
-      <div className={'tile tile-' + this.type}>
+      <div class={'tile tile-' + this.type}>
         {content}
       </div>
     );
@@ -162,4 +162,8 @@ export default class GithubTile extends React.Component {
 
 GithubTile.defaultProps = {
   src: ''
+};
+
+GithubTile.propTypes = {
+  src: PropTypes.string
 };

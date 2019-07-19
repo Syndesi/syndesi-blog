@@ -1,5 +1,6 @@
-import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
+import { TwitterTweetEmbed } from 'react-twitter-embed';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class TwitterTile extends React.Component {
 
@@ -9,7 +10,7 @@ export default class TwitterTile extends React.Component {
   }
 
   render(){
-    var twitter = null;
+    let twitter = null;
     switch(this.props.type){
     case 'timeline':
       break;
@@ -31,8 +32,8 @@ export default class TwitterTile extends React.Component {
       break;
     }
     return (
-      <div className={'tile tile-' + this.type}>
-        <div className="row">
+      <div class={'tile tile-' + this.type}>
+        <div class="row">
           {twitter}
         </div>
       </div>
@@ -44,4 +45,9 @@ export default class TwitterTile extends React.Component {
 TwitterTile.defaultProps = {
   id:   '1104505103229153280',
   type: 'tweet'
+};
+
+TwitterTile.propTypes = {
+  id:   PropTypes.string,
+  type: PropTypes.string
 };

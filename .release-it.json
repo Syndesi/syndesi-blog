@@ -13,6 +13,9 @@
     "publish": false
   },
   "hooks": {
+    "before:init": [
+      "yarn lint"
+    ],
     "after:version:bump": [
       "node .release.js"
     ],

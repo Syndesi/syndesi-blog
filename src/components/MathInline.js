@@ -1,5 +1,6 @@
 import React from 'react';
 import katex from 'katex';
+import PropTypes from 'prop-types';
 var HtmlToReactParser = require('html-to-react').Parser;
 
 export default class MathInline extends React.Component {
@@ -22,4 +23,8 @@ export default class MathInline extends React.Component {
 
 MathInline.defaultProps = {
   content: ''
+};
+
+MathInline.propTypes = {
+  content: PropTypes.string
 };

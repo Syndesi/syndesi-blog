@@ -1,5 +1,6 @@
 import React from 'react';
 import katex from 'katex';
+import PropTypes from 'prop-types';
 var HtmlToReactParser = require('html-to-react').Parser;
 
 export default class MathTile extends React.Component {
@@ -9,10 +10,6 @@ export default class MathTile extends React.Component {
     this.type = 'math';
   }
 
-  createKatexString(){
-
-  }
-
   render(){
     var content = null;
     try {
@@ -20,12 +17,12 @@ export default class MathTile extends React.Component {
       content = (new HtmlToReactParser()).parse(math);
     } catch(e) {
       content = (
-        <p className="error">{e.toString()}</p>
+        <p class="error">{e.toString()}</p>
       );
     }
     return (
-      <div className={'tile tile-' + this.type}>
-        <div className="row p-1">
+      <div class={'tile tile-' + this.type}>
+        <div class="row p-1">
           {content}
         </div>
       </div>
@@ -35,4 +32,8 @@ export default class MathTile extends React.Component {
 
 MathTile.defaultProps = {
   content: ''
+};
+
+MathTile.propTypes = {
+  content: PropTypes.string
 };

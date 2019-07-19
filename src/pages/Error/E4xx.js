@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 import Error from '../../components/Error.js';
+import PropTypes from 'prop-types';
 
 
 @withRouter
@@ -58,4 +59,8 @@ E4xx.defaultProps = {
     449: 'The request should be retried after doing the appropriate action',
     499: 'Client Closed Request'
   }
+};
+
+E4xx.propTypes = {
+  descriptions: PropTypes.object
 };

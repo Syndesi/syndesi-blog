@@ -1,20 +1,13 @@
 import React from 'react';
 import { observer, inject } from 'mobx-react';
-import axios from 'axios';
 
 import Card from '../components/Card.js';
-import FileDownloadTile from '../components/Tile/FileDownloadTile.js';
-import MathTile from '../components/Tile/MathTile.js';
-import YouTubeTile from '../components/Tile/YouTubeTile.js';
-import TwitterTile from '../components/Tile/TwitterTile.js';
 import GithubTile from '../components/Tile/GithubTile.js';
 import PrismTile from '../components/Tile/PrismTile.js';
 import GalleryTile from '../components/Tile/GalleryTile.js';
 import QuoteTile from '../components/Tile/QuoteTile.js';
 import CiteTile from '../components/Tile/CiteTile.js';
 import MarkdownTile from '../components/Tile/MarkdownTile.js';
-import CommentTile from '../components/Tile/CommentTile.js';
-import FormTile from '../components/Tile/FormTile.js';
 import ImageTile from '../components/Tile/ImageTile.js';
 
 import Error from '../components/Error.js';
@@ -36,11 +29,11 @@ export default class Index extends React.Component {
   }
 
   render(){
-    var s = this.props.store;
-    var cards = [];
-    this.state.post.forEach((el, i) => {
-      var thumbnailUrl = null;
-      var thumbnailAlt = null;
+    let s = this.props.store;
+    let cards = [];
+    this.state.post.forEach((el) => {
+      let thumbnailUrl = null;
+      let thumbnailAlt = null;
       if(el.thumbnail){
         // use the most usefull description for the thumbnail
         if(el.thumbnail.title){
@@ -52,7 +45,7 @@ export default class Index extends React.Component {
         // use the most usefull image src for the thumbnail
         // (use 250x167 or the default thumbnail size)
         thumbnailUrl = el.thumbnail.data.thumbnails[0].url;
-        for(var j = 0; j < el.thumbnail.data.thumbnails.length; j++){
+        for(let j = 0; j < el.thumbnail.data.thumbnails.length; j++){
           if(el.thumbnail.data.thumbnails[j].dimension == '250x167'){
             thumbnailUrl = el.thumbnail.data.thumbnails[j].url;
             break;

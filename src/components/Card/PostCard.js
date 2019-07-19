@@ -2,6 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import {NavLink} from 'react-router-dom';
 import {inject, observer} from 'mobx-react';
+import PropTypes from 'prop-types';
 
 
 @inject('store')
@@ -45,11 +46,18 @@ export default class PostCard extends React.Component {
 
 PostCard.defaultProps = {
   title:        'Title of the card',
-  author:       null,
-  authorUrl:    null,
   created_on:   null,
-  modified_on:  null,
+  created_by:   null,
   summary:      null,
   moreUrl:      null,
-  thumbnailUrl: 'https://api.syndesi.dev/uploads/_/originals/satellite-1030780_1920.jpg'
+  thumbnail:    'https://api.syndesi.dev/uploads/_/originals/satellite-1030780_1920.jpg'
+};
+
+PostCard.propTypes = {
+  title:        PropTypes.string,
+  created_on:   PropTypes.string,
+  created_by:   PropTypes.object,
+  summary:      PropTypes.string,
+  moreUrl:      PropTypes.string,
+  thumbnail:    PropTypes.object,
 };

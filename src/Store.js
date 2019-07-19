@@ -1,7 +1,6 @@
-import { observable, computed } from 'mobx';
+import { observable } from 'mobx';
 import Cookies from 'js-cookie';
 import i18next from 'i18next';
-import axios from 'axios';
 import copy from 'copy-to-clipboard';
 import { toast } from 'react-toastify';
 import FontFaceObserver from 'fontfaceobserver';

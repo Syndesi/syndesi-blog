@@ -2,8 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 
-import Loader from '../components/Loader.js';
-
 
 export default class Post extends React.Component {
 
@@ -28,13 +26,13 @@ export default class Post extends React.Component {
   }
 
   getPostId(){
-    var id = this.props.match.params.postId;
+    let id = this.props.match.params.postId;
     return id.substr(0, id.indexOf('-'));
   }
 
   render(){
-    var d = this.state.data;
-    var post = <p>loading post data...</p>;
+    let d = this.state.data;
+    let post = <p>loading post data...</p>;
     if(d){
       post = (
         <div className="card mb-1">

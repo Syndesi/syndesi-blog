@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 import Error from '../../components/Error.js';
+import PropTypes from 'prop-types';
 
 
 @withRouter
@@ -37,4 +38,8 @@ E5xx.defaultProps = {
     510: 'Not Extended',
     511: 'Network Authentication Required'
   }
+};
+
+E5xx.propTypes = {
+  descriptions: PropTypes.object
 };

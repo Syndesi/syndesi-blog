@@ -9,6 +9,7 @@ import QuoteTile from './Tile/QuoteTile';
 import TwitterTile from './Tile/TwitterTile';
 import YouTubeTile from './Tile/YouTubeTile';
 import MarkdownTile from './Tile/MarkdownTile';
+import PropTypes from 'prop-types';
 
 export default class TileRenderer extends React.Component {
 
@@ -74,4 +75,8 @@ export default class TileRenderer extends React.Component {
 
 TileRenderer.defaultProps = {
   content: ''
+};
+
+TileRenderer.propTypes = {
+  content: PropTypes.object
 };
