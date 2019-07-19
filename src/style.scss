@@ -5,6 +5,9 @@
 @import "~react-toastify/scss/main.scss";
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+$font-prefix: '~@ibm/plex';
+@import '~@ibm/plex/scss/ibm-plex.scss';
+
 
 @import "./variables.scss";
 @import "./print.scss";
@@ -19,8 +22,8 @@ html {
 
 body {
   background-color: color(gray, 10);
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  font-family: $font-family-text;
+  font-weight: $font-weight-text;
   margin: 0px;
   padding: 5rem 0px 0px 0px;
   height: 100%;

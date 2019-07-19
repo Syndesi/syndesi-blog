@@ -12,6 +12,7 @@
     "postversion": "git push --tags && git push && echo \"Successfully released version $npm_package_version!\""
   },
   "dependencies": {
+    "@ibm/plex": "^2.0.0",
     "anchor-offset": "^1.0.6",
     "axios": "^0.19.0",
     "copy-to-clipboard": "^3.2.0",

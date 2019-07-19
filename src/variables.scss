@@ -20,6 +20,10 @@ $breakpoint-smartphone: 1400px;
 $breakpoint-smartphone: 52rem;
 $breakpoint-small: 32rem;
 
+$font-family-mono: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+$font-weight-mono: 400;
+$font-family-text: 'Roboto', sans-serif;
+$font-weight-text: 300;
 
 
 @import "./lib/Layout.scss";

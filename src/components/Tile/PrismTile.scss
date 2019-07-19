@@ -10,6 +10,12 @@ pre[class*="language-"] {
   }
 }
 
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: $font-family-mono;
+  font-weight: $font-weight-mono;
+}
+
 .tile-prism {
   .buttongroup {
     position: absolute;
