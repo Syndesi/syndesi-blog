@@ -6,7 +6,7 @@
     "release": true,
     "tokenRef": "GITHUB_TOKEN_SYNDESI_BLOG",
     "assets": [
-      "release/dist.zip"
+      "release/${version}/*.zip"
     ]
   },
   "npm": {
