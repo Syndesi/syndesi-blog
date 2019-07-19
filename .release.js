@@ -1,5 +1,6 @@
 const { zip } = require('zip-a-folder');
 const fs = require('fs');
+const path = require('path');
 
 
 class Release {
