@@ -23,4 +23,4 @@ This is the software used for my own blog. It depends on an custom API (powered 
 ### Commits & co
 
 1. Commit all required patches/features.
-2. Execute `yarn version --patch`.
+2. Execute `yarn release` and answer all questions.
