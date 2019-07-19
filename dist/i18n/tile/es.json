@@ -1,0 +1,46 @@
+{
+  "citeTile": {
+    "sources": "Fuentes"
+  },
+  "demo": "demo es",
+  "github": {
+    "author": "por <1>{{author}}</1>",
+    "demo": "es {{demo}} es"
+  },
+  "githubTile": {
+    "createdBy": "por <1>{{createdBy}}</1>",
+    "createdOn": "creado en {{date}}",
+    "iconGithub": "Github",
+    "iconIssue": "cuestiones",
+    "iconStar": "estrella",
+    "latestVersion": "Ultima versión: {{version}}",
+    "versionReleasedBy": "por <1>{{author}}</1>",
+    "versionReleasedOn": "en {{date}}"
+  },
+  "imageTile": {
+    "menu": {
+      "copyImageUrl": "Copiar url de la imagen",
+      "copyImageUrlToast": "URL de la imagen copiada",
+      "fullscreen": "Fullscreen",
+      "openImage": "Abrir imagen",
+      "quality": {
+        "number": "{{percentage}} %",
+        "original": "Original",
+        "quality": "Calidad"
+      },
+      "size": {
+        "desktop": "Escritorio",
+        "fullHd": "Full HD",
+        "original": "Original",
+        "size": "Tamaño",
+        "smartphone": "Smartphone"
+      }
+    },
+    "pagination": "{{currentPage}} de {{allPages}}"
+  },
+  "prismTile": {
+    "buttonHover": "copiar código",
+    "codeCopiedToast": "Copiado al portapapeles",
+    "iconCopy": "dupdo"
+  }
+}

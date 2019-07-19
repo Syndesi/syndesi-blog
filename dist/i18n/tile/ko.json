@@ -1,0 +1,46 @@
+{
+  "citeTile": {
+    "sources": "출처"
+  },
+  "demo": "demo ko",
+  "github": {
+    "author": "으로 <1>{{author}}</1>",
+    "demo": "ko {{demo}} ko"
+  },
+  "githubTile": {
+    "createdBy": "으로 <1>{{createdBy}}</1>",
+    "createdOn": "에 만든 {{date}}",
+    "iconGithub": "Github",
+    "iconIssue": "문제",
+    "iconStar": "별",
+    "latestVersion": "최신 버전: {{version}}",
+    "versionReleasedBy": "으로 <1>{{author}}</1>",
+    "versionReleasedOn": "에 {{date}}"
+  },
+  "imageTile": {
+    "menu": {
+      "copyImageUrl": "이미지 URL 복사",
+      "copyImageUrlToast": "이미지 URL 복사 됨",
+      "fullscreen": "전체 화면",
+      "openImage": "이미지 열기",
+      "quality": {
+        "number": "{{percentage}} %",
+        "original": "기발한",
+        "quality": "품질"
+      },
+      "size": {
+        "desktop": "데스크톱",
+        "fullHd": "가득 차있는 hd",
+        "original": "기발한",
+        "size": "크기",
+        "smartphone": "스마트 폰"
+      }
+    },
+    "pagination": "{{currentPage}} 의 {{allPages}}"
+  },
+  "prismTile": {
+    "buttonHover": "코드 복사",
+    "codeCopiedToast": "클립 보드에 복사되었습니다",
+    "iconCopy": "부"
+  }
+}
