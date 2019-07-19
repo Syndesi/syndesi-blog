@@ -3,7 +3,6 @@ import {Switch, Route, Redirect} from 'react-router-dom';
 import { withRouter } from "react-router";
 import Loadable from 'react-loadable';
 import {inject, observer} from 'mobx-react';
-import { ToastContainer } from 'react-toastify';
 
 import Header from '../components/Header.js';
 import Footer from '../components/Footer.js';
@@ -46,7 +45,6 @@ export default class PublicRoute extends React.Component {
           <Route path={url + '/story/:storyId'} component={Story}/>
         </Switch>
         <Route component={Footer}/>
-        <ToastContainer hideProgressBar="true" />
       </Suspense>
     );
   }
