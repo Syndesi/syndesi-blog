@@ -14,7 +14,7 @@ class Release {
       fs.readdir(outputPath, (err, files) => {
         if (err) throw err;
         for (const file of files) {
-          fs.unlink(path.join(directory, file), err => {
+          fs.unlink(path.join(outputPath, file), err => {
             if (err) throw err;
           });
         }
