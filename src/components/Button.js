@@ -4,7 +4,7 @@ export default class Button extends React.Component {
 
   render(){
     return (
-      <button {...this.props} class={"btn "+this.props.className}>
+      <button {...this.props} className={'btn '+this.props.className}>
         {this.props.children}
       </button>
     );

@@ -10,7 +10,7 @@ export default class ContainerTile extends React.Component {
 
   render(){
     return (
-      <div class={'tile tile-' + this.type + ' tile-transparent tile-overflow'}>
+      <div className={'tile tile-' + this.type + ' tile-transparent tile-overflow'}>
         {this.props.children}
       </div>
     );

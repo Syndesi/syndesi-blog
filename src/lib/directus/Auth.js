@@ -1,5 +1,5 @@
-import axios from "axios";
-import Cookies from "js-cookie";
+import axios from 'axios';
+import Cookies from 'js-cookie';
 
 export default class Auth {
 
@@ -57,7 +57,7 @@ export default class Auth {
     }
     // update token
     d.setToken(token);
-    if(typeof(this.onLogin) == "function"){
+    if(typeof(this.onLogin) == 'function'){
       this.onLogin();
     }
   }
@@ -65,7 +65,7 @@ export default class Auth {
   async logout(){
     let d = this.d;
     d.sterilizeData();
-    if(typeof(this.onLogout) == "function"){
+    if(typeof(this.onLogout) == 'function'){
       this.onLogout();
     }
     return true;
@@ -78,7 +78,7 @@ export default class Auth {
       // account already logged in
       token = d.token;
     } else {
-      if(!!Cookies.get(d.baseUrl + '-token')){
+      if(Cookies.get(d.baseUrl + '-token')){
         // token is stored in cookie
         token = Cookies.get(d.baseUrl + '-token');
       } else {
@@ -98,7 +98,7 @@ export default class Auth {
     }
     // update token
     d.setToken(token);
-    if(typeof(this.onRefresh) == "function"){
+    if(typeof(this.onRefresh) == 'function'){
       this.onRefresh();
     }
   }

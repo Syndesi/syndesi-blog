@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from "react-router";
+import { withRouter } from 'react-router';
 import Error from '../../components/Error.js';
 
 
@@ -13,8 +13,8 @@ export default class E4xx extends React.Component {
       description = this.props.descriptions[code];
     }
     return (
-      <div class="page">
-        <div class="tile">
+      <div className="page">
+        <div className="tile">
           <Error code={code} description={description} />
         </div>
       </div>

@@ -11,11 +11,11 @@ export default class MathInline extends React.Component {
       content = (new HtmlToReactParser()).parse(math);
     } catch(e) {
       content = (
-        <span class="error">{e.toString()}</span>
+        <span className="error">{e.toString()}</span>
       );
     }
     return (
-      <span class="math-inline">{content}</span>
+      <span className="math-inline">{content}</span>
     );
   }
 }

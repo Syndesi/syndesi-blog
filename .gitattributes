@@ -1,0 +1,13 @@
+*.js -crlf
+*.jsx -crlf
+*.css -crlf
+*.scss -crlf
+*.htm -crlf
+*.html -crlf
+*.json -crlf
+*.xml -crlf
+*.svg -crlf
+*.md -crlf
+*.yml -crlf
+*.yaml -crlf
+*.txt -crlf

@@ -1,11 +1,11 @@
 import React from 'react';
 import Prism from 'prismjs';
-import {inject} from "mobx-react";
-import Icon from "../Icon.js";
+import {inject} from 'mobx-react';
+import Icon from '../Icon.js';
 var HtmlToReactParser = require('html-to-react').Parser;
 
 
-@inject("store")
+@inject('store')
 export default class PrismTile extends React.Component {
 
   constructor(props){
@@ -25,13 +25,13 @@ export default class PrismTile extends React.Component {
     let html = Prism.highlight(this.props.code, Prism.languages[language], language);
     let codeContent = (new HtmlToReactParser()).parse(html);
     return (
-      <div class={'tile tile-' + this.type}>
-        <div class="row">
-          <pre class={'line-numbers language-' + language}><code>
+      <div className={'tile tile-' + this.type}>
+        <div className="row">
+          <pre className={'line-numbers language-' + language}><code>
             {codeContent}
           </code></pre>
-          <div class="buttongroup">
-            <button class="btn" onClick={(e) => {this.copyToClipboard();}}><Icon icon="content_copy" i18nText="tile:prismTile.iconCopy" /></button>
+          <div className="buttongroup">
+            <button className="btn" onClick={(e) => {this.copyToClipboard();}}><Icon icon="content_copy" i18nText="tile:prismTile.iconCopy" /></button>
           </div>
         </div>
       </div>
@@ -40,6 +40,6 @@ export default class PrismTile extends React.Component {
 }
 
 PrismTile.defaultProps = {
-  code: "<!DOCTYPE html>\n<html>\n    <head>\n        <title>Title</title>\n    </head>\n    <body>\n        <h1 id=\"heading\">Heading</h1>\n        <p class=\"class\">This is an example paragraph.</p>\n    </body>\n</html>",
+  code: '<!DOCTYPE html>\n<html>\n    <head>\n        <title>Title</title>\n    </head>\n    <body>\n        <h1 id="heading">Heading</h1>\n        <p class="class">This is an example paragraph.</p>\n    </body>\n</html>',
   language: 'markup'
 };

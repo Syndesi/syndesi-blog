@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 import moment from 'moment';
 import React from 'react';
 
@@ -26,28 +26,28 @@ export default class FileDownloadTile extends React.Component {
 
   parseFileId(id){
     axios.get('http://localhost/directus_test/public/_/files/' + id)
-         .then((res) => {
-           var uploaded = moment(res.data.data.uploaded_on).format('DD.MM.YYYY');
-           var filesize = this.formatBytes(res.data.data.filesize, 1);
-           var filename = this.state.filename;
-           if(!filename){
-             filename = res.data.data.filename;
-           }
-           this.setState({
-             details:  'syndesi.dev, ' + uploaded + ', ' + filesize,
-             filename: filename,
-             href:     res.data.data.data.full_url
-           });
-         });
+      .then((res) => {
+        var uploaded = moment(res.data.data.uploaded_on).format('DD.MM.YYYY');
+        var filesize = this.formatBytes(res.data.data.filesize, 1);
+        var filename = this.state.filename;
+        if(!filename){
+          filename = res.data.data.filename;
+        }
+        this.setState({
+          details:  'syndesi.dev, ' + uploaded + ', ' + filesize,
+          filename: filename,
+          href:     res.data.data.data.full_url
+        });
+      });
   }
 
   // https://stackoverflow.com/questions/15900485/correct-way-to-convert-size-in-bytes-to-kb-mb-gb-in-javascript
   formatBytes(bytes,decimals) {
     if(bytes == 0) return '0 Bytes';
     var k = 1024,
-        dm = decimals <= 0 ? 0 : decimals || 2,
-        sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
-        i = Math.floor(Math.log(bytes) / Math.log(k));
+      dm = decimals <= 0 ? 0 : decimals || 2,
+      sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
+      i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
   }
 
@@ -58,19 +58,19 @@ export default class FileDownloadTile extends React.Component {
       return match[2];
     }
     else {
-      return "";
+      return '';
     }
   }
 
   render(){
     return (
-      <div class={'tile tile-' + this.type}>
-        <div class="row layout-equal-spaced no-wrap">
-          <div class="detailText">
+      <div className={'tile tile-' + this.type}>
+        <div className="row layout-equal-spaced no-wrap">
+          <div className="detailText">
             <p>{this.state.filename}</p>
-            <p class="detail">{this.state.details}</p>
+            <p className="detail">{this.state.details}</p>
           </div>
-          <a href={this.state.href} download={this.state.filename} target="_blank" class="download">
+          <a href={this.state.href} download={this.state.filename} target="_blank" className="download">
             <Button>Download</Button>
           </a>
         </div>

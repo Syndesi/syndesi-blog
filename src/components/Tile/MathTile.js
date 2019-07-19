@@ -20,12 +20,12 @@ export default class MathTile extends React.Component {
       content = (new HtmlToReactParser()).parse(math);
     } catch(e) {
       content = (
-        <p class="error">{e.toString()}</p>
+        <p className="error">{e.toString()}</p>
       );
     }
     return (
-      <div class={'tile tile-' + this.type}>
-        <div class="row p-1">
+      <div className={'tile tile-' + this.type}>
+        <div className="row p-1">
           {content}
         </div>
       </div>

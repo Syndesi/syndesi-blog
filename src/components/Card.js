@@ -25,10 +25,10 @@ export default class Card extends React.Component {
         thumbnailBrightness: brightness
       });
     }, {
-       sx: 0.5,
-       sy: 0.5,
-       sWidth: 0.5,
-       sHeight: 0.5
+      sx: 0.5,
+      sy: 0.5,
+      sWidth: 0.5,
+      sHeight: 0.5
     });
   }
 
@@ -40,7 +40,7 @@ export default class Card extends React.Component {
       alt = p.thumbnailAlt;
     }
     if(p.thumbnailUrl){
-      thumbnail = <img class="image-splash" src={p.thumbnailUrl} alt={alt} />;
+      thumbnail = <img className="image-splash" src={p.thumbnailUrl} alt={alt} />;
     }
     var numberClass = 'light';
     if(this.state.thumbnailBrightness >= 0.6){
@@ -52,28 +52,28 @@ export default class Card extends React.Component {
       date = d.format('DD.MM.YYYY');
     }
     return (
-      <div class="card mb-1">
-        <div class="splash">
-          <div class="aspect-ratio-3-2">
-            <div class="aspect-ratio-inside">
+      <div className="card mb-1">
+        <div className="splash">
+          <div className="aspect-ratio-3-2">
+            <div className="aspect-ratio-inside">
               {thumbnail}
-              <p class={"post-number unselectable " + numberClass}>{p.number}</p>
+              <p className={'post-number unselectable ' + numberClass}>{p.number}</p>
             </div>
           </div>
         </div>
-        <div class="pb-0">
+        <div className="pb-0">
           <h4>{p.title}</h4>
         </div>
-        <div class="pb-0 pt-0 space-evenly">
-          <p class="detail">by <a class="detail" href={p.authorUrl}>{p.author}</a></p>
-          <p class="detail">{date}</p>
+        <div className="pb-0 pt-0 space-evenly">
+          <p className="detail">by <a className="detail" href={p.authorUrl}>{p.author}</a></p>
+          <p className="detail">{date}</p>
         </div>
-        <div class="pb-0">
+        <div className="pb-0">
           <p>{p.summary}</p>
         </div>
-        <div class="adaptive-height"></div>
+        <div className="adaptive-height"></div>
         <div>
-          <a class="text-secondary" href={p.continueUrl}>continue reading →</a>
+          <a className="text-secondary" href={p.continueUrl}>continue reading →</a>
         </div>
       </div>
     );

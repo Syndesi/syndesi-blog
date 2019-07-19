@@ -11,7 +11,7 @@ export default class MarkdownTile extends React.Component {
 
   render(){
     return (
-      <div class={'tile tile-' + this.type + ' p-1'}>
+      <div className={'tile tile-' + this.type + ' p-1'}>
         <Markdown markdown={this.props.content} />
       </div>
     );

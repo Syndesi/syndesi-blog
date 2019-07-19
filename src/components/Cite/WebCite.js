@@ -23,7 +23,7 @@ export default class WebCite extends React.Component {
           author = <a href={a.url} target="_blank">{author}</a>;
         }
         authors.push(author);
-        authors.push("; ");
+        authors.push('; ');
       }
       authors.pop();
     }
@@ -31,7 +31,7 @@ export default class WebCite extends React.Component {
     var createdSeperator = (authors || created) ? '.' : null;
     var visited = p.visited ? ' Retrieved on ' + p.visited + '.' : null;
     return (
-      <p class={'cite-text cite-' + this.type}>
+      <p className={'cite-text cite-' + this.type}>
         {authors}{created}{createdSeperator} <a href={p.url} target="_blank" >"{p.title}"</a>. {visited}
       </p>
     );

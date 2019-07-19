@@ -30,27 +30,27 @@ export default class Error extends React.Component {
       );
       actions.push(
         <Tooltip placement="bottom" overlay={tooltip}>
-          <span class="btn-round btn-transparent icon">help_outline</span>
+          <span className="btn-round btn-transparent icon">help_outline</span>
         </Tooltip>
       );
     }
     if(p.reload){
       actions.push(
-        <span class="btn-round btn-transparent icon" onClick={() => {this.update();}}>refresh</span>
+        <span className="btn-round btn-transparent icon" onClick={() => {this.update();}}>refresh</span>
       );
     }
     if(actions.length > 0){
       actionsRow = (
-        <ul class="error-actions py-1 unselectable bg-level-1">
+        <ul className="error-actions py-1 unselectable bg-level-1">
           {actions}
         </ul>
       );
     }
 
     return (
-      <div class="error">
-        <h3 class="error-code pt-1">{p.code}</h3>
-        <p class="error-description pb-1">{p.description}</p>
+      <div className="error">
+        <h3 className="error-code pt-1">{p.code}</h3>
+        <p className="error-description pb-1">{p.description}</p>
         {actionsRow}
       </div>
     );

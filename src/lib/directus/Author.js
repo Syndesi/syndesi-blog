@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 export default class Author {
 
@@ -25,7 +25,7 @@ export default class Author {
     if(!authorObject || !authorObject.id || !authorObject.last_name){
       return null;
     }
-    let url = "/" +languageCode + "/author/" + authorObject.id + "-" + authorObject.last_name;
+    let url = '/' +languageCode + '/author/' + authorObject.id + '-' + authorObject.last_name;
     return url.toLowerCase();
   }
 

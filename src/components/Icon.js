@@ -6,11 +6,11 @@ export default class Icon extends React.Component {
 
   render(){
     let {icon, i18nText, family, ...r} = this.props;
-    let containerClass = ["icon-container", "icon-"+family].join(" ");
+    let containerClass = ['icon-container', 'icon-'+family].join(' ');
     return (
-      <span class={containerClass} {...r}>
-        <span class="icon unselectable" aria-hidden="true">{icon}</span>
-        <span class="text">{i18next.t(i18nText)}</span>
+      <span className={containerClass} {...r}>
+        <span className="icon unselectable" aria-hidden="true">{icon}</span>
+        <span className="text">{i18next.t(i18nText)}</span>
       </span>
     );
   }

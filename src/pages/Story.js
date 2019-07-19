@@ -1,13 +1,13 @@
 import React from 'react';
-import { withRouter } from "react-router";
-import {inject, observer} from "mobx-react";
+import { withRouter } from 'react-router';
+import {inject, observer} from 'mobx-react';
 
 import Loader from '../components/Loader.js';
 import PostCard from '../components/Card/PostCard.js';
 import Matrix from '../components/Matrix.js';
 import ContainerTile from '../components/Tile/ContainerTile.js';
 
-@inject("store")
+@inject('store')
 @withRouter
 @observer
 export default class Post extends React.Component {
@@ -62,7 +62,7 @@ export default class Post extends React.Component {
       content = <Loader />;
     }
     return (
-      <div class="page">
+      <div className="page">
         {content}
       </div>
     );

@@ -39,15 +39,15 @@ export default class Post extends React.Component {
       post = (
         <div className="card mb-1">
           <h1>{d.title}</h1>
-          <p class="gray">{d.summary}</p>
+          <p className="gray">{d.summary}</p>
           <ReactMarkdown source={d.content} />
         </div>
       );
     }
     return (
-        <div className="page">
-          {post}
-        </div>
+      <div className="page">
+        {post}
+      </div>
     );
   }
 }

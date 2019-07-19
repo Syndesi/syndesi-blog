@@ -9,7 +9,7 @@ export default class CiteLink extends React.Component {
 
   render(){
     return (
-        <sup><a href={"#cite-" + this.props.citeNumber}>[{this.props.citeNumber}]</a></sup>
+      <sup><a href={'#cite-' + this.props.citeNumber}>[{this.props.citeNumber}]</a></sup>
     );
   }
 }

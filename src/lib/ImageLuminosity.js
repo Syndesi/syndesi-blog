@@ -2,9 +2,9 @@ export default class ImageLuminosity {
 
   // code adapted from https://github.com/seanevd/image-luminosity/blob/master/index.js
   luminosity(imageSrc, callback, dimensions) {
-    var img = document.createElement("img");
+    var img = document.createElement('img');
     img.src = imageSrc;
-    img.style.display = "none";
+    img.style.display = 'none';
     img.crossOrigin = 'anonymous';              ///=anonymous
     document.body.appendChild(img);
 
@@ -16,7 +16,7 @@ export default class ImageLuminosity {
 
     img.onload = function() {
       // create canvas
-      var canvas = document.createElement("canvas");
+      var canvas = document.createElement('canvas');
       var sx,sy,sWidth,sHeight;
       canvas.width = this.width;
       canvas.height = this.height;
@@ -33,7 +33,7 @@ export default class ImageLuminosity {
         sWidth = canvas.width;
         sHeight = canvas.height;
       }
-      var ctx = canvas.getContext("2d");
+      var ctx = canvas.getContext('2d');
       ctx.drawImage(this, 0, 0);
       var imageData = ctx.getImageData(sx, sy, sWidth, sHeight);
       img.parentNode.removeChild(img);
@@ -64,9 +64,9 @@ export default class ImageLuminosity {
         r: average(avgR),
         g: average(avgG),
         b: average(avgB)
-      }
+      };
       callback(values);
-    }
+    };
   }
 }
 

@@ -14,37 +14,37 @@ export default class YouTubeTile extends React.Component {
       if(playerOptions[i] == null){
         continue;
       }
-      options.push(i + "=" + playerOptions[i]);
+      options.push(i + '=' + playerOptions[i]);
     }
     if(options.length == 0){
-      options = "";
+      options = '';
     } else {
-      options = "?" + options.join("&");
+      options = '?' + options.join('&');
     }
     return (
-        <div class={'tile tile-' + this.type}>
-          <div class="row">
-            <div class="aspect-ratio aspect-ratio-16-9">
-              <div class="aspect-ratio-inside">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src={"https://www.youtube.com/embed/" + src + options}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen>
-                </iframe>
-              </div>
+      <div className={'tile tile-' + this.type}>
+        <div className="row">
+          <div className="aspect-ratio aspect-ratio-16-9">
+            <div className="aspect-ratio-inside">
+              <iframe
+                width="100%"
+                height="100%"
+                src={'https://www.youtube.com/embed/' + src + options}
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen>
+              </iframe>
             </div>
           </div>
         </div>
+      </div>
     );
   }
 }
 
 // for futher informations visit https://developers.google.com/youtube/player_parameters
 YouTubeTile.defaultProps = {
-  src:            "80AFso-l1Eg",
+  src:            '80AFso-l1Eg',
   autoplay:       0,
   cc_load_policy: null,
   color:          null,

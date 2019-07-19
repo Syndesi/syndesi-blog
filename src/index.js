@@ -4,11 +4,11 @@ import {BrowserRouter} from 'react-router-dom';
 import {I18nextProvider} from 'react-i18next';
 import i18next from 'i18next';
 import Backend from 'i18next-xhr-backend';
-import {initReactI18next} from "react-i18next";
+import {initReactI18next} from 'react-i18next';
 
 import './style.scss';
 import Router from './router.js';
-import {Provider} from "mobx-react";
+import {Provider} from 'mobx-react';
 import Store from './Store.js';
 
 i18next

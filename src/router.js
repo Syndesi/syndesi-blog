@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom';
-import { withRouter } from "react-router";
+import { withRouter } from 'react-router';
 import Loadable from 'react-loadable';
 import {inject, observer, Provider} from 'mobx-react';
-import {Helmet} from "react-helmet";
+import {Helmet} from 'react-helmet';
 import { ToastContainer } from 'react-toastify';
 import anchorOffset from 'anchor-offset';
 
@@ -34,7 +34,7 @@ const Wip = Loadable({
 });
 
 @withRouter
-@inject("store")
+@inject('store')
 @observer
 export default class Router extends React.Component {
 
@@ -52,14 +52,14 @@ export default class Router extends React.Component {
 
   render() {
     let s = this.props.store;
-    let appClasses = ["app"];
+    let appClasses = ['app'];
     if(!s.iconsEnabled){
-      appClasses.push("icon-disabled");
+      appClasses.push('icon-disabled');
     }
-    appClasses = appClasses.join(" ");
+    appClasses = appClasses.join(' ');
     return (
       <Suspense fallback={Loader}>
-        <div class={appClasses}>
+        <div className={appClasses}>
           <Favicon />
           <Helmet>
             <meta charSet="utf-8" />

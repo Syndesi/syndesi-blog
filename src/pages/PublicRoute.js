@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom';
-import { withRouter } from "react-router";
+import { withRouter } from 'react-router';
 import Loadable from 'react-loadable';
 import {inject, observer} from 'mobx-react';
 
@@ -29,7 +29,7 @@ const Credits = Loadable({
 });
 
 @withRouter
-@inject("store")
+@inject('store')
 @observer
 export default class PublicRoute extends React.Component {
 

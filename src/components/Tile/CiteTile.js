@@ -1,11 +1,11 @@
 import React from 'react';
-import {inject} from "mobx-react";
+import {inject} from 'mobx-react';
 import {Trans, withTranslation} from 'react-i18next';
 import WebCite from '../Cite/WebCite.js';
 
 
 @withTranslation('tile')
-@inject("store")
+@inject('store')
 export default class CiteTile extends React.Component {
 
   constructor(props){
@@ -15,12 +15,12 @@ export default class CiteTile extends React.Component {
 
   createCiteTile(data, citeNumber){
     var types = {
-      "web": WebCite
+      'web': WebCite
     };
     var TagName = types[data.type] || WebCite;
     return (
-      <div class="cite mb-1" id={"cite-" + citeNumber}>
-        <p class="cite-number unselectable">{citeNumber}.</p>
+      <div className="cite mb-1" id={'cite-' + citeNumber}>
+        <p className="cite-number unselectable">{citeNumber}.</p>
         <TagName {...data} />
       </div>
     );
@@ -32,13 +32,13 @@ export default class CiteTile extends React.Component {
       cites.push(this.createCiteTile(this.props.store.cites[i], i + 1));
     }
     return (
-      <div class={'tile tile-' + this.type} id="cite" >
-        <div class="row px-1 cite-title">
+      <div className={'tile tile-' + this.type} id="cite" >
+        <div className="row px-1 cite-title">
           <h4><Trans i18nKey="citeTile.sources">
             Sources
           </Trans></h4>
         </div>
-        <div class="row p-1 cite-list">
+        <div className="row p-1 cite-list">
           {cites}
         </div>
       </div>

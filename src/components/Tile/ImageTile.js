@@ -1,14 +1,14 @@
 import React from 'react';
 import { ContextMenu, SubMenu, MenuItem, ContextMenuTrigger } from 'react-contextmenu';
-import {Trans, withTranslation} from "react-i18next";
+import {Trans, withTranslation} from 'react-i18next';
 import {UID} from 'react-uid';
 import Error from '../Error.js';
 import Loader from '../Loader.js';
-import {inject} from "mobx-react";
+import {inject} from 'mobx-react';
 import i18next from 'i18next';
 
 @withTranslation('tile')
-@inject("store")
+@inject('store')
 export default class ImageTile extends React.Component {
 
   constructor(props){
@@ -38,50 +38,50 @@ export default class ImageTile extends React.Component {
   }
 
   openImage(){
-    window.open(this.props.src, "_blank")
+    window.open(this.props.src, '_blank');
   }
 
   renderNormalImage(){
     return (
-        <div class="row">
-          <div class="aspect-ratio aspect-ratio-3-2">
-            <div class="aspect-ratio-inside">
-              <img class="image" src={this.props.src}/>
-              <div class="text">
-                {this.props.title && (
-                  <div class="row">
-                    <h4>{this.props.title}</h4>
-                  </div>
-                )}
-                {this.props.description && (
-                  <div class="row">
-                    <p>{this.props.description}</p>
-                  </div>
-                )}
-              </div>
+      <div className="row">
+        <div className="aspect-ratio aspect-ratio-3-2">
+          <div className="aspect-ratio-inside">
+            <img className="image" src={this.props.src}/>
+            <div className="text">
+              {this.props.title && (
+                <div className="row">
+                  <h4>{this.props.title}</h4>
+                </div>
+              )}
+              {this.props.description && (
+                <div className="row">
+                  <p>{this.props.description}</p>
+                </div>
+              )}
             </div>
           </div>
         </div>
+      </div>
     );
   }
 
   renderFullscreenImage(){
     return (
-      <div class="row">
-        <img class="image" src={this.props.src}/>
-        <ul class="iconlist">
-          <li class="icon" onClick={() => {this.toggleFullscreen();}}>
+      <div className="row">
+        <img className="image" src={this.props.src}/>
+        <ul className="iconlist">
+          <li className="icon" onClick={() => {this.toggleFullscreen();}}>
             close
           </li>
         </ul>
-        <div class="text">
+        <div className="text">
           {this.props.title && (
-            <div class="row">
+            <div className="row">
               <h4>{this.props.title}</h4>
             </div>
           )}
           {this.props.description && (
-            <div class="row">
+            <div className="row">
               <p>{this.props.description}</p>
             </div>
           )}
@@ -132,7 +132,7 @@ export default class ImageTile extends React.Component {
     return (
       <UID>
         {id => (
-          <div class={'tile tile-' + this.type + fullscreenClass}>
+          <div className={'tile tile-' + this.type + fullscreenClass}>
             <ContextMenuTrigger id={id}>
               {content}
             </ContextMenuTrigger>
@@ -145,9 +145,9 @@ export default class ImageTile extends React.Component {
 }
 
 ImageTile.defaultProps = {
-  src: "https://api.syndesi.dev/uploads/_/originals/aurora-borealis-1032517_1920.jpg",
-  title: "Immergrün",
-  description: "Diese in Mittweida oft zu findenden Büsche sind selbst im Winter grün.",
-  url: "",
-  animation: "zoom-out-right"
+  src: 'https://api.syndesi.dev/uploads/_/originals/aurora-borealis-1032517_1920.jpg',
+  title: 'Immergrün',
+  description: 'Diese in Mittweida oft zu findenden Büsche sind selbst im Winter grün.',
+  url: '',
+  animation: 'zoom-out-right'
 };

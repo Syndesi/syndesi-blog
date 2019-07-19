@@ -1,10 +1,10 @@
 import React from 'react';
 import moment from 'moment';
 import {NavLink} from 'react-router-dom';
-import {inject, observer} from "mobx-react";
+import {inject, observer} from 'mobx-react';
 
 
-@inject("store")
+@inject('store')
 @observer
 export default class PostCard extends React.Component {
 
@@ -15,29 +15,29 @@ export default class PostCard extends React.Component {
     let author = null;
     if(p.created_by){
       author = (
-        <p class="detail">
-          by <NavLink className="detail" to={"/" + s.lang + "/author/" + p.created_by.id + "-" + p.created_by.last_name}>{p.created_by.last_name}</NavLink>
+        <p className="detail">
+          by <NavLink className="detail" to={'/' + s.lang + '/author/' + p.created_by.id + '-' + p.created_by.last_name}>{p.created_by.last_name}</NavLink>
         </p>
       );
     }
     return (
-      <div class="card">
-        <div class="row">
-          <div class="aspect-ratio aspect-ratio-3-2">
-            <img class="aspect-ratio-inside" src={p.thumbnail.data.thumbnails[1].url} />
+      <div className="card">
+        <div className="row">
+          <div className="aspect-ratio aspect-ratio-3-2">
+            <img className="aspect-ratio-inside" src={p.thumbnail.data.thumbnails[1].url} />
           </div>
         </div>
-        <div class="row px-1 pt-1">
+        <div className="row px-1 pt-1">
           <h4>{p.title}</h4>
         </div>
-        <div class="row px-1 pb-1 layout-equal-spaced">
+        <div className="row px-1 pb-1 layout-equal-spaced">
           {author}
-          <p class="detail">{'created on ' + created}</p>
+          <p className="detail">{'created on ' + created}</p>
         </div>
-        <div class="rpw px-1 pb-1">
+        <div className="rpw px-1 pb-1">
           <p>{p.summary} <a href={p.moreUrl}>more</a></p>
         </div>
-        <div class="adaptive-height"></div>
+        <div className="adaptive-height"></div>
       </div>
     );
   }

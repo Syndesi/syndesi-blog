@@ -1,9 +1,9 @@
 import React from 'react';
-import {inject, observer} from "mobx-react";
+import {inject, observer} from 'mobx-react';
 import demoPost from '../assets/demoPost.json';
-import TileRenderer from '../components/TileRenderer.js'
+import TileRenderer from '../components/TileRenderer.js';
 
-@inject("store")
+@inject('store')
 @observer
 export default class Wip extends React.Component {
 
@@ -14,7 +14,7 @@ export default class Wip extends React.Component {
 
   render(){
     return (
-      <div class="page">
+      <div className="page">
         <article>
           <TileRenderer content={demoPost} />
         </article>

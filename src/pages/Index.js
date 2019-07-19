@@ -19,7 +19,7 @@ import ImageTile from '../components/Tile/ImageTile.js';
 
 import Error from '../components/Error.js';
 
-@inject("store")
+@inject('store')
 @observer
 export default class Index extends React.Component {
 
@@ -53,7 +53,7 @@ export default class Index extends React.Component {
         // (use 250x167 or the default thumbnail size)
         thumbnailUrl = el.thumbnail.data.thumbnails[0].url;
         for(var j = 0; j < el.thumbnail.data.thumbnails.length; j++){
-          if(el.thumbnail.data.thumbnails[j].dimension == "250x167"){
+          if(el.thumbnail.data.thumbnails[j].dimension == '250x167'){
             thumbnailUrl = el.thumbnail.data.thumbnails[j].url;
             break;
           }
@@ -62,14 +62,14 @@ export default class Index extends React.Component {
       cards.push(
         <div className="col">
           <Card title={el.title}
-                summary={el.summary}
-                number={el.post_id.id}
-                thumbnailUrl={thumbnailUrl}
-                thumbnailAlt={thumbnailAlt}
-                date={el.created_on}
-                author={el.created_by.last_name}
-                authorUrl="#"
-                continueUrl={'/' + s.lang + '/post/' + el.post_id.id + '-' + this.titleToUrl(el.title)}
+            summary={el.summary}
+            number={el.post_id.id}
+            thumbnailUrl={thumbnailUrl}
+            thumbnailAlt={thumbnailAlt}
+            date={el.created_on}
+            author={el.created_by.last_name}
+            authorUrl="#"
+            continueUrl={'/' + s.lang + '/post/' + el.post_id.id + '-' + this.titleToUrl(el.title)}
           />
         </div>
       );
@@ -85,7 +85,7 @@ export default class Index extends React.Component {
           <ImageTile />
           <ImageTile src="https://api.syndesi.dev/uploads/_/originals/img_0622.jpg" />
           <ImageTile src="https://api.syndesi.dev/uploads/_/originals/img_0264.jpg" />
-          <div class="tile">
+          <div className="tile">
             <Error />
           </div>
           <GalleryTile />

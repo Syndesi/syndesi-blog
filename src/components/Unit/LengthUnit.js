@@ -10,28 +10,28 @@ export default class LengthUnit extends React.Component {
   }
 
   valueToMathInline(value){
-    var number = "";
+    var number = '';
     if(value.value.match(/e/i)){
       // number is written in scientific notation
       number = value.value.substr(0, value.value.indexOf('e')).trim();
-      number += " \\cdot 10^{" + value.value.substr(value.value.indexOf('e') + 1).replace("+", "").trim() + "}";
+      number += ' \\cdot 10^{' + value.value.substr(value.value.indexOf('e') + 1).replace('+', '').trim() + '}';
     } else {
       // normal number
       number = value.value;
     }
     return(
-      <MathInline content={number + " \\space " + value.katexSymbols[0]} />
+      <MathInline content={number + ' \\space ' + value.katexSymbols[0]} />
     );
   }
 
   render(){
-    var outputUnit = "m";
+    var outputUnit = 'm';
     var lc = new LengthConversion();
     var converted = lc.convertToAll(this.props.value);
     var primary = converted[lc.primary];
-    var original = converted["original"];
+    var original = converted['original'];
     return (
-      <span class="unit unit-temperature">
+      <span className="unit unit-temperature">
         <span className="unit-converted">{this.valueToMathInline(primary)}</span>{' '}
         (<span className="unit-original">{this.valueToMathInline(original)}</span>)
       </span>
@@ -40,5 +40,5 @@ export default class LengthUnit extends React.Component {
 }
 
 LengthUnit.defaultProps = {
-  value: "10 m"
+  value: '10 m'
 };

@@ -1,9 +1,9 @@
-import axios from "axios";
-import Cookies from "js-cookie";
+import axios from 'axios';
+import Cookies from 'js-cookie';
 
-import Auth from "./Auth.js";
-import Post from "./Post.js";
-import Story from "./Story.js";
+import Auth from './Auth.js';
+import Post from './Post.js';
+import Story from './Story.js';
 
 export default class Directus {
 
@@ -31,12 +31,12 @@ export default class Directus {
     this.token = token;
     if(this.token == null){
       // no valid token -> anonymous requests etc.
-      console.log("anonymous token");
+      console.log('anonymous token');
       Cookies.remove(this.baseUrl + '-token');
       this.axios = axios.create();
     } else {
       // valid token does exist
-      console.log("valid token");
+      console.log('valid token');
       Cookies.set(this.baseUrl + '-token', token);
       this.axios = axios.create({
         headers: {
