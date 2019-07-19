@@ -5,7 +5,6 @@ const fs = require('fs');
 class Release {
 
   static async main() {
-    let version = process.argv[2] || 'unknown_version';
     let outputPath = './release/';
     if (!fs.existsSync(outputPath)){
       fs.mkdirSync(outputPath, { recursive: true });
@@ -20,7 +19,7 @@ class Release {
         }
       });
     }
-    await zip('./dist', outputPath + '/dist_'+version+'.zip');
+    await zip('./dist', outputPath + '/dist.zip');
   }
 }
 
