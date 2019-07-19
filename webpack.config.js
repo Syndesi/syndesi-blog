@@ -18,7 +18,7 @@ module.exports = (env, options) => {
   }
   console.log(process.env.WEB_BASE_PATH);
   return {
-    entry: ['babel-polyfill', './src/index.js'],
+    entry: ['babel-polyfill', './src/index.tsx'],
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'js/bundle.[chunkhash:8].js',
@@ -33,7 +33,7 @@ module.exports = (env, options) => {
     mode: options.mode || 'development',
     module: {
       rules: [
-        { test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ },
+        { test: /\.(js|jsx|ts|tsx)$/, resolve: { extensions: [".js", ".jsx", ".ts", ".tsx"] }, use: 'babel-loader', exclude: /node_modules/ },
         { test: /\.css$/, use: [MiniCssExtractPlugin.loader, "css-loader"] },
         { test: /\.scss$/, use: [MiniCssExtractPlugin.loader, "css-loader", {loader: "sass-loader", options: { importer: globImporter() }}] },
         {

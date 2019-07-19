@@ -10,7 +10,7 @@
     "build": "webpack --progress --mode production",
     "start": "webpack-dev-server --content-base src/ --inline --history-api-fallback",
     "release": "release-it",
-    "lint": "eslint src --fix"
+    "lint": "eslint src --ext tsx --fix"
   },
   "dependencies": {
     "anchor-offset": "^1.0.6",
