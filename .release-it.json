@@ -13,7 +13,7 @@
     "publish": false
   },
   "hooks": {
-    "before:init": [
+    "after:version:bump": [
       "node .release.js ${version}"
     ],
     "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
