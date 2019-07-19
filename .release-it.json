@@ -1,0 +1,21 @@
+{
+  "git": {
+    "tagName": "v${version}"
+  },
+  "github": {
+    "release": true,
+    "tokenRef": "GITHUB_TOKEN_SYNDESI_BLOG",
+    "assets": [
+      "release/dist.zip"
+    ]
+  },
+  "npm": {
+    "publish": false
+  },
+  "hooks": {
+    "before:init": [
+      "node .release.js ${version}"
+    ],
+    "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
+  }
+}

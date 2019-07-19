@@ -1,0 +1,46 @@
+{
+  "citeTile": {
+    "sources": "مصادر"
+  },
+  "demo": "demo ar",
+  "github": {
+    "author": "<1>{{author}}</1> بواسطة",
+    "demo": "ar {{demo}} ar"
+  },
+  "githubTile": {
+    "createdBy": "<1>{{createdBy}}</1> بواسطة",
+    "createdOn": "{{date}} تم إنشاؤها على",
+    "iconGithub": "Github",
+    "iconIssue": "مسائل",
+    "iconStar": "النجوم",
+    "latestVersion": "<1>{{version}}</1> :احدث اصدار",
+    "versionReleasedBy": "<1>{{author}}</1> بواسطة",
+    "versionReleasedOn": "{{date}} على"
+  },
+  "imageTile": {
+    "menu": {
+      "copyImageUrl": "انسخ رابط الصورة",
+      "copyImageUrlToast": "تم نسخ عنوان URL للصورة",
+      "fullscreen": "شاشة كاملة",
+      "openImage": "صورة مفتوحة",
+      "quality": {
+        "number": "% {{percentage}}",
+        "original": "أصلي",
+        "quality": "جودة"
+      },
+      "size": {
+        "desktop": "سطح المكتب",
+        "fullHd": "دقة عالية",
+        "original": "أصلي",
+        "size": "بحجم",
+        "smartphone": "الهاتف الذكي"
+      }
+    },
+    "pagination": "{{allPages}} من {{currentPage}}"
+  },
+  "prismTile": {
+    "buttonHover": "نسخة الكود",
+    "codeCopiedToast": "نسخ إلى الحافظة",
+    "iconCopy": "نسخ"
+  }
+}

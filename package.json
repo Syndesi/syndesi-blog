@@ -47,7 +47,8 @@
     "react-twitter-embed": "^2.0.8",
     "react-uid": "^2.2.0",
     "slick-carousel": "^1.8.1",
-    "syndesi-license-icons": "^1.0.0"
+    "syndesi-license-icons": "^1.0.0",
+    "zip-a-folder": "^0.0.8"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
