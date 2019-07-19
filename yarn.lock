@@ -33,11 +33,6 @@
   dependencies:
     commander "^2.15.1"
 
-"@ibm/plex@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@ibm/plex/-/plex-2.0.0.tgz#309ac4d571ad23225fd28c4605ec86882d81997e"
-  integrity sha512-mmAyvkiDa8c17KwJN3u2HRfYkF0LwtvVNPkCkoXMjcoI7tKbhBegj+4Dr3UK4+EGzqv7/h6JBw5pTttXTBrRnw==
-
 "@mapbox/geojson-area@0.2.2":
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@mapbox/geojson-area/-/geojson-area-0.2.2.tgz#18d7814aa36bf23fbbcc379f8e26a22927debf10"
