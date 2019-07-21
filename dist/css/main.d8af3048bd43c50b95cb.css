@@ -3010,6 +3010,9 @@ ul.flat {
     background-color: #1a6fe6;
     color: #ffffff; }
 
+.btn-group > .btn {
+  padding: 0.5rem; }
+
 .error {
   color: #565656; }
   .error.error-exception {
@@ -3607,11 +3610,11 @@ pre[class*="language-"] {
   font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", Courier, monospace;
   font-weight: 400; }
 
-.tile-prism .buttongroup {
+.tile-prism .btn-group {
   position: absolute;
   top: 0px;
   right: 0px; }
-  .tile-prism .buttongroup > .btn {
+  .tile-prism .btn-group > .btn {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px; }

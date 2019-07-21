@@ -23,7 +23,7 @@ export default class CommentTile extends React.Component {
     }
     return <p>abc</p>;
     return (
-      <div className={'row comment pt-1' + leftPadding}>
+      <div class={'row comment pt-1' + leftPadding}>
         <p>{comment.account.name}</p>
         <p>{comment.content}</p>
         {comments}
@@ -38,7 +38,7 @@ export default class CommentTile extends React.Component {
     }
     console.log(comments);
     return (
-      <div className={'tile tile-' + this.type + ' pb-1'}>
+      <div class={'tile tile-' + this.type + ' pb-1'}>
         {comments}
       </div>
     );

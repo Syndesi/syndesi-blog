@@ -66,7 +66,7 @@ export default class TileRenderer extends React.Component {
 
   render(){
     return (
-      <div className='tileRenderer'>
+      <div class='tileRenderer'>
         {this.renderTiles()}
       </div>
     );

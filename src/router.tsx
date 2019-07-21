@@ -57,7 +57,7 @@ export default class Router extends React.Component {
     appClasses = appClasses.join(' ');
     return (
       <Suspense fallback={Loader}>
-        <div className={appClasses}>
+        <div class={appClasses}>
           <Favicon />
           <Helmet>
             <meta charSet="utf-8" />

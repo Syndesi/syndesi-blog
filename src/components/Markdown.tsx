@@ -76,7 +76,7 @@ export default class Markdown extends React.Component {
 
     compiled.tree;
     return (
-      <div className="markdown">{compiled.tree}</div>
+      <div class="markdown">{compiled.tree}</div>
     );
   }
 }

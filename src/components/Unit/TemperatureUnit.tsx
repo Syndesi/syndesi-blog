@@ -30,14 +30,14 @@ export default class TemperatureUnit extends React.Component {
         continue;
       }
       lines.push(
-        <div className="row layout-equal-spaced" key={values[key].name}>
+        <div class="row layout-equal-spaced" key={values[key].name}>
           <p>{values[key].name + ':'}</p>
-          <p className="ml-3"><MathInline content={this.valueToKatexString(values[key])} /></p>
+          <p class="ml-3"><MathInline content={this.valueToKatexString(values[key])} /></p>
         </div>
       );
     }
     return (
-      <div className="unit-hover">
+      <div class="unit-hover">
         {lines}
       </div>
     );
@@ -51,12 +51,12 @@ export default class TemperatureUnit extends React.Component {
     var tooltip = this.generateTooltip(converted);
     return (
       <Tooltip placement="bottom" overlay={tooltip}>
-        <span className="unit unit-temperature">
-          <span className="unit-converted">
+        <span class="unit unit-temperature">
+          <span class="unit-converted">
             <MathInline content={this.valueToKatexString(primary)} />
           </span>
           {' '}
-          <span className="unit-original">
+          <span class="unit-original">
             <MathInline content={'\\left(' + this.valueToKatexString(original) + '\\right)'} />
           </span>
         </span>

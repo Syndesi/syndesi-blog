@@ -16,29 +16,29 @@ export default class PostCard extends React.Component {
     let author = null;
     if(p.created_by){
       author = (
-        <p className="detail">
-          by <NavLink className="detail" to={'/' + s.lang + '/author/' + p.created_by.id + '-' + p.created_by.last_name}>{p.created_by.last_name}</NavLink>
+        <p class="detail">
+          by <NavLink class="detail" to={'/' + s.lang + '/author/' + p.created_by.id + '-' + p.created_by.last_name}>{p.created_by.last_name}</NavLink>
         </p>
       );
     }
     return (
-      <div className="card">
-        <div className="row">
-          <div className="aspect-ratio aspect-ratio-3-2">
-            <img className="aspect-ratio-inside" src={p.thumbnail.data.thumbnails[1].url} />
+      <div class="card">
+        <div class="row">
+          <div class="aspect-ratio aspect-ratio-3-2">
+            <img class="aspect-ratio-inside" src={p.thumbnail.data.thumbnails[1].url} />
           </div>
         </div>
-        <div className="row px-1 pt-1">
+        <div class="row px-1 pt-1">
           <h4>{p.title}</h4>
         </div>
-        <div className="row px-1 pb-1 layout-equal-spaced">
+        <div class="row px-1 pb-1 layout-equal-spaced">
           {author}
-          <p className="detail">{'created on ' + created}</p>
+          <p class="detail">{'created on ' + created}</p>
         </div>
-        <div className="rpw px-1 pb-1">
+        <div class="rpw px-1 pb-1">
           <p>{p.summary} <a href={p.moreUrl}>more</a></p>
         </div>
-        <div className="adaptive-height"></div>
+        <div class="adaptive-height"></div>
       </div>
     );
   }

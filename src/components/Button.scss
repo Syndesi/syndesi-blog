@@ -41,3 +41,7 @@
     color: $color-white;
   }
 }
+
+.btn-group > .btn {
+  padding: gap(1);
+}

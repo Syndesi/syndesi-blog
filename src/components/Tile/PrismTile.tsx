@@ -31,7 +31,7 @@ export default class PrismTile extends React.Component {
           <pre class={'line-numbers language-' + language}><code>
             {codeContent}
           </code></pre>
-          <div class="buttongroup">
+          <div class="btn-group">
             <button class="btn" onClick={() => {this.copyToClipboard();}}><Icon icon="content_copy" i18nText="tile:prismTile.iconCopy" /></button>
           </div>
         </div>

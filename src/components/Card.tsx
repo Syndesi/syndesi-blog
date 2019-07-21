@@ -40,7 +40,7 @@ export default class Card extends React.Component {
       alt = p.thumbnailAlt;
     }
     if(p.thumbnailUrl){
-      thumbnail = <img className="image-splash" src={p.thumbnailUrl} alt={alt} />;
+      thumbnail = <img class="image-splash" src={p.thumbnailUrl} alt={alt} />;
     }
     var numberClass = 'light';
     if(this.state.thumbnailBrightness >= 0.6){
@@ -52,28 +52,28 @@ export default class Card extends React.Component {
       date = d.format('DD.MM.YYYY');
     }
     return (
-      <div className="card mb-1">
-        <div className="splash">
-          <div className="aspect-ratio-3-2">
-            <div className="aspect-ratio-inside">
+      <div class="card mb-1">
+        <div class="splash">
+          <div class="aspect-ratio-3-2">
+            <div class="aspect-ratio-inside">
               {thumbnail}
-              <p className={'post-number unselectable ' + numberClass}>{p.number}</p>
+              <p class={'post-number unselectable ' + numberClass}>{p.number}</p>
             </div>
           </div>
         </div>
-        <div className="pb-0">
+        <div class="pb-0">
           <h4>{p.title}</h4>
         </div>
-        <div className="pb-0 pt-0 space-evenly">
-          <p className="detail">by <a className="detail" href={p.authorUrl}>{p.author}</a></p>
-          <p className="detail">{date}</p>
+        <div class="pb-0 pt-0 space-evenly">
+          <p class="detail">by <a class="detail" href={p.authorUrl}>{p.author}</a></p>
+          <p class="detail">{date}</p>
         </div>
-        <div className="pb-0">
+        <div class="pb-0">
           <p>{p.summary}</p>
         </div>
-        <div className="adaptive-height"></div>
+        <div class="adaptive-height"></div>
         <div>
-          <a className="text-secondary" href={p.continueUrl}>continue reading →</a>
+          <a class="text-secondary" href={p.continueUrl}>continue reading →</a>
         </div>
       </div>
     );

@@ -31,9 +31,9 @@ export default class LengthUnit extends React.Component {
     var primary = converted[lc.primary];
     var original = converted['original'];
     return (
-      <span className="unit unit-temperature">
-        <span className="unit-converted">{this.valueToMathInline(primary)}</span>{' '}
-        (<span className="unit-original">{this.valueToMathInline(original)}</span>)
+      <span class="unit unit-temperature">
+        <span class="unit-converted">{this.valueToMathInline(primary)}</span>{' '}
+        (<span class="unit-original">{this.valueToMathInline(original)}</span>)
       </span>
     );
   }

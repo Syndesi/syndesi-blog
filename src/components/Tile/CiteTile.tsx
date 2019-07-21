@@ -19,8 +19,8 @@ export default class CiteTile extends React.Component {
     };
     var TagName = types[data.type] || WebCite;
     return (
-      <div className="cite mb-1" id={'cite-' + citeNumber}>
-        <p className="cite-number unselectable">{citeNumber}.</p>
+      <div class="cite mb-1" id={'cite-' + citeNumber}>
+        <p class="cite-number unselectable">{citeNumber}.</p>
         <TagName {...data} />
       </div>
     );
@@ -32,13 +32,13 @@ export default class CiteTile extends React.Component {
       cites.push(this.createCiteTile(this.props.store.cites[i], i + 1));
     }
     return (
-      <div className={'tile tile-' + this.type} id="cite" >
-        <div className="row px-1 cite-title">
+      <div class={'tile tile-' + this.type} id="cite" >
+        <div class="row px-1 cite-title">
           <h4><Trans i18nKey="citeTile.sources">
             Sources
           </Trans></h4>
         </div>
-        <div className="row p-1 cite-list">
+        <div class="row p-1 cite-list">
           {cites}
         </div>
       </div>
